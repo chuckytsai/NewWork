@@ -22,27 +22,28 @@ export function Day12Hrs(day) {
         WeatherMap();
     }
     else if (dayjs(day).format('DD') === dayjs(Today).format('DD')) {
-        if (dayjs(Today).format('HH') < "18") {
+        if (dayjs(Today).format('HH') < "17") {
             TimeFrom = dayjs(Today).format('YYYY-MM-DD') + "T06:00:00";
             TimeTo = dayjs(Today).format('YYYY-MM-DD') + "T18:00:00";
         }
-        else if (dayjs(Today).format('HH') >= "18") {
+        else if (dayjs(Today).format('HH') >= "17") {
             TimeFrom = dayjs(Today).format('YYYY-MM-DD') + "T18:00:00";
             TimeTo = dayjs(Today).add(1, 'day').format('YYYY-MM-DD') + "T06:00:00";
         }
         WeatherMap();
     }
     else {
-        if (dayjs(day).format('HH') < "18") {
+        if (dayjs(day).format('HH') < "17") {
             TimeFrom = dayjs(day).format('YYYY-MM-DD') + "T06:00:00";
             TimeTo = dayjs(day).format('YYYY-MM-DD') + "T18:00:00";
         }
-        else if (dayjs(day).format('HH') >= "18") {
+        else if (dayjs(day).format('HH') >= "17") {
             TimeFrom = dayjs(day).format('YYYY-MM-DD') + "T18:00:00";
             TimeTo = dayjs(day).add(1, 'day').format('YYYY-MM-DD') + "T06:00:00";
         }
         WeatherMap();
     }
+    console.log(TimeFrom , TimeTo)
 }
 // ==============天氣氣象局API渲染資料======================
 let WeatherMap = async () => {
