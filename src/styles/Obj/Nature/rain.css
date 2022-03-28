@@ -1,0 +1,34 @@
+.RainBackground {
+    background-color: rgba(52, 58, 70, 0.3);
+    overflow: hidden;
+}
+
+.Rain {
+    position: fixed;
+    height: 25px;
+    top: 0;
+    background: linear-gradient(transparent, #fff);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation: rainDrop 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    z-index: 500;
+}
+
+.Rain:nth-child(3n + 1) {
+    background: linear-gradient(transparent, rgb(233, 237, 238));
+}
+.Rain:nth-child(3n + 2) {
+    background: linear-gradient(transparent, rgb(215, 244, 252));
+}
+.Rain:nth-child(3n + 3) {
+    background: linear-gradient(transparent, rgb(213, 220, 221));
+}
+
+@keyframes rainDrop {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(calc(100vh));
+    }
+}
