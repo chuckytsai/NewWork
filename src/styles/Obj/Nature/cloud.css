@@ -1,14 +1,18 @@
+.Clouds {
+    position: fixed;
+}
+
 .Cloud {
     width: 100px;
     height: 40px;
-    background-color: rgb(216, 243, 241);
-    border: 3 solid #ccc;
+    background: linear-gradient(to bottom, gray, rgb(131, 124, 124));
+    border: 0.1px solid rgb(89, 93, 163);
+    border-top: none;
+    border-bottom: 0.1px solid rgb(106, 109, 153, 0.7);
     border-radius: 40px;
-    position: absolute;
-    margin-top: 5%;
-    left: 1%;
-    animation-delay: -2s;
-    animation: cloudFloating1 8s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    animation: cloudFloating 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    z-index: 999;
+    opacity: 0.95;
 }
 
 .Cloud::after {
@@ -18,11 +22,10 @@
     left: 45px;
     width: 45px;
     height: 30px;
-    background-color: rgb(216, 243, 241);
-    border: 3 solid #ccc;
+    background: linear-gradient(to bottom, gray, rgb(131, 124, 124, 0.9));
     border-radius: 50%;
-    z-index: -1;
-    animation: cloudFloating2 2.5s cubic-bezier(0.55, 0.5, 0.45) infinite;
+    z-index: 1;
+    border: none;
 }
 
 .Cloud::before {
@@ -32,46 +35,21 @@
     left: 15px;
     width: 45px;
     height: 45px;
-    background-color: rgb(216, 243, 241);
-    border: 3 solid #ccc;
+    background: linear-gradient(to bottom, gray, rgb(131, 124, 124));
+    overflow: 0.7;
     border-radius: 50%;
+    border: none;
     z-index: -1;
-    animation-delay: -1s;
-    animation: cloudFloating3 2.5s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
-@keyframes cloudFloating1 {
+@keyframes cloudFloating {
     0% {
-        transform: translate3d(7px, 0, 0);
+        transform: translateX(-2px);
     }
     50% {
-        transform: translate3d(0px, 0, 0);
+        transform: translateX(0px);
     }
     100% {
-        transform: translate3d(7px, 0, 0);
-    }
-}
-
-@keyframes cloudFloating2 {
-    0% {
-        transform: translate3d(0, 3px, 0);
-    }
-    50% {
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(0, 3px, 0);
-    }
-}
-
-@keyframes cloudFloating3 {
-    0% {
-        transform: translate3d(0, -1px, 0);
-    }
-    50% {
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(0, -1px, 0);
+        transform: translateX(-2px);
     }
 }

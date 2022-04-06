@@ -31,15 +31,18 @@ export function WeatherEffect(time, index) {
     // ======  先決定有沒有太陽  =====
     if (time >= 18 || Rain > 1 || Cloudyday > 1) {
         if (Rain > 1) {
-            ReactDOM.render(<><Cloud /></>, WeatherLayer);
+            ReactDOM.render(<></>, WeatherLayer);
             CreatRains(0, 50);
+            CreatClouds(0, 15);
         }
         else if (Cloudyday > 1) {
-            ReactDOM.render(<><Cloud /></>, WeatherLayer);
+            ReactDOM.render(<></>, WeatherLayer);
+            CreatClouds(0, 15);
         }
     }
     else if (time < 18) {
-        ReactDOM.render(<><Sun /><Cloud /></>, document.getElementsByClassName("layer")[1]);
+        ReactDOM.render(<><Sun /></>, document.getElementsByClassName("layer")[1]);
+        CreatClouds(0, 18);
     }
 }
 
@@ -53,10 +56,33 @@ export function CreatRains(index, amount) {
         let posX = Math.floor(Math.random() * window.innerWidth);
         let delay = Math.random() * -20;
         let duration = Math.random() * 5;
-        drop.style.width = 0.7 * size + "px";
+        if (document.body.clientWidth > 768) {
+            drop.style.width = 0.7 * size + "px";
+        } else if (document.body.clientWidth < 768) {
+            drop.style.width = 0.3 * size + "px";
+        }
         drop.style.left = posX + "px";
         drop.style.animationDelay = delay + "s";
         drop.style.animationDuration = 1 + duration + "s";
         WeatherLayer.appendChild(drop);
+    }
+}
+
+export function CreatClouds(index, amount) {
+    let WeatherLayer = document.getElementsByClassName("layer")[1];
+    WeatherLayer.classList.add("RainBackground");
+    for (let x = index; x < amount; x++) {
+        let clouds = document.createElement("span");
+        clouds.className = "Clouds";
+        let delay = Math.random() * -10;
+        let duration = Math.random() * 50;
+        let posX = Math.floor(Math.random() * window.innerWidth);
+        let posY = Math.floor(Math.random() * 150);
+        clouds.style.right = (posX-100) + "px";
+        clouds.style.top = posY + "px";
+        clouds.style.animationDelay = delay + "s";
+        clouds.style.animationDuration = 10 + duration + "s";
+        WeatherLayer.appendChild(clouds);
+        ReactDOM.render(<><Cloud /></>, document.getElementsByClassName("Clouds")[x]);
     }
 }

@@ -43,7 +43,7 @@ export function Day12Hrs(day) {
         }
         WeatherMap();
     }
-    console.log(TimeFrom , TimeTo)
+    console.log(TimeFrom, TimeTo)
 }
 // ==============天氣氣象局API渲染資料======================
 let WeatherMap = async () => {
@@ -64,11 +64,13 @@ let WeatherMap = async () => {
                     <h6>最低溫度:</h6><h5>{item.elementValue[0].value} 度</h5>
                 </div>);
             ReactDOM.render(<>{MinTs}</>, document.getElementsByClassName("MinT")[0]);
-            let POPs = Item.data.records.locations[0].location[SelectArea.value].weatherElement[0].time.map((item, i) =>
-                <div key={i} value={i}>
-                    <h6>降雨機率:</h6><h5>{item.elementValue[0].value} %</h5>
-                </div>);
-            ReactDOM.render(<>{POPs}</>, document.getElementsByClassName("POP")[0]);
+            if (Item.data.records.locations[0].location[SelectArea.value].weatherElement[0].time.length > 0) {
+                let POPs = Item.data.records.locations[0].location[SelectArea.value].weatherElement[0].time.map((item, i) =>
+                    <div key={i} value={i}>
+                        <h6>降雨機率:</h6><h5>{item.elementValue[0].value} %</h5>
+                    </div>);
+                ReactDOM.render(<>{POPs}</>, document.getElementsByClassName("POP")[0]);
+            }
             if (Item.data.records.locations[0].location[SelectArea.value].weatherElement[9].time.length > 0) {
                 let UVIs = Item.data.records.locations[0].location[SelectArea.value].weatherElement[9].time.map((item, i) =>
                     <div key={i} value={i}>
@@ -84,7 +86,16 @@ let WeatherMap = async () => {
                     <h6>天氣狀況:</h6><h5>{item.elementValue[0].value}</h5>
                 </div>);
             ReactDOM.render(<>{Wxs}</>, document.getElementsByClassName("Wx")[0]);
-            WeatherEffect(TimeFrom.split("T")[1].split(":")[0], Item.data.records.locations[0].location[SelectArea.value].weatherElement[6].time[0].elementValue[0].value);
+            if (Item.data.records.locations[0].location[SelectArea.value].weatherElement[6].time.length > 0) {
+                WeatherEffect(TimeFrom.split("T")[1].split(":")[0], Item.data.records.locations[0].location[SelectArea.value].weatherElement[6].time[0].elementValue[0].value);
+            }
+            else {
+                TimeFrom = dayjs(Today).add(1, 'day').format('YYYY-MM-DD') + "T18:00:00";
+                TimeTo = dayjs(Today).add(2, 'day').format('YYYY-MM-DD') + "T06:00:00";
+                setTimeout(() => {
+                    WeatherMap();
+                }, 100);
+            }
         }, 500);
     } catch (error) {
         console.log("異常", error);

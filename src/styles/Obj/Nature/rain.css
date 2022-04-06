@@ -14,6 +14,7 @@
     z-index: 500;
 }
 
+
 .Rain:nth-child(3n + 1) {
     background: linear-gradient(transparent, rgb(233, 237, 238));
 }
@@ -22,6 +23,24 @@
 }
 .Rain:nth-child(3n + 3) {
     background: linear-gradient(transparent, rgb(213, 220, 221));
+}
+
+@media (max-width:768px) {
+    .Rain {
+        height: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background:white;
+    }
+    .Rain:nth-child(3n + 1) {
+        background:white;
+    }
+    .Rain:nth-child(3n + 2) {
+        background:white;
+    }
+    .Rain:nth-child(3n + 3) {
+        background:white;
+    }
 }
 
 @keyframes rainDrop {
