@@ -4,13 +4,13 @@
         width: 252px;
     }
     50% {
-        height: 260px;
+        height: 253px;
         width: 255px;
-        background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow, rgb(248, 248, 4, 0.2));
+        background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow);
     }
     100% {
-        height: 255px;
-        background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow, rgb(229, 245, 3, 0.1));
+        height: 252px;
+        background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow);
     }
 }
 
@@ -21,13 +21,13 @@
             width: 152px;
         }
         50% {
-            height: 160px;
-            width: 155px;
-            background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow, rgb(248, 248, 4, 0.2));
+            height: 154px;
+            width: 152.5px;
+            background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow);
         }
         100% {
-            height: 155px;
-            background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow, rgb(229, 245, 3, 0.1));
+            height: 152px;
+            background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow);
         }
     }
 }
@@ -38,8 +38,10 @@
     height: 250px;
     border: none;
     border-radius: 50%;
-    background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow, white);
+    background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow);
     animation: Sunlight 2.5s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    z-index: 0;
+    opacity: 1;
 }
 
 @media (max-width: 1280px) {

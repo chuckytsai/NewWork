@@ -1,5 +1,6 @@
 .RainBackground {
-    background-color: rgba(52, 58, 70, 0.3);
+    background:linear-gradient(to bottom, rgb(147, 157, 211), rgb(119, 133, 212), rgb(5, 6, 26));
+    opacity: 0.5;
     overflow: hidden;
 }
 
@@ -28,8 +29,8 @@
 @media (max-width:768px) {
     .Rain {
         height: 5px;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
         background:white;
     }
     .Rain:nth-child(3n + 1) {
