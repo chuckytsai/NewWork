@@ -1,17 +1,11 @@
 
-import React, { useState } from "react";
+import React from "react";
 import "moment/locale/zh-tw";
 import ReactDOM from 'react-dom';
 import 'react-calendar/dist/Calendar.css';
-import dayjs from 'dayjs';
 // 引入元件
-// import { Sidebar } from "../../../components/ReactElement/Sidebar";
-// import { ListGroup, MachineName } from "./ListGroup";
-import { ListGroup } from "./ListGroup";
 import { ShowMonthEdit, ThisMonthOnly } from "./ScheduleFunction";
-// import { StoreScheduleInput } from "../../../components/ReactElement/InputCombo";
 import { CalenderGroup, ChangeMonths, StoreEvent } from "./CalendarGroup"
-// import { CallLoanding } from "../../../components/ReactElement/Loading";
 // 引入樣式
 import "../../styles/work/Schedule/StoreSchedule.css"
 
@@ -24,7 +18,9 @@ export function Memorandum() {
     setTimeout(() => {
         ChangeMonths();
         ThisMonthOnly();
-    }, 400)
+        if (window.location.href.split("/")[4] === "date") { ShowMonthEdit("left"); }
+        else if (window.location.href.split("/")[4] === "list") { ShowMonthEdit("right"); }
+    }, 400);
     return <div className="DateGroup">
         <nav className="DateHeader">
             <div className="SelectWeek">
@@ -44,25 +40,12 @@ export function Memorandum() {
             </div>
             <div className="ShowMonthEdit">
                 <span>
-                    <button className="ShowMonthEditLeft ShowMonthEditAction"
-                        onClick={() => {
-                            ShowMonthEdit("left");
-                            ReactDOM.render(<></>, document.getElementById("listContainer"));
-                        }}>月</button>
-                    <button className="ShowMonthEditRight ShowMonthEditClose"
-                        onClick={(e) => {
-                            ShowMonthEdit("right");
-                            // =====生成表單========
-                            ReactDOM.render(
-                                <><ListGroup />
-                                    <footer className="BusinessTimeInstruction">
-                                        <h6><div className="periodIndex periodMorning"></div>{"早餐時段: 00:00 ~ 10:30"}</h6>
-                                        <h6><div className="periodIndex periodNoonday"></div>{"午餐時段: 10:30 ~ 15:30"}</h6>
-                                        <h6><div className="periodIndex periodNight"></div>{"晚餐時段: 15:30 ~ 00:00"}</h6>
-                                    </footer></>,
-                                document.getElementById("listContainer")
-                            );
-                        }}>清單</button>
+                    <a href="/memorandum/date">
+                        <button className="ShowMonthEditLeft ShowMonthEditAction">月</button>
+                    </a>
+                    <a href="/memorandum/list">
+                        <button className="ShowMonthEditRight ShowMonthEditClose">清單</button>
+                    </a>
                 </span>
             </div>
         </nav>

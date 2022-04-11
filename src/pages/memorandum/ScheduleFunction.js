@@ -1,11 +1,12 @@
 import ReactDOM from "react-dom";
+import dayjs from 'dayjs';
 // 引入元件
 import { StoreEvent } from "./CalendarGroup";
 // import { ChickCheckdate } from "../../../components/Function/SwalWarn";
-// import { CallLoanding, CloseLoanding } from "../../../components/ReactElement/Loading";
-import { GetWeekListAPI } from "./ListGroup";
+import { CallLoanding, CloseLoanding } from "../../components/Loading";
+import { ListGroup, GetWeekListAPI } from "./ListGroup";
 import { OpenCloseElements } from "./ScheduleEl";
-import dayjs from 'dayjs';
+
 
 // 月曆 & 清單  按鈕
 export function ShowMonthEdit(i) {
@@ -24,8 +25,9 @@ export function ShowMonthEdit(i) {
         listContainer.style.display = "none";
         SelectMonth.style.display = "block";
         SelectWeek.style.display = "none";
-        // CallLoanding();
+        CallLoanding();
         StoreEvent();
+        ReactDOM.render(<></>, document.getElementById("listContainer"));
     }
     else if (i === "right") {
         ShowMonthEditRight.classList.add("ShowMonthEditAction");
@@ -36,7 +38,17 @@ export function ShowMonthEdit(i) {
         listContainer.style.display = "block";
         SelectMonth.style.display = "none";
         SelectWeek.style.display = "flex";
-        // CallLoanding();
+        CallLoanding();
+        // =====生成表單========
+        ReactDOM.render(
+            <><ListGroup />
+                <footer className="BusinessTimeInstruction">
+                    <h6><div className="periodIndex periodMorning"></div>{"早餐時段: 00:00 ~ 10:30"}</h6>
+                    <h6><div className="periodIndex periodNoonday"></div>{"午餐時段: 10:30 ~ 15:30"}</h6>
+                    <h6><div className="periodIndex periodNight"></div>{"晚餐時段: 15:30 ~ 00:00"}</h6>
+                </footer></>,
+            document.getElementById("listContainer")
+        );
     }
 }
 // 控制清單內容最上與最下的物件不會往上或往下

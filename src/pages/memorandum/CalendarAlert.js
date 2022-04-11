@@ -3,30 +3,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { StoreEvent } from "./CalendarGroup";
 // import { ChickCheckdate } from "../../../components/Function/SwalWarn"
-// import { CallLoanding, CloseLoanding } from "../../../components/ReactElement/Loading";
+import { CallLoanding, CloseLoanding } from "../../components/Loading";
 import 'antd/dist/antd.css';
 import { Transfer } from 'antd';
-// 引入API
-// import { machinesToMachineApi, StoreOpeningListApi, StoreDeleteApi } from "../../../middleware/api";
+// 引入Json檔案
+import { ScheduleList } from "../../components/Json/ScheduleList.json";
+
 let targetKeyArrey = [];
 let targetKeys = [];
 let mockData = [];
 let ChangeStore = false;
 // 店家排程穿越框
 export function CalendarAlerts(props) {
-    // CallLoanding();
-    // let getMachineListAPI = async () => {
-    //     try {
-    //         let machinesToItem = await machinesToMachineApi(document.getElementsByClassName("storeToMachine")[0].value);
-    //         let machinesToItemOptions = machinesToItem.data.data.map((item, i) => (
-    //             <option key={i} value={item.id}>{item.business_time}</option>
-    //         ));
-    //         ReactDOM.render(<>{machinesToItemOptions}</>, document.getElementsByClassName("CalendarAlertSelectTime")[0]);
-    //     } catch (error) {
-    //         CloseLoanding();
-    //         ChickCheckdate("狀態異常", error, "error");
-    //     }
-    // }
     setTimeout(() => {
         // getMachineListAPI();
         targetKeys = [];
@@ -48,15 +36,18 @@ export function CalendarAlerts(props) {
         </nav>
         <div className="CalendarAlertBusinessTime">
             <p>選擇時段</p>
-            <select className="CalendarAlertSelectTime"></select>
+            <select className="CalendarAlertSelectTime">
+                <option value={null}>請選擇</option>
+                <option value={"10:00~14:00"}>10:00~14:00</option>
+                <option value={"14:00~18:00"}>14:00~18:00</option>
+                <option value={"18:00~22:00"}>18:00~22:00</option>
+            </select>
             <button className="IndigoBtn CalendarAlertSearch">搜尋</button>
         </div>
         <div className="SelectMonth">
             <span>
-                <button className="AlertLastWeek"
-                    onClick={props.LastClick}>{'<'}</button>
-                <button className="AlertNextWeek"
-                    onClick={props.NextClick}>{'>'}</button>
+                <button className="AlertLastWeek" onClick={props.LastClick}>{'<'}</button>
+                <button className="AlertNextWeek" onClick={props.NextClick}>{'>'}</button>
             </span>
             <h1 className="WhatDateText">{props.time}</h1>
             <button className="todayButton AlertTodayButton"
@@ -136,6 +127,23 @@ class ListApp extends React.Component {
     componentDidMount() { this.getMock(); }
     getMock = () => {
         if (mockData.length > 0) { mockData = []; }
+        let WhatDateText = document.getElementsByClassName("WhatDateText")[0].textContent
+        for (let x = 0; x < ScheduleList.length; x++) {
+            for (let y = 0; y < ScheduleList[x].length; y++) {
+                if (ScheduleList[x][y]["date"] === WhatDateText) {
+                    let data1 = {
+                        key: y.toString(),
+                        title: ScheduleList[x][y]["name"]
+                    };
+                    if (data1.chosen) {
+                        targetKeys.push(data1.key);
+                    }
+                    mockData.push(data1);
+                    this.setState({ mockData, targetKeys });
+                }
+            }
+        }
+
         // let getMachineListAPI = async () => {
         //     try {
         //         let WhatDateText = document.getElementsByClassName("WhatDateText")[0].textContent.split("/");

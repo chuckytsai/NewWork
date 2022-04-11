@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import { WeatherApi } from "../../api/api";
 import { TaiwanCitys } from "./weatherEl";
 import { WhatDates, WeatherEffect } from "./weatherFunction";
+import { CloseLoanding } from "../../components/Loading";
 // 引入樣式
 import "../../styles/work/weather.css";
 import "../../styles/Obj/Nature/cloud.css";
@@ -83,8 +84,10 @@ let WeatherMap = async () => {
                 TimeTo = dayjs(Today).add(2, 'day').format('YYYY-MM-DD') + "T06:00:00";
                 setTimeout(() => { WeatherMap(); }, 100);
             }
+            CloseLoanding();
         }, 300);
     } catch (error) {
+        CloseLoanding();
         console.log("異常", error);
     }
 }
@@ -107,14 +110,18 @@ export function Weather() {
                                 <button onClick={() => {
                                     if (dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD') !== dayjs(Today).format('YYYY-MM-DD')) {
                                         WhatDates("Y");
-                                        setTimeout(() => { Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD')); }, 500);
+                                        setTimeout(() => {
+                                            Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD'));
+                                        }, 500);
                                     }
                                 }}></button>
                                 <div className="dates WeatherText">{dayjs(Today).format("YYYY-MM-DD")}</div>
                                 <button className="NextDay" onClick={() => {
                                     if (dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD') !== dayjs(Today).add(6, 'day').format('YYYY-MM-DD')) {
                                         WhatDates("T");
-                                        setTimeout(() => { Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD')); }, 500);
+                                        setTimeout(() => {
+                                            Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD'));
+                                        }, 500);
                                     }
                                 }}></button>
                             </div>

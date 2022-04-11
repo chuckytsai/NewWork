@@ -5,12 +5,11 @@ import { Calendar } from 'react-calendar';
 import dayjs from 'dayjs';
 import { onSelect } from "./ListGroup";
 import { ThisMonthOnly } from "./ScheduleFunction";
-// import { CallLoanding, CloseLoanding } from "../../../components/ReactElement/Loading";
+import { CallLoanding, CloseLoanding } from "../../components/Loading";
 // import { ChickCheckdate } from "../../../components/Function/SwalWarn";
 import { DataCompent } from "../../components/Json/Holiday.json";
 // 引入Json檔案
 import { ScheduleList } from "../../components/Json/ScheduleList.json";
-import { string } from "yup";
 
 let ThisMonth = new Date().getMonth();
 let ThisYear = new Date().getFullYear();
@@ -21,7 +20,7 @@ let tileContent = ({ date, view }) =>
         <span value={dateCost++} className="DateList"></span> : <p className="NoDateList"></p>
 
 function nextThisMon() {
-    // CallLoanding();
+    CallLoanding();
     if (ThisMonth < 11) {
         ThisMonth = ThisMonth + 1;
     }
@@ -35,7 +34,7 @@ function nextThisMon() {
     }, 250);
 }
 function prevThisMon() {
-    // CallLoanding();
+    CallLoanding();
     if (ThisMonth === 0) {
         ThisMonth = 11;
     }
@@ -136,7 +135,7 @@ let StoreEvents = async () => {
             ReactDOM.render(<>{BusinessMachines}</>, document.getElementsByClassName("BusinessMachine")[x])
         }
         HolidayEvents();
-        // CloseLoanding();
+        CloseLoanding();
     }, 200);
 
 };
