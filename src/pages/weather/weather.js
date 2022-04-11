@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import dayjs from 'dayjs';
 import { WeatherApi } from "../../api/api";
 import { TaiwanCitys } from "./weatherEl";
+import { WhatDates, WeatherEffect } from "./weatherFunction";
+// 引入樣式
 import "../../styles/work/weather.css";
 import "../../styles/Obj/Nature/cloud.css";
-import { WhatDates, WeatherEffect } from "./weatherFunction";
+// 引入圖片
 import { SvgWave } from "../../components/Objs/Nature/waveSVG";
 import mountains from "../../images/png/el/101.png";
 
