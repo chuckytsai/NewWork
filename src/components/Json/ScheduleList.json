@@ -1,0 +1,82 @@
+{
+    "ScheduleList": [
+        [
+            {
+                "date": "2022-04-01",
+                "name": "美容師1號",
+                "work": true,
+                "business_time": "10:00~14:00"
+            },
+            {
+                "date": "2022-04-01",
+                "name": "美容師2號",
+                "work": true,
+                "business_time": "10:00~14:00"
+            },
+            {
+                "date": "2022-04-01",
+                "name": "美容師3號",
+                "work": true,
+                "business_time": "14:00~18:00"
+            },
+            {
+                "date": "2022-04-01",
+                "name": "美容師4號",
+                "work": true,
+                "business_time": "18:00~22:00"
+            }
+        ],
+        [
+            {
+                "date": "2022-04-10",
+                "name": "美容師1號",
+                "work": true,
+                "business_time": "10:00~14:00"
+            },
+            {
+                "date": "2022-04-10",
+                "name": "美容師2號",
+                "work": true,
+                "business_time": "14:00~18:00"
+            },
+            {
+                "date": "2022-04-10",
+                "name": "美容師3號",
+                "work": true,
+                "business_time": "14:00~18:00"
+            },
+            {
+                "date": "2022-04-10",
+                "name": "美容師4號",
+                "work": false,
+                "business_time": "18:00~22:00"
+            }
+        ],
+        [
+            {
+                "date": "2022-04-12",
+                "name": "美容師1號",
+                "work": false,
+                "business_time": "00:00~00:00"
+            },
+            {
+                "date": "2022-04-12",
+                "name": "美容師2號",
+                "work": false,
+                "business_time": "00:00~00:00"
+            },
+            {
+                "date": "2022-04-12",
+                "name": "美容師3號",
+                "work": true,
+                "business_time": "18:00~22:00"
+            },
+            {
+                "date": "2022-04-12",
+                "name": "美容師4號",
+                "work": false,
+                "business_time": "00:00~00:00"
+            }
+        ]
+    ]
+}

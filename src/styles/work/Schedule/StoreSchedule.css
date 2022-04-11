@@ -1,0 +1,640 @@
+.DateGroup {
+    padding-right: 1%;
+    padding-bottom: 1%;
+    padding-left: 1.5%;
+    margin-top: 3%;
+}
+
+.HolidayDates {
+    background: #f85756;
+    width: 100%;
+    color: white;
+    font-size: 14px !important;
+    border: none;
+    border-radius: 3px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: -8px;
+    left: 0;
+    padding-left: 3px;
+}
+
+.HolidayDates div {
+    display: none;
+}
+
+.BusinessStores {
+    font-size: 14px !important;
+    width: 100%;
+    padding: 3px 0;
+    display: flex;
+    padding-left: 3px;
+}
+
+.BusinessStores div {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: orange;
+    margin-right: 3px;
+}
+
+.DateHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 65px;
+}
+
+.SelectMonth {
+    z-index: 1;
+}
+
+.SelectMonth button {
+    background: #4f5d73;
+    border: none;
+    color: white;
+    height: 36px;
+    width: 48px;
+    text-align: center;
+    margin-top: 12px;
+    border-radius: 4px;
+}
+
+@media (max-width: 540px) {
+    .SelectMonth button {
+        font-size: 12px;
+    }
+}
+
+.SelectWeek {
+    display: none;
+    margin-left: -65px;
+}
+
+.SelectWeek button {
+    background: #4f5d73;
+    border: none;
+    color: white;
+    height: 35px;
+    text-align: center;
+    margin: 12px 0px;
+    z-index: 99;
+}
+
+.SelectWeek .todayButton {
+    margin-left: 10px;
+}
+
+.LastWeek {
+    background: #4f5d73;
+    border: none;
+    color: white;
+    height: 34px;
+    text-align: center;
+    border-radius: 3px 0px 0px 3px;
+    margin: 12px 0px;
+    min-width: 28px;
+    font-size: 8px;
+}
+
+.NextWeek {
+    background: #4f5d73;
+    border: none;
+    color: white;
+    height: 34px;
+    text-align: center;
+    border-radius: 0px 3px 3px 0px;
+    margin: 12px 0px;
+    min-width: 28px;
+    font-size: 8px;
+}
+
+.SelectWeek span {
+    display: flex;
+    margin-left: 28%;
+    position: absolute;
+}
+
+@media (max-width: 1280px) {
+    .SelectWeek span {
+        margin-left: 20%;
+    }
+}
+
+.SelectWeek span h1 {
+    color: #2f353a;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: default;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 540px) {
+    .SelectWeek span h1 {
+        width: auto;
+        margin-left: 10px;
+        margin-top: -45px;
+        font-size: 20px;
+    }
+}
+
+.lastMonth {
+    width: 28px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.ShowYearMonth {
+    margin: 0 10px;
+}
+
+.ShowMonthEdit span {
+    margin-right: 15px;
+}
+
+.ShowMonthEdit span button {
+    width: 60px;
+    height: 36px;
+    border: none;
+    margin: 12px 0px;
+}
+
+@media (max-width: 540px) {
+    .ShowMonthEdit span button {
+        font-size: 12px;
+        width: 50px;
+    }
+}
+
+.ShowMonthEditLeft {
+    border-radius: 4px 0px 0px 4px;
+}
+.ShowMonthEditRight {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.ShowMonthEditAction {
+    background-color: #53595f;
+    color: white;
+}
+
+.react-calendar__tile--now,
+.react-calendar__tile--now:hover {
+    background-color: #f3e8d9;
+    color: black;
+}
+
+.ShowMonthEditClose {
+    background-color: #d9e1e8;
+    color: white;
+}
+
+#calendarContainer .react-calendar__tile--active {
+    background-color: rgb(243, 234, 234, 0.5);
+    color: black;
+}
+
+#calendarContainer .react-calendar {
+    width: 100%;
+    border: none;
+}
+
+#calendarContainer .react-calendar .react-calendar__navigation {
+    display: flex;
+    height: 44px;
+    margin-bottom: 0em;
+    position: absolute;
+    margin-top: -60px;
+}
+
+#calendarContainer .react-calendar .react-calendar__navigation__prev2-button,
+#calendarContainer .react-calendar .react-calendar__navigation__next2-button {
+    display: none;
+}
+
+#calendarContainer .react-calendar .react-calendar__navigation .react-calendar__navigation__label {
+    position: absolute;
+    margin: 24px 0;
+    color: #2f353a;
+    font-size: 35px;
+    font-weight: bold;
+    width: 800px;
+    background-color: rgb(255, 249, 249, 0);
+    cursor: default;
+    text-align: center;
+    margin-left: 500px;
+    z-index: 0;
+}
+
+@media (max-width: 1280px) {
+    #calendarContainer .react-calendar .react-calendar__navigation .react-calendar__navigation__label {
+        width: 250px;
+    }
+}
+
+@media (max-width: 820px) {
+    #calendarContainer .react-calendar .react-calendar__navigation .react-calendar__navigation__label {
+        width: 200px;
+    }
+}
+
+@media (max-width: 540px) {
+    #calendarContainer .react-calendar .react-calendar__navigation .react-calendar__navigation__label {
+        width: 300px;
+        position: absolute;
+        margin-top: -35px;
+        font-size: 20px;
+    }
+}
+
+.react-calendar__navigation__label__labelText--from :hover {
+    cursor: default;
+}
+
+#calendarContainer .react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button {
+    background: #4f5d73;
+    border: none;
+    color: white;
+    height: 36px;
+    text-align: center;
+    border-radius: 3px 0px 0px 3px;
+    margin: 12px 0px;
+    min-width: 28px;
+}
+
+#calendarContainer .react-calendar .react-calendar__navigation .react-calendar__navigation__next-button {
+    background: #4f5d73;
+    border: none;
+    color: white;
+    height: 36px;
+    text-align: center;
+    border-radius: 0px 3px 3px 0px;
+    margin: 12px 0px;
+    min-width: 28px;
+}
+
+#calendarContainer .react-calendar__viewContainer {
+    border-top: 1px #c8ced3 solid;
+    border-radius: 4px;
+}
+
+#calendarContainer .react-calendar__viewContainer .react-calendar__month-view__days__day,
+#calendarContainer .react-calendar__viewContainer .react-calendar__month-view__weekdays__weekday {
+    border: 0.5px solid #c8ced3;
+    text-decoration: none;
+}
+
+#calendarContainer .react-calendar__viewContainer .react-calendar__month-view__weekdays__weekday abbr {
+    cursor: default;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+}
+
+@media (max-width: 540px) {
+    #calendarContainer .react-calendar__viewContainer .react-calendar__month-view__weekdays__weekday abbr {
+        font-size: 12px;
+    }
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+    color: #c8ced3;
+}
+
+.react-calendar__tile--active,
+.react-calendar__tile--now,
+element.style {
+    flex: 0 0 14.2857%;
+    overflow: hidden;
+}
+
+#calendarContainer .react-calendar__viewContainer .react-calendar__month-view__days__day {
+    text-align: left;
+    height: 80px;
+    line-height: 0;
+    display: flex;
+    justify-self: start;
+}
+
+#calendarContainer .react-calendar__viewContainer .react-calendar__month-view__days__day,
+#calendarContainer .react-calendar__viewContainer .react-calendar__month-view__weekdays__weekday {
+    border: 0.5px solid #c8ced3;
+}
+
+.react-calendar button:enabled:hover {
+    cursor: pointer;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--now:enabled:hover {
+    background: #e8eef1;
+    color: black;
+}
+
+#calendarContainer .react-calendar__viewContainer .react-calendar__month-view__days__day {
+    text-align: left;
+    height: 120px;
+    line-height: 0;
+    display: flex;
+    justify-self: start;
+    padding: 10px 0;
+}
+
+@media (max-width: 1280px) {
+    #calendarContainer .react-calendar__viewContainer .react-calendar__month-view__days__day {
+        height: 90px;
+    }
+}
+
+@media (max-width: 540px) {
+    #calendarContainer .react-calendar__viewContainer .react-calendar__month-view__days__day {
+        height: 60px;
+    }
+}
+
+#calendarContainer .react-calendar__viewContainer .react-calendar__tile abbr {
+    text-align: left;
+    margin-left: 2px;
+    width: 50px;
+    position: absolute;
+}
+
+@media (max-width: 540px) {
+    #calendarContainer .react-calendar__viewContainer .react-calendar__tile abbr {
+        font-size: 10px;
+    }
+}
+
+.DateList {
+    display: block;
+    padding-top: 7px;
+    width: 200%;
+    background-color: rgb(255, 249, 249, 0);
+    font-size: 10px !important;
+    margin-left: 4px;
+}
+
+.DateListHover {
+    position: absolute;
+    width: 180px;
+    background-color: white;
+    z-index: 1999;
+    padding-left: 5px;
+    border: 3px solid #4f5d73;
+    border-radius: 4px;
+    margin-left: 1px;
+    margin-top: 7px;
+    height: 100px;
+    overflow: scroll;
+}
+.DateListHover .HolidayDates {
+    opacity: 0;
+}
+
+.DateList::-webkit-scrollbar {
+    width: 1em;
+}
+
+#listContainer {
+    display: none;
+    width: 100%;
+}
+
+.ListGroup {
+    width: 100%;
+}
+
+.StoresListGroup {
+    width: 100%;
+    height: 39px;
+}
+
+.ListGroup nav {
+    width: 100%;
+    background-color: #f1f1f1;
+    border: #c8ced3 1px solid;
+    line-height: 39px;
+    height: 39px;
+    font-size: 14px;
+    color: #2f353a;
+    padding: 0 20px;
+    border-bottom: #c8ced3 0.5px solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.StoresListGroup h6 {
+    width: 100%;
+    height: 39px;
+    line-height: 39px;
+    font-size: 14px;
+    color: #2f353a;
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    background: none;
+}
+
+.CanGrab {
+    cursor: grab;
+}
+
+.PositionMon {
+    height: 39px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    border: #c8ced3 1px solid;
+    background: white;
+}
+
+.BusinessTime {
+    text-align: left;
+    width: 150px;
+    margin-left: -5px;
+    font-size: 14px;
+    left: 0;
+}
+
+@media (max-width: 540px) {
+    .BusinessTime {
+        margin-left: -10px;
+        font-size: 12px;
+        width: 135px;
+    }
+}
+
+.CompanyBusiness {
+    display: flex;
+}
+
+@media (max-width: 540px) {
+    .CompanyBusiness {
+        font-size: 10px;
+        overflow: hidden;
+        width: 240px;
+    }
+}
+
+.CompanyBusiness .periodIndex {
+    margin-top: 15px;
+    margin-right: 8px;
+}
+
+@media (max-width: 375px) {
+    .CompanyBusiness .periodIndex {
+        margin-right: 3px;
+    }
+}
+
+.CompanyBusiness p {
+    font-size: 14px;
+}
+
+.CompanyBusiness {
+    margin-left: -50px;
+}
+
+.ListGroupBtns {
+    position: absolute;
+    right: 0;
+}
+
+.ListGroupBtns div {
+    width: 50px;
+    height: 15px;
+    line-height: 19px;
+    margin: 0;
+    display: block;
+    font-size: 8px;
+    border: none;
+    background-color: rgb(255, 249, 249, 0);
+    cursor: pointer;
+}
+
+@media (max-width: 540px) {
+    .ListGroupBtns div svg {
+        position: absolute;
+        margin: 5px 0;
+        right: 0;
+    }
+}
+
+.ListGroupBtns div:hover {
+    color: rgb(146, 173, 127);
+    height: 17px;
+    line-height: 21px;
+}
+
+.BusinessTimeInstruction {
+    margin-top: 15px;
+    font-size: 14px;
+    display: flex;
+    color: #2f353a;
+}
+
+@media (max-width: 540px) {
+    .BusinessTimeInstruction {
+        padding-left: 5px;
+        display: block;
+    }
+}
+
+.BusinessTimeInstruction h6 {
+    margin-right: 20px;
+    display: flex;
+}
+
+.BusinessTimeInstruction h6 .periodIndex {
+    margin-top: 6px;
+    margin-right: 3px;
+}
+
+.periodMorning,
+.time10 {
+    background-color: #ffc107;
+}
+
+.periodNoonday,
+.time14 {
+    background-color: #f37d2e;
+}
+
+.periodNight,
+.time18 {
+    background-color: #00bfa5;
+}
+
+@keyframes Slowly {
+    0% {
+        transform: rotate(1deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(1.5deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+    100% {
+        font-weight: normal;
+    }
+}
+
+.SlowlyDisappear {
+    animation: Slowly 3.5s linear;
+    animation-delay: -2.5s;
+    background: radial-gradient(circle farthest-corner at left, rgb(245, 245, 227), rgb(252, 244, 244));
+    text-shadow: 2px 1px #d9eee7;
+    font-size: 15px !important;
+    font-weight: 2000;
+    border: none;
+    border-radius: 10px;
+    height: 38px !important;
+    line-height: 38px !important;
+    position: absolute !important;
+}
+
+.BusinessMachine {
+    overflow: hidden;
+}
+
+.BusinessMachines {
+    font-size: 12px;
+    width: 100px;
+    height: 20px;
+    display: flex;
+    line-height: 17px;
+    margin: 1.5px 0;
+    color: #2f353a;
+}
+
+.BusinessMachinestrue {
+    display: flex;
+}
+
+.BusinessMachinesfalse {
+    display: none;
+}
+
+@media (max-width: 540px) {
+    .BusinessMachines {
+        font-size: 8px;
+        height: 12px;
+        line-height: 12px;
+    }
+}
+
+.periodIndex {
+    border-radius: 50%;
+    position: relative;
+    width: 8px;
+    height: 8px;
+    color: rgb(255, 249, 249, 0);
+    margin-right: 2px;
+    border: none;
+    margin-top: 3px;
+}
