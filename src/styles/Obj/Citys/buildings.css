@@ -9,7 +9,7 @@
 }
 
 .building {
-    background: linear-gradient(to bottom, rgb(40, 138, 133), rgb(32, 136, 131), rgb(33, 116, 96));
+    background: linear-gradient(to bottom, rgb(40, 138, 133), rgb(32, 136, 131));
     bottom: 0;
     position: absolute;
     /* border: 0.2px solid rgb(174, 175, 164, 0.5); */
