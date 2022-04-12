@@ -384,15 +384,15 @@ element.style {
 
 .DateListHover {
     position: absolute;
-    width: 180px;
-    background-color: white;
+    width: 170px;
+    background-color: rgb(255, 255, 255);
     z-index: 1999;
     padding-left: 5px;
-    border: 3px solid #4f5d73;
+    border: 2px double #ec8b30;
     border-radius: 4px;
     margin-left: 1px;
-    margin-top: 7px;
-    height: 100px;
+    margin-top: -10px;
+    height: 120px;
     overflow: scroll;
 }
 .DateListHover .HolidayDates {

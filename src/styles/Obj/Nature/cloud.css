@@ -10,14 +10,28 @@
     z-index: 999;
 }
 
+.CloudShadow {
+    background: linear-gradient(to left,rgba(239, 241, 247, 0.9), rgb(226, 237, 250,0.9), rgba(244, 247, 253, 0.9) ,rgba(230, 230, 248, 0.8));
+    width: 70%;
+    height: 70%;
+    border-radius: 0px;
+    position: absolute;
+    top: 30%;
+    left: 23%;
+    z-index: 101;
+    clip-path: polygon(39% 39%, 26% 11%, 100% 21%, 97% 80%, 69% 100%, 40% 96%, 0 100%, 18% 64%);
+}
+
 .Cloud::after,
 .Cloud::before {
     content: "";
     position: absolute;
     background: white;
     border-radius: 50%;
-    z-index: -1;
+    z-index: 99;
     border: none;
+    top: -20px;
+    left: 25px;
 }
 
 /* =====第一種雲===== */

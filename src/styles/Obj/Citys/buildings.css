@@ -1,0 +1,258 @@
+.buildings {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    z-index: -99;
+    overflow: hidden;
+}
+
+.building {
+    background: linear-gradient(to bottom, rgb(40, 138, 133), rgb(32, 136, 131), rgb(33, 116, 96));
+    bottom: 0;
+    position: absolute;
+    /* border: 0.2px solid rgb(174, 175, 164, 0.5); */
+}
+
+.building::after {
+    content: "";
+    background-color: rgb(40, 138, 133);
+    position: absolute;
+}
+
+.building::before {
+    content: "";
+    background-color: rgb(40, 138, 133);
+    position: absolute;
+}
+
+.building1 {
+    height: 250px;
+    width: 50px;
+    left: 0;
+    clip-path: polygon(48% 14%, 50% 13%, 100% 31%, 100% 100%, 0 100%, 0 32%);
+}
+
+.building2 {
+    height: 240px;
+    width: 65px;
+    left: 45px;
+    border-radius: 3px 3px 0 0;
+}
+
+.building3 {
+    height: 260px;
+    width: 75px;
+    left: 85px;
+    z-index: -1;
+    border-radius: 3px 3px 0 0;
+}
+
+.building4 {
+    height: 220px;
+    width: 50px;
+    left: 145px;
+    border-radius: 3px 3px 0 0;
+}
+
+.building5 {
+    height: 240px;
+    width: 55px;
+    left: 185px;
+    border-radius: 3px 3px 0 0;
+}
+
+.building6 {
+    height: 290px;
+    width: 85px;
+    left: 220px;
+    border-radius: 3px 3px 0 0;
+    z-index: -1;
+}
+
+.building6::after {
+    width: 70px;
+    height: 25px;
+    top: -25px;
+    left: 8px;
+    border-radius: 5px 5px 0 0;
+}
+
+.building6::before {
+    width: 5px;
+    height: 100px;
+    top: -60px;
+    left: 40px;
+    border-radius: 5px 5px 0 0;
+}
+
+.building7 {
+    height: 220px;
+    width: 80px;
+    left: 300px;
+    border-radius: 3px 3px 0 0;
+}
+
+.building7::after {
+    width: 25px;
+    height: 15px;
+    top: -15px;
+    left: 40px;
+    border-radius: 6px 5px 0 0;
+    z-index: -1;
+}
+
+.building8 {
+    height: 275px;
+    width: 80px;
+    left: 370px;
+    clip-path: polygon(0 1%, 100% 15%, 100% 100%, 0 100%);
+    z-index: -1;
+}
+
+.building9 {
+    height: 230px;
+    width: 70px;
+    left: 430px;
+    clip-path: polygon(48% 14%, 50% 13%, 100% 31%, 100% 100%, 0 100%, 0 32%);
+}
+
+.building10 {
+    height: 240px;
+    width: 50px;
+    left: 480px;
+    border-radius: 3px 3px 0 0;
+    z-index: -1;
+}
+
+.building11 {
+    height: 220px;
+    width: 40px;
+    left: 525px;
+    border-radius: 3px 3px 0 0;
+    z-index: -2;
+}
+
+.building12 {
+    height: 180px;
+    width: 40px;
+    left: 565px;
+    border-radius: 3px 3px 0 0;
+}
+
+.building13 {
+    height: 235px;
+    width: 140px;
+    left: 600px;
+    border-radius: 3px 3px 0 0;
+    z-index: -1;
+}
+
+.building14 {
+    height: 190px;
+    width: 40px;
+    left: 730px;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 5% 100%);
+}
+
+.building15 {
+    height: 220px;
+    width: 140px;
+    left: 750px;
+    border-radius: 3px 3px 0 0;
+    z-index: -1;
+}
+
+.building16 {
+    height: 160px;
+    width: 65px;
+    left: 880px;
+    border-radius: 2px 2px 0 0;
+}
+
+.building17 {
+    height: 180px;
+    width: 80px;
+    left: 930px;
+    border-radius: 3px 3px 0 0;
+    z-index: -1;
+}
+
+.building18 {
+    height: 220px;
+    width: 85px;
+    left: 1000px;
+    border-radius: 5px 5px 0 0;
+    z-index: -2;
+}
+
+.building18::after {
+    width: 70px;
+    height: 25px;
+    top: -25px;
+    left: 8px;
+    border-radius: 5px 5px 0 0;
+}
+
+.building18::before {
+    width: 60px;
+    height: 15px;
+    top: -40px;
+    left: 13px;
+    border-radius: 5px 5px 0 0;
+}
+
+.building19 {
+    height: 210px;
+    width: 120px;
+    left: 1080px;
+    border-radius: 5px 5px 0 0;
+}
+
+.building19::after {
+    width: 4px;
+    height: 60px;
+    top: -60px;
+    left: 55px;
+    border-radius: 20px 20px 0 0;
+}
+
+.building19::before {
+    width: 10px;
+    height: 10px;
+    top: -30px;
+    left: 52px;
+    border-radius: 50%;
+}
+
+.building20 {
+    height: 350px;
+    width: 80px;
+    left: 1180px;
+    border-radius: 5px 5px 0 0;
+    z-index: -1;
+}
+
+.building20::after {
+    width: 98px;
+    height: 15px;
+    top: 3px;
+    left: -10px;
+    border-radius: 10px;
+    z-index: -2;
+}
+
+.building20::before {
+    width: 80px;
+    height: 60px;
+    top: -57px;
+    clip-path: polygon(48% 0, 49% 0, 100% 100%, 100% 100%, 0 100%, 0 100%);
+}
+
+.building21 {
+    height: 400px;
+    width: 80px;
+    left: 1250px;
+    clip-path: polygon(0 46%, 100% 40%, 100% 100%, 100% 100%, 0 100%, 0 100%);
+}
