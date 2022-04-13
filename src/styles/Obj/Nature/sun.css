@@ -1,3 +1,10 @@
+.SunBackground {
+    background:linear-gradient(to bottom, rgb(125, 179, 240), #e0e7e9, rgb(59, 68, 223));
+    opacity: 0.9;
+    overflow: hidden;
+}
+
+
 @keyframes Sunlight {
     25% {
         height: 252px;

@@ -24,7 +24,6 @@ export function WeatherEffect(time, index) {
 
     // 恢復正常無天氣狀態
     ReactDOM.render(<></>, WeatherLayer);
-    WeatherLayer.classList.remove("RainBackground");
     console.log(time)
     // ======  先決定有沒有太陽  =====
     if (time >= 18 || Rain > 1 || Sunny === 1) {   //不要太陽
@@ -32,19 +31,19 @@ export function WeatherEffect(time, index) {
         if (Rain > 1) {
             ReactDOM.render(<></>, WeatherLayer);
             CreatRains(0, 25);
-            CreatClouds(0, 10);
+            CreatClouds(0, 10, "Rain");
         }
         else if (Cloudyday > 1 || PartlyCloudy > 1) {
             ReactDOM.render(<></>, WeatherLayer);
-            CreatClouds(0, 10);
+            CreatClouds(0, 10, "Cloudy");
         }
         if (Fog < 2) { document.getElementsByClassName("wave")[0].style.display = "none"; }
         else if (Fog > 1) { document.getElementsByClassName("wave")[0].style.display = "block"; }
     }
     else if (time < 18 || Sunny > 1) {   //要太陽
-        console.log("要太陽")
+        console.warn("要太陽")
         ReactDOM.render(<><Sun /></>, document.getElementsByClassName("layer")[1]);
-        CreatClouds(0, 10);
+        CreatClouds(0, 10, "Sun");
         if (Fog < 2) { document.getElementsByClassName("wave")[0].style.display = "none"; }
         else if (Fog > 1) { document.getElementsByClassName("wave")[0].style.display = "block"; }
     }
@@ -52,7 +51,8 @@ export function WeatherEffect(time, index) {
 // 許多雨滴的下雨效果
 export function CreatRains(index, amount) {
     let WeatherLayer = document.getElementsByClassName("layer")[1];
-    WeatherLayer.classList.add("RainBackground");
+    let buildings = document.getElementsByClassName("buildings")[0];
+    buildings.classList.add("RainBackground");
     for (let x = index; x < amount; x++) {
         let drop = document.createElement("i");
         drop.className = "Rain";
@@ -69,9 +69,10 @@ export function CreatRains(index, amount) {
     }
 }
 // 製造出很多雲朵的效果
-export function CreatClouds(index, amount) {
+export function CreatClouds(index, amount, situation) {
     let WeatherLayer = document.getElementsByClassName("layer")[1];
-    WeatherLayer.classList.add("RainBackground");
+    let buildings = document.getElementsByClassName("buildings")[0];
+    buildings.className = "buildings " + situation + "Background";
     for (let x = index; x < amount; x++) {
         let clouds = document.createElement("span");
         clouds.className = "Clouds";
@@ -80,6 +81,6 @@ export function CreatClouds(index, amount) {
         clouds.style.top = (posY + 50) + "px";
         clouds.style.right = (posX + parseInt(Math.random() * 5)) + "%";
         WeatherLayer.appendChild(clouds);
-        ReactDOM.render(<><Cloud className={"Cloud" + x} /></>, document.getElementsByClassName("Clouds")[x]);
+        ReactDOM.render(<><Cloud className={"Cloud" + x + " Cloud" + situation} /></>, document.getElementsByClassName("Clouds")[x]);
     }
 }

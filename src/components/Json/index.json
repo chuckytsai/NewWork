@@ -24,6 +24,16 @@
             "name": "大樓",
             "Illustrate": "大樓",
             "url": "/citys"
+        },
+        {
+            "name": "時鐘",
+            "Illustrate": "時鐘",
+            "url": "/timer"
+        },
+        {
+            "name": "龍騰文化",
+            "Illustrate": "龍騰活動頁面",
+            "url": "/LongTone"
         }
     ]
 }

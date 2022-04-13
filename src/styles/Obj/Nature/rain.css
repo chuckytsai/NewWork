@@ -1,12 +1,56 @@
 .RainBackground {
-    background:linear-gradient(to bottom, rgb(147, 157, 211), rgb(119, 133, 212), rgb(5, 6, 26));
-    opacity: 0.5;
+    background: linear-gradient(to bottom, rgb(26, 35, 77), rgb(49, 55, 90), rgb(155, 158, 224));
+    opacity: 0.9;
     overflow: hidden;
+    /* animation: cloudThunder 18s cubic-bezier(0.1, 0.1, 0.45, 0.2) infinite; */
+}
+
+@keyframes cloudThunder {
+    10% {
+        background: rgb(95, 101, 122, 0.2);
+        opacity: 0.9;
+    }
+    20% {
+        background: rgb(95, 101, 122);
+        opacity: 0.8;
+    }
+    30% {
+        background: rgba(160, 153, 123, 0.7);
+        opacity: 0.5;
+    }
+    40% {
+        background: rgb(95, 101, 122, 0.9);
+        opacity: 0.9;
+    }
+    50% {
+        background: rgb(95, 101, 122, 0.8);
+        opacity: 0.9;
+    }
+    60% {
+        background: rgba(243, 241, 232, 0.5);
+        opacity: 0.9;
+    }
+    70% {
+        background: rgb(95, 101, 122, 0.5);
+        opacity: 0.9;
+    }
+    80% {
+        background: rgb(95, 101, 122);
+        opacity: 0.9;
+    }
+    90% {
+        background: rgb(255, 255, 177);
+        opacity: 0.5;
+    }
+    100% {
+        background: rgb(95, 101, 122);
+        opacity: 0.9;
+    }
 }
 
 .Rain {
     position: fixed;
-    height: 25px;
+    height: 20px;
     top: 0;
     background: linear-gradient(transparent, #fff);
     border-bottom-left-radius: 5px;
@@ -14,7 +58,6 @@
     animation: rainDrop 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
     z-index: 500;
 }
-
 
 .Rain:nth-child(3n + 1) {
     background: linear-gradient(transparent, rgb(233, 237, 238));
@@ -26,21 +69,21 @@
     background: linear-gradient(transparent, rgb(213, 220, 221));
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
     .Rain {
-        height: 5px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        background:white;
+        height: 8px;
+        border-bottom-left-radius: 1px;
+        border-bottom-right-radius: 1px;
+        background: white;
     }
     .Rain:nth-child(3n + 1) {
-        background:white;
+        background: white;
     }
     .Rain:nth-child(3n + 2) {
-        background:white;
+        background: white;
     }
     .Rain:nth-child(3n + 3) {
-        background:white;
+        background: white;
     }
 }
 

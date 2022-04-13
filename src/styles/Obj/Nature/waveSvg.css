@@ -5,6 +5,7 @@
     width: 100%;
     left: 0;
     bottom: 0;
+    display: none;
 }
 
 .waves {

@@ -10,18 +10,6 @@
     z-index: 999;
 }
 
-.CloudShadow {
-    background: linear-gradient(to left,rgba(239, 241, 247, 0.9), rgb(226, 237, 250,0.9), rgba(244, 247, 253, 0.9) ,rgba(230, 230, 248, 0.8));
-    width: 70%;
-    height: 70%;
-    border-radius: 0px;
-    position: absolute;
-    top: 30%;
-    left: 23%;
-    z-index: 101;
-    clip-path: polygon(39% 39%, 26% 11%, 100% 21%, 97% 80%, 69% 100%, 40% 96%, 0 100%, 18% 64%);
-}
-
 .Cloud::after,
 .Cloud::before {
     content: "";
@@ -32,6 +20,20 @@
     border: none;
     top: -20px;
     left: 25px;
+}
+
+.CloudyBackground {
+    background:linear-gradient(to bottom, rgb(76, 81, 134), #b4bbbd, rgb(100, 102, 134));
+}
+
+.CloudCloudy {
+    background: rgb(167, 190, 189);
+    border: 0px solid rgb(89, 93, 163);
+}
+
+.CloudCloudy::after,
+.CloudCloudy::before {
+    background: rgb(167, 190, 189);
 }
 
 /* =====第一種雲===== */
@@ -134,4 +136,15 @@
     100% {
         transform: translateX(-10px);
     }
+}
+
+.CloudRain{
+    background: rgb(67, 92, 116);
+    opacity: 0.9;
+    box-shadow: 6px 5px rgba(76, 84, 158, 0.2);
+}
+
+.CloudRain::after,
+.CloudRain::before {
+    background: rgb(67, 92, 116);
 }

@@ -1,17 +1,17 @@
 import ReactDOM from 'react-dom';
+import React from 'react';
 // import Parallax  from 'react-parallax';
 import dayjs from 'dayjs';
 import { WeatherApi } from "../../api/api";
 import { TaiwanCitys } from "./weatherEl";
 import { WhatDates, WeatherEffect } from "./weatherFunction";
 import { CloseLoanding } from "../../components/Loading";
+import { Citys } from '../../components/Citys';
 // 引入樣式
 import "../../styles/work/weather.css";
 import "../../styles/Obj/Nature/cloud.css";
 // 引入圖片
 import { SvgWave } from "../../components/Objs/Nature/waveSVG";
-import mountains from "../../images/png/el/101.png";
-
 let Today = new Date();  //今天日期
 let TimeFrom = dayjs(Today).format('YYYY-MM-DD') + "T06:00:00"; //開始時間
 let TimeTo = dayjs(Today).format('YYYY-MM-DD') + "T18:00:00"; //結束時間
@@ -97,7 +97,7 @@ export function Weather() {
     return <section className="WeatherBackground">
         <div className="WeatherContainer">
             <div id="scene">
-                <div className="layer"><img alt="" src={mountains} /></div>
+                <div className="layer"><Citys/></div>
                 <div className="layer"></div>
                 <div className="layer">
                     <div className="WeatherTexts">
@@ -110,18 +110,14 @@ export function Weather() {
                                 <button onClick={() => {
                                     if (dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD') !== dayjs(Today).format('YYYY-MM-DD')) {
                                         WhatDates("Y");
-                                        setTimeout(() => {
-                                            Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD'));
-                                        }, 500);
+                                        setTimeout(() => {Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD'));}, 500);
                                     }
                                 }}></button>
                                 <div className="dates WeatherText">{dayjs(Today).format("YYYY-MM-DD")}</div>
                                 <button className="NextDay" onClick={() => {
                                     if (dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD') !== dayjs(Today).add(6, 'day').format('YYYY-MM-DD')) {
                                         WhatDates("T");
-                                        setTimeout(() => {
-                                            Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD'));
-                                        }, 500);
+                                        setTimeout(() => {Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD'));}, 500);
                                     }
                                 }}></button>
                             </div>

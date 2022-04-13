@@ -7,7 +7,7 @@
 /* 文件說明區域 */
 .IllustrateGroup {
     width: 50%;
-    overflow: hidden;
+    overflow-y: scroll;
     border: 0.5px solid rgb(212, 195, 195);
 }
 
@@ -19,6 +19,7 @@
     justify-content: left;
     flex-wrap: wrap;
     padding: 1% 2%;
+    overflow: scroll;
 }
 
 .HoverImg {
