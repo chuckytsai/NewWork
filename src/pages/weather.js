@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import { WeatherApi } from "../../src/api/api"
+import { WeatherApi } from "../../src/api/api";
 
 // ===============  氣象紀錄 ==================
 // 晴時多雲 多雲時陰短暫雨 陰有雨
@@ -32,5 +32,6 @@ export function Weather() {
     setTimeout(() => {
         WeatherMap();
     }, 100);
-    return <div className="WeatherGroup">天氣預測</div>
+    return <div className="WeatherGroup"></div>
+
 }

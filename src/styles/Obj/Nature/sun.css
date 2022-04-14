@@ -1,5 +1,5 @@
 .SunBackground {
-    background:linear-gradient(to bottom, rgb(125, 179, 240), #e0e7e9, rgb(233, 233, 225));
+    background:linear-gradient(to bottom, rgb(90, 165, 252), #cdd8ef, rgb(240, 230, 225));
     opacity: 0.9;
     overflow: hidden;
 }
@@ -8,14 +8,14 @@
 @keyframes Sunlight {
     25% {
         height: 252px;
-        width: 252px;
     }
     50% {
+        margin-top: 1px;
         height: 253px;
-        width: 255px;
         background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow);
     }
     100% {
+        margin-top: 0px;
         height: 252px;
         background: linear-gradient(rgb(247, 99, 54), rgb(240, 99, 74), orange, yellow);
     }

@@ -1,50 +1,40 @@
 .RainBackground {
-    background: linear-gradient(to bottom, rgb(26, 35, 77), rgb(49, 55, 90), rgb(155, 158, 224));
+    background: linear-gradient(to bottom, rgb(2, 18, 85), rgb(61, 70, 121), rgb(155, 158, 224),rgb(114, 181, 197));
     opacity: 0.9;
     overflow: hidden;
-    /* animation: cloudThunder 18s cubic-bezier(0.1, 0.1, 0.45, 0.2) infinite; */
+    /* animation: cloudThunder 14s cubic-bezier(0.1, 0.1, 0.45, 0.2) infinite; */
 }
 
 @keyframes cloudThunder {
     10% {
-        background: rgb(95, 101, 122, 0.2);
-        opacity: 0.9;
+        background: rgb(33, 37, 48);
     }
     20% {
         background: rgb(95, 101, 122);
-        opacity: 0.8;
     }
     30% {
-        background: rgba(160, 153, 123, 0.7);
-        opacity: 0.5;
+        background: rgba(185, 193, 222, 0.9);
     }
     40% {
-        background: rgb(95, 101, 122, 0.9);
-        opacity: 0.9;
+        background: rgb(1, 6, 22);
     }
     50% {
-        background: rgb(95, 101, 122, 0.8);
-        opacity: 0.9;
+        background: rgba(185, 193, 222);
     }
     60% {
-        background: rgba(243, 241, 232, 0.5);
-        opacity: 0.9;
+        background: rgba(185, 193, 222);
     }
     70% {
-        background: rgb(95, 101, 122, 0.5);
-        opacity: 0.9;
+        background: rgb(57, 63, 84);
     }
     80% {
-        background: rgb(95, 101, 122);
-        opacity: 0.9;
+        background: rgba(185, 193, 222);
     }
     90% {
-        background: rgb(255, 255, 177);
-        opacity: 0.5;
+        background: linear-gradient(to bottom, rgb(243, 238, 163, 0.2),rgb(63, 63, 32), rgb(2, 3, 0));
     }
     100% {
-        background: rgb(95, 101, 122);
-        opacity: 0.9;
+        background: rgb(7, 10, 23);
     }
 }
 
@@ -52,8 +42,8 @@
     position: fixed;
     height: 20px;
     top: 0;
-    background: linear-gradient(transparent, #fff);
-    border-bottom-left-radius: 5px;
+    background: linear-gradient(transparent, rgb(241, 241, 249));
+    border-bottom-left-radius: 2px;
     border-bottom-right-radius: 5px;
     animation: rainDrop 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
     z-index: 500;
@@ -72,9 +62,9 @@
 @media (max-width: 768px) {
     .Rain {
         height: 8px;
+        background: white;
         border-bottom-left-radius: 1px;
         border-bottom-right-radius: 1px;
-        background: white;
     }
     .Rain:nth-child(3n + 1) {
         background: white;

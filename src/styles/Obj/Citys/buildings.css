@@ -12,7 +12,7 @@
     background: rgb(40, 138, 133);
     bottom: 0;
     position: absolute;
-    border: 0.5px solid rgb(91, 156, 152);
+    border: 0.5px solid rgb(40, 150, 150);
     /* border: 0.2px solid rgb(174, 175, 164, 0.5); */
 }
 
@@ -64,6 +64,7 @@
     bottom: 70px;
     left: 550px;
     padding-top: 10px;
+    border-radius: 20px 0 0 0;
 }
 
 .apartment5 {

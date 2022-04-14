@@ -4,9 +4,9 @@
 
 .Cloud {
     background: white;
-    border: 0.1px solid rgb(89, 93, 163);
+    border: 0.5px solid rgb(173, 176, 230);
     border-top: none;
-    border-radius: 40px;
+    border-radius: 30px;
     z-index: 999;
 }
 
@@ -23,17 +23,31 @@
 }
 
 .CloudyBackground {
-    background:linear-gradient(to bottom, rgb(76, 81, 134), #b4bbbd, rgb(100, 102, 134));
+    background: linear-gradient(to bottom, rgb(7, 53, 102), #34475e, rgb(243, 244, 252));
 }
 
 .CloudCloudy {
     background: rgb(167, 190, 189);
-    border: 0px solid rgb(89, 93, 163);
+    border: 0.5px solid rgb(89, 93, 163);
 }
 
 .CloudCloudy::after,
 .CloudCloudy::before {
     background: rgb(167, 190, 189);
+}
+
+.PartlyCloudyBackground {
+    background: linear-gradient(to bottom, rgb(54, 124, 203), #305f94, rgb(227, 228, 239));
+}
+
+.CloudPartlyCloudy {
+    background: rgb(224, 247, 249);
+    border: 0px solid rgb(89, 93, 163);
+}
+
+.CloudPartlyCloudy::after,
+.CloudPartlyCloudy::before {
+    background: rgb(224, 247, 249);
 }
 
 /* =====第一種雲===== */
@@ -44,7 +58,7 @@
     height: 60px;
     border-radius: 40px;
     animation: cloudFloating 5s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-    box-shadow: 5px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 .Cloud2::after,
@@ -73,7 +87,7 @@
     height: 45px;
     border-radius: 40px;
     animation: cloudFloating 7s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-    box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
+    box-shadow: 7px 5px rgba(0, 0, 0, 0.2);
 }
 
 .Cloud1::after,
@@ -138,10 +152,12 @@
     }
 }
 
-.CloudRain{
+.CloudRain {
     background: rgb(67, 92, 116);
     opacity: 0.9;
-    box-shadow: 6px 5px rgba(76, 84, 158, 0.2);
+    box-shadow: 3px 5px rgba(15, 21, 75, 0.2);
+    border: 0.5px solid rgb(68, 64, 114);
+    border-left: none;
 }
 
 .CloudRain::after,

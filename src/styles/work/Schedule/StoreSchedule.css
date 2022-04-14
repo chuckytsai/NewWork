@@ -181,23 +181,24 @@
 }
 
 .ShowMonthEditAction {
-    background-color: #53595f;
-    color: white;
+    background-color: rgb(227, 145, 51);
+    color: rgb(247, 239, 239);
 }
 
 .react-calendar__tile--now,
 .react-calendar__tile--now:hover {
-    background-color: #f3e8d9;
+    background-color: white;
     color: black;
 }
 
 .ShowMonthEditClose {
-    background-color: #d9e1e8;
-    color: white;
+    background-color: rgb(248, 241, 241);
+    color: rgb(227, 145, 51);
+    border: 1px double  rgb(227, 145, 51);
 }
 
 #calendarContainer .react-calendar__tile--active {
-    background-color: rgb(243, 234, 234, 0.5);
+    background-color: white;
     color: black;
 }
 
@@ -326,6 +327,7 @@ element.style {
 
 #calendarContainer .react-calendar__viewContainer .react-calendar__month-view__days__day,
 #calendarContainer .react-calendar__viewContainer .react-calendar__month-view__weekdays__weekday {
+    background-color: white;
     border: 0.5px solid #c8ced3;
 }
 
@@ -384,7 +386,7 @@ element.style {
 
 .DateListHover {
     position: absolute;
-    width: 170px;
+    width: 14%;
     background-color: rgb(255, 255, 255);
     z-index: 1999;
     padding-left: 5px;

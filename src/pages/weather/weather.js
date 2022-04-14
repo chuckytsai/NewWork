@@ -1,12 +1,12 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-// import Parallax  from 'react-parallax';
 import dayjs from 'dayjs';
 import { WeatherApi } from "../../api/api";
 import { TaiwanCitys } from "./weatherEl";
 import { WhatDates, WeatherEffect } from "./weatherFunction";
 import { CloseLoanding } from "../../components/Loading";
 import { Citys } from '../../components/Citys';
+import { NavSidebar } from "../../components/Nav";
 // 引入樣式
 import "../../styles/work/weather.css";
 import "../../styles/Obj/Nature/cloud.css";
@@ -94,43 +94,46 @@ let WeatherMap = async () => {
 
 export function Weather() {
     setTimeout(() => { Day12Hrs(Today); }, 100);
-    return <section className="WeatherBackground">
-        <div className="WeatherContainer">
-            <div id="scene">
-                <div className="layer"><Citys/></div>
-                <div className="layer"></div>
-                <div className="layer">
-                    <div className="WeatherTexts">
-                        <div>
-                            <div className="WeatherSelectGroups">
-                                <TaiwanCitys onChange={() => { WeatherMap(); }} />
-                                <select className="SelectArea" onChange={() => { WeatherMap(); }}></select>
+    return <>
+        <NavSidebar />
+        <section className="WeatherBackground">
+            <div className="WeatherContainer">
+                <div id="scene">
+                    <div className="layer"><Citys /></div>
+                    <div className="layer"></div>
+                    <div className="layer">
+                        <div className="WeatherTexts">
+                            <div>
+                                <div className="WeatherSelectGroups">
+                                    <TaiwanCitys onChange={() => { WeatherMap(); }} />
+                                    <select className="SelectArea" onChange={() => { WeatherMap(); }}></select>
+                                </div>
+                                <div className="WeatherSelectGroups">
+                                    <button onClick={() => {
+                                        if (dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD') !== dayjs(Today).format('YYYY-MM-DD')) {
+                                            WhatDates("Y");
+                                            setTimeout(() => { Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD')); }, 500);
+                                        }
+                                    }}></button>
+                                    <div className="dates WeatherText">{dayjs(Today).format("YYYY-MM-DD")}</div>
+                                    <button className="NextDay" onClick={() => {
+                                        if (dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD') !== dayjs(Today).add(6, 'day').format('YYYY-MM-DD')) {
+                                            WhatDates("T");
+                                            setTimeout(() => { Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD')); }, 500);
+                                        }
+                                    }}></button>
+                                </div>
+                                <div className="MaxAT WeatherText"></div>
+                                <div className="MinT WeatherText"></div>
+                                <div className="POP WeatherText"></div>
+                                <div className="Wx WeatherText"></div>
+                                <div className="UVI WeatherText"></div>
                             </div>
-                            <div className="WeatherSelectGroups">
-                                <button onClick={() => {
-                                    if (dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD') !== dayjs(Today).format('YYYY-MM-DD')) {
-                                        WhatDates("Y");
-                                        setTimeout(() => {Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD'));}, 500);
-                                    }
-                                }}></button>
-                                <div className="dates WeatherText">{dayjs(Today).format("YYYY-MM-DD")}</div>
-                                <button className="NextDay" onClick={() => {
-                                    if (dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD') !== dayjs(Today).add(6, 'day').format('YYYY-MM-DD')) {
-                                        WhatDates("T");
-                                        setTimeout(() => {Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD'));}, 500);
-                                    }
-                                }}></button>
-                            </div>
-                            <div className="MaxAT WeatherText"></div>
-                            <div className="MinT WeatherText"></div>
-                            <div className="POP WeatherText"></div>
-                            <div className="Wx WeatherText"></div>
-                            <div className="UVI WeatherText"></div>
                         </div>
                     </div>
                 </div>
+                <SvgWave />
             </div>
-            <SvgWave />
-        </div>
-    </section>
+        </section>
+    </>
 }

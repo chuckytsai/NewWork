@@ -65,7 +65,9 @@ export function CalenderGroup() {
         }
         function addClass() {
             if (DateList[this.index].lastElementChild !== null) {
-                DateList[this.index].classList.add("DateListHover");
+                if (DateList[this.index].lastElementChild.className === "BusinessMachine") {
+                    DateList[this.index].classList.add("DateListHover");
+                }
             }
         }
         function delClass() {
@@ -73,7 +75,7 @@ export function CalenderGroup() {
                 DateList[this.index].classList.remove("DateListHover");
             }
         }
-    }, 500)
+    }, 500);
     return <>
         <Calendar
             locale={("zh-TW")}

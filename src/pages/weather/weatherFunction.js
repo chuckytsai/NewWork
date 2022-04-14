@@ -30,12 +30,16 @@ export function WeatherEffect(time, index) {
         console.log("不要太陽")
         if (Rain > 1) {
             ReactDOM.render(<></>, WeatherLayer);
-            CreatRains(0, 25);
+            CreatRains(0, 50);
             CreatClouds(0, 10, "Rain");
         }
-        else if (Cloudyday > 1 || PartlyCloudy > 1) {
+        else if (Cloudyday > 1) {
             ReactDOM.render(<></>, WeatherLayer);
             CreatClouds(0, 10, "Cloudy");
+        }
+        else if (PartlyCloudy > 1) {
+            ReactDOM.render(<></>, WeatherLayer);
+            CreatClouds(0, 10, "PartlyCloudy");
         }
         if (Fog < 2) { document.getElementsByClassName("wave")[0].style.display = "none"; }
         else if (Fog > 1) { document.getElementsByClassName("wave")[0].style.display = "block"; }
