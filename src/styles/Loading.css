@@ -3,19 +3,28 @@
     width: 100%;
     height: 100%;
     top: 0;
-    background: rgb(248, 246, 246, 0.8);
+    background: #383125cc;
     z-index: 999999999999;
     border: none;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 15%;
     height: 150px;
+}
+
+@media (max-width: 375px) {
+    .container {
+        margin-top: 50%;
+        height: 120px;
+    }
 }
 
 .container .ring {
@@ -26,6 +35,7 @@
     border-radius: 50%;
     border: 4px solid transparent;
     border-top: 4px solid #20a8d8;
+    opacity: 0.9;
     /*---動畫片--- 命名: 動畫 線性無限 */
     animation: animate 4s linear infinite;
 }
@@ -47,10 +57,10 @@
     top: 18px;
     right: 18px;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background:#20a8d8;
-    box-shadow: 0 0 0 5px  #6bccf0, 0 0 0 10px #b3e6eb, 0 0 0 20px #d5f4f8, 0 0 20px #93e9c5, 0 0 50px #24ecff;
+    width: 10px;
+    height: 10px;
+    background: #20a8d8;
+    box-shadow: 0 0 0 5px #6bccf0, 0 0 0 10px #b3e6eb, 0 0 0 15px #82a4a8, 0 0 15px #93e9c5, 0 0 30px #24ecff;
 }
 
 .container .ring:nth-child(2) {
@@ -68,10 +78,10 @@
     bottom: 18px;
     left: 18px;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     background: #00bfa5;
-    box-shadow: 0 0 0 5px #80e499, 0 0 0 10px #c3f7f0, 0 0 0 20px #6bc71511, 0 0 20px #e5fcd0, 0 0 50px #00bfa5;
+    box-shadow: 0 0 0 5px #80e499, 0 0 0 10px #c3f7f0, 0 0 0 20px #6bc71511, 0 0 20px #e5fcd0, 0 0 30px #00bfa5;
 }
 @keyframes animate2 {
     0% {
@@ -98,17 +108,26 @@
     bottom: 18px;
     left: 18px;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     background: #db5841;
-    box-shadow: 0 0 0 5px #fa717133, 0 0 0 10px #ec707022, 0 0 0 20px #e41cf811, 0 0 20px #eca0a0, 0 0 50px #f56363;
+    box-shadow: 0 0 0 5px rgb(252, 177, 177), 0 0 0 10px rgb(230, 150, 150), 0 0 0 20px #daa78511, 0 0 20px #eca0a0,
+        0 0 30px #f56363;
 }
 
 .container p {
     position: absolute;
-    color: rgb(49, 35, 110);
+    color: rgb(245, 243, 253);
     font-size: 44px;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     margin-top: 390px;
     letter-spacing: 0.15em;
+}
+
+@media (max-width: 375px) {
+    .container p {
+        margin-top: 160px;
+        letter-spacing: 0.15em;
+        font-family: boder;
+    }
 }

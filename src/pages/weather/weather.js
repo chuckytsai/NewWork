@@ -7,6 +7,7 @@ import { WhatDates, WeatherEffect } from "./weatherFunction";
 import { CloseLoanding } from "../../components/Loading";
 import { Citys } from '../../components/Citys';
 import { NavSidebar } from "../../components/Nav";
+import { Sidebar } from "../../components/SidebarMenu";
 // 引入樣式
 import "../../styles/work/weather.css";
 import "../../styles/Obj/Nature/cloud.css";
@@ -96,6 +97,7 @@ export function Weather() {
     setTimeout(() => { Day12Hrs(Today); }, 100);
     return <>
         <NavSidebar />
+        <Sidebar/>
         <section className="WeatherBackground">
             <div className="WeatherContainer">
                 <div id="scene">

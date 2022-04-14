@@ -36,9 +36,15 @@
     margin: 10px 0;
     justify-content: center;
 }
+@media (max-width: 375px) {
+    .WeatherSelectGroups {
+        margin: 3px auto;
+        padding: 0 3px;
+    }
+}
 
 .WeatherSelectGroups select {
-    user-select: none; 
+    user-select: none;
     width: 100px;
     padding-left: 3px;
     font-size: 16px;
@@ -54,7 +60,8 @@
 
 @media (max-width: 375px) {
     .WeatherSelectGroups select {
-        margin: 0 25px;
+        margin: 0 10px;
+        width: 85px;
     }
 }
 
@@ -71,10 +78,11 @@
     justify-content: center;
     padding-top: 20px;
     padding-bottom: 10px;
-    background: linear-gradient(rgba(201, 234, 219, 0.9), rgba(190, 211, 209, 0.8), rgb(230, 239, 230));
+    background: linear-gradient(rgba(201, 234, 219, 0.9), rgba(190, 211, 209), rgb(230, 239, 230));
     border: none;
     border-radius: 20px;
     box-shadow: 1px 1.5px rgba(1, 22, 22, 0.3);
+    z-index: 10;
 }
 
 @media (max-width: 1280px) {
@@ -87,6 +95,8 @@
     .WeatherTexts {
         margin-top: 32%;
         width: 250px;
+        padding-top: 10px;
+        padding-bottom: 0px;
     }
 }
 
@@ -104,7 +114,7 @@
 
 @media (max-width: 375px) {
     .WeatherText {
-        font-size: 22px;
+        font-size: 19px;
     }
 }
 
@@ -125,7 +135,9 @@
 @media (max-width: 375px) {
     .WeatherText h6 {
         font-size: 16px;
-        padding-left: 15px;
+        padding-left: 35px;
+        height: 20px;
+        line-height: 20px;
     }
 }
 
@@ -144,7 +156,9 @@
 @media (max-width: 375px) {
     .WeatherText h5 {
         font-size: 14px;
-        margin-left: 110px;
+        margin-left: 145px;
+        height: 25px;
+        line-height: 25px;
     }
 }
 
@@ -158,6 +172,14 @@
     margin-top: 12px;
     border: none;
     clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 75% 100%, 50% 100%, 5% 50%);
+}
+
+@media (max-width: 375px) {
+    .WeatherTexts button {
+        width: 28px;
+        height: 26px;
+        margin-top: 14px;
+    }
 }
 
 .WeatherTexts button:hover {

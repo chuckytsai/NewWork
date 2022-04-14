@@ -45,8 +45,8 @@
     background: linear-gradient(transparent, rgb(241, 241, 249));
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 5px;
-    animation: rainDrop 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-    z-index: 500;
+    animation: rainDrop 4s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    z-index: 5;
 }
 
 .Rain:nth-child(3n + 1) {

@@ -31,15 +31,29 @@ export function WeatherEffect(time, index) {
         if (Rain > 1) {
             ReactDOM.render(<></>, WeatherLayer);
             CreatRains(0, 50);
-            CreatClouds(0, 10, "Rain");
+            if (document.body.clientWidth > 540) {
+                CreatClouds(0, 10, "Rain");
+            } else if (document.body.clientWidth <= 540) {
+                CreatClouds(0, 8, "Rain");
+            }
         }
         else if (Cloudyday > 1) {
             ReactDOM.render(<></>, WeatherLayer);
-            CreatClouds(0, 10, "Cloudy");
+            if (document.body.clientWidth > 540) {
+                CreatClouds(0, 10, "Cloudy");
+            }
+            else if (document.body.clientWidth <= 540) {
+                CreatClouds(0, 8, "Cloudy");
+            }
         }
         else if (PartlyCloudy > 1) {
             ReactDOM.render(<></>, WeatherLayer);
-            CreatClouds(0, 10, "PartlyCloudy");
+            if (document.body.clientWidth > 540) {
+                CreatClouds(0, 10, "PartlyCloudy");
+            }
+            else if (document.body.clientWidth <= 540) {
+                CreatClouds(0, 8, "PartlyCloudy");
+            }
         }
         if (Fog < 2) { document.getElementsByClassName("wave")[0].style.display = "none"; }
         else if (Fog > 1) { document.getElementsByClassName("wave")[0].style.display = "block"; }
@@ -82,8 +96,8 @@ export function CreatClouds(index, amount, situation) {
         clouds.className = "Clouds";
         let posX = x * amount;
         let posY = Math.floor(Math.random() * 150);
-        clouds.style.top = (posY + 50) + "px";
-        clouds.style.right = (posX + parseInt(Math.random() * 5)) + "%";
+        clouds.style.top = (posY + 25) + "px";
+        clouds.style.left = (posX + parseInt(Math.random() * 5)) + "%";
         WeatherLayer.appendChild(clouds);
         ReactDOM.render(<><Cloud className={"Cloud" + x + " Cloud" + situation} /></>, document.getElementsByClassName("Clouds")[x]);
     }

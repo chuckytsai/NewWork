@@ -10,7 +10,7 @@ import { CloseLoanding } from "../components/Loading";
 export function Index() {
   setTimeout(() => {
     CloseLoanding();
-  }, 100);
+  }, 10);
   return <div className="IndexPanel">
     <div className="IllustrateGroup">
       <h6>{""}</h6>

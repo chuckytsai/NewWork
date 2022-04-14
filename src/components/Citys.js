@@ -1,11 +1,6 @@
 import "../styles/Obj/Citys/buildings.css";
-import { CloseLoanding } from "./Loading";
-
 
 export function Citys() {
-    setTimeout(() => {
-        CloseLoanding();
-    }, 20);
     return <div className="buildings">
         <div className="building building1"></div>
         <div className="building building2"></div>

@@ -1,0 +1,73 @@
+.navigation {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background-color: rgb(234, 114, 28);
+    transition: 0.5s;
+    overflow-y: scroll;
+    z-index: 9999999;
+    left: -60px;
+    border-right: 0.5px solid white;
+}
+
+.navigation::-webkit-scrollbar {
+    display: none;
+}
+
+.navigation ul {
+    padding-left: 8px;
+}
+
+.activeNav {
+    width: 150px;
+    left: 0;
+    overflow: hidden;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigationLi a {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: rgb(245, 241, 236);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navigationLi a:hover {
+    background-color: rgb(245, 236, 244);
+    width: 98%;
+    color: rgb(234, 114, 28);
+    padding-left: 4px;
+    border-radius: 5px 0 0 5px;
+    opacity: 0.9;
+    font-weight: 700;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+}
+
+.IndexIcon {
+    position: relative;
+    line-height: 50px;
+    width: 100%;
+}

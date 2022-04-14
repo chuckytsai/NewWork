@@ -21,11 +21,6 @@
             "url": "/memorandum"
         },
         {
-            "name": "大樓",
-            "Illustrate": "大樓",
-            "url": "/citys"
-        },
-        {
             "name": "時鐘",
             "Illustrate": "時鐘",
             "url": "/timer"
