@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 // ==========引用web 的js=============
 import { Index } from "./pages";
-import { Weather } from "./pages/weather/Weather";
+import { Weather } from "./pages/weather/weather";
 import { Memorandum } from "./pages/memorandum/Memorandum";
 import { Timer } from "./pages/timer/Timer";
 import { Loanding } from "./components/Loading";
