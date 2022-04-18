@@ -1,0 +1,182 @@
+.TimmerGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2f363e;
+    position: absolute;
+    width: 100%;
+}
+
+.TimerContainer {
+    position: relative;
+    background-color: #2f363e;
+    border-radius: 20px;
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
+    box-shadow: 5px 25px 70px rgba(0, 0, 0, 0.75), 10px 50px 70px rgba(0, 0, 0, 0.25),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    position: relative;
+    width: 370px;
+    height: 370px;
+    background-color: #2f363e;
+    border-radius: 50%;
+    box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+        inset 5px 5px 20px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.clock::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #2f363e;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.clock span {
+    position: absolute;
+    inset: 10px;
+    color: #fff;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock span b {
+    font-size: 1.5em;
+    opacity: 0.25;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+    user-select: none;
+}
+
+.circle {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.circle i {
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background-color: var(--clr);
+    opacity: 0.75;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+}
+
+.circle:nth-child(1) i {
+    width: 2px;
+}
+
+.circle:nth-child(2) i {
+    width: 4px;
+}
+
+.circle2 {
+    width: 220px;
+    height: 220px;
+    z-index: 9;
+}
+
+.circle3 {
+    width: 170px;
+    height: 170px;
+    z-index: 8;
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    top: -8.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--clr);
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+
+.Timer1 {
+    --i: 1;
+}
+
+.Timer2 {
+    --i: 2;
+}
+
+.Timer3 {
+    --i: 3;
+}
+
+.Timer4 {
+    --i: 4;
+}
+
+.Timer5 {
+    --i: 5;
+}
+
+.Timer6 {
+    --i: 6;
+}
+
+.Timer7 {
+    --i: 7;
+}
+
+.Timer8 {
+    --i: 8;
+}
+
+.Timer9 {
+    --i: 9;
+}
+
+.Timer10 {
+    --i: 10;
+}
+
+.Timer11 {
+    --i: 11;
+}
+
+#sc {
+    --clr: #04fc43;
+}
+
+#mn {
+    --clr: #fee800;
+}
+
+#hr {
+    --clr: #ff2972;
+}
+
+.TimeText {
+    margin-left: 120px;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 800;
+    width: 200px;
+    word-wrap: break-word;
+}
