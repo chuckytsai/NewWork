@@ -8,9 +8,24 @@
     z-index: 9999999;
     left: -60px;
     border-right: 0.5px solid white;
+    top: 0;
 }
 
-.navigation::-webkit-scrollbar {
+.IllustrateSidebar {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background-color: rgb(234, 114, 28);
+    transition: 0.5s;
+    overflow-y: scroll;
+    z-index: 9999999;
+    left: -60px;
+    border-right: 0.5px solid white;
+    top: 0;
+}
+
+.navigation::-webkit-scrollbar,
+.IllustrateSidebar::-webkit-scrollbar {
     display: none;
 }
 

@@ -16,12 +16,14 @@ export function Index() {
       <h6>{""}</h6>
     </div>
     <div className="WellcomeMyHome">
-      {Data.map((item, i) => (
-        <a href={item["url"]} className="HoverImg" key={i}
-          onMouseMove={() => { IllustrateGroupEffect("Move", item["name"]); }}
-          onMouseLeave={() => { IllustrateGroupEffect("Leave", ""); }}
-        >{item["name"]}</a>
-      ))}
+      <div className="HoverImgs">
+        {Data.map((item, i) => (
+          <a href={item["url"]} className="HoverImg" key={i}
+            onMouseMove={() => { IllustrateGroupEffect("Move", item["name"]); }}
+            onMouseLeave={() => { IllustrateGroupEffect("Leave", ""); }}
+          >{item["name"]}</a>
+        ))}
+      </div>
     </div>
   </div>
 }

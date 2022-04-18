@@ -1,11 +1,17 @@
-import { ToggleMenu } from "./SidebarMenu";
+import { ToggleMenu, CloseMenu } from "./SidebarMenu";
 import "../styles/Nav.css";
 
 export function NavSidebar() {
     return <nav className="NavSidebar">
         <div className="NavButtons">
-            <button>說明</button>
-            <button onClick={() => {ToggleMenu();}}>選單</button>
+            <button onClick={() => {
+                CloseMenu("Illustrate");
+                ToggleMenu("Illustrate");
+            }}>說明</button>
+            <button onClick={() => {
+                CloseMenu("menu");
+                ToggleMenu("menu");
+            }}>選單</button>
         </div>
     </nav>
 }

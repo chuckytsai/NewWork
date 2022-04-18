@@ -58,6 +58,7 @@ export function CalenderGroup() {
         let DateList = document.getElementsByClassName("DateList");
         if (document.body.clientWidth > 820) {
             for (let x = 0; x < DateList.length; x++) {
+                
                 DateList[x].index = x;
                 DateList[x].addEventListener("mousemove", addClass, false);
                 DateList[x].addEventListener("mouseout", delClass, false);
@@ -102,7 +103,7 @@ export function HolidayEvents() {
         for (let y = 0; y < DataCompent.length; y++) {
             if (parseInt(DataCompent[y].date.split("-")[1]) === (ThisMonth + 1)) {
                 ReactDOM.render(<HolidayDates text={DataCompent[y].name} />,
-                    document.getElementsByClassName("DateList")[parseInt(DataCompent[y].date.split("-")[2]) - 1])
+                DateList[parseInt(DataCompent[y].date.split("-")[2]) - 1])
             }
         }
     }

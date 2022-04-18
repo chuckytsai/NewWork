@@ -28,7 +28,7 @@
 
 .CloudCloudy {
     background: rgb(167, 190, 189);
-    border: 0.5px solid rgb(89, 93, 163);
+    border: none;
 }
 
 .CloudCloudy::after,
@@ -42,7 +42,7 @@
 
 .CloudPartlyCloudy {
     background: rgb(224, 247, 249);
-    border: 0px solid rgb(89, 93, 163);
+    border: none;
 }
 
 .CloudPartlyCloudy::after,

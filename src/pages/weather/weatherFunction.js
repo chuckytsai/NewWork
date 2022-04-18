@@ -34,7 +34,7 @@ export function WeatherEffect(time, index) {
             if (document.body.clientWidth > 540) {
                 CreatClouds(0, 10, "Rain");
             } else if (document.body.clientWidth <= 540) {
-                CreatClouds(0, 8, "Rain");
+                CreatClouds(0, 7, "Rain");
             }
         }
         else if (Cloudyday > 1) {
@@ -43,7 +43,7 @@ export function WeatherEffect(time, index) {
                 CreatClouds(0, 10, "Cloudy");
             }
             else if (document.body.clientWidth <= 540) {
-                CreatClouds(0, 8, "Cloudy");
+                CreatClouds(0, 7, "Cloudy");
             }
         }
         else if (PartlyCloudy > 1) {
@@ -52,7 +52,7 @@ export function WeatherEffect(time, index) {
                 CreatClouds(0, 10, "PartlyCloudy");
             }
             else if (document.body.clientWidth <= 540) {
-                CreatClouds(0, 8, "PartlyCloudy");
+                CreatClouds(0, 7, "PartlyCloudy");
             }
         }
         if (Fog < 2) { document.getElementsByClassName("wave")[0].style.display = "none"; }
@@ -94,7 +94,7 @@ export function CreatClouds(index, amount, situation) {
     for (let x = index; x < amount; x++) {
         let clouds = document.createElement("span");
         clouds.className = "Clouds";
-        let posX = x * amount;
+        let posX = x * 10;
         let posY = Math.floor(Math.random() * 150);
         clouds.style.top = (posY + 25) + "px";
         clouds.style.left = (posX + parseInt(Math.random() * 5)) + "%";

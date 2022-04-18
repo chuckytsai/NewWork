@@ -3,8 +3,8 @@ import dayjs from 'dayjs';
 // 引入元件
 import { StoreEvent } from "./CalendarGroup";
 // import { ChickCheckdate } from "../../../components/Function/SwalWarn";
-import { CallLoanding, CloseLoanding } from "../../components/Loading";
-import { ListGroup, GetWeekListAPI } from "./ListGroup";
+import { CallLoanding } from "../../components/Loading";
+import { ListGroup} from "./ListGroup";
 import { OpenCloseElements } from "./ScheduleEl";
 
 

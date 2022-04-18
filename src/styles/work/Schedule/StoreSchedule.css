@@ -1,8 +1,9 @@
 .DateGroup {
-    padding-right: 1%;
-    padding-bottom: 1%;
-    padding-left: 1.5%;
-    margin-top: 3%;
+    width: 100%;
+}
+
+#calendarContainer, #listContainer {
+    padding: 0 15px;
 }
 
 .HolidayDates {
@@ -43,6 +44,7 @@
     display: flex;
     justify-content: space-between;
     padding-left: 65px;
+    padding-top: 70px;
 }
 
 .SelectMonth {
@@ -58,6 +60,7 @@
     text-align: center;
     margin-top: 12px;
     border-radius: 4px;
+    margin-left: 16px;
 }
 
 @media (max-width: 540px) {
@@ -68,7 +71,7 @@
 
 .SelectWeek {
     display: none;
-    margin-left: -65px;
+    margin-left: -50px;
 }
 
 .SelectWeek button {
@@ -194,7 +197,7 @@
 .ShowMonthEditClose {
     background-color: rgb(248, 241, 241);
     color: rgb(227, 145, 51);
-    border: 1px double  rgb(227, 145, 51);
+    border: 1px double rgb(227, 145, 51);
 }
 
 #calendarContainer .react-calendar__tile--active {
@@ -263,7 +266,7 @@
     background: #4f5d73;
     border: none;
     color: white;
-    height: 36px;
+    height: 35px;
     text-align: center;
     border-radius: 3px 0px 0px 3px;
     margin: 12px 0px;
@@ -274,7 +277,7 @@
     background: #4f5d73;
     border: none;
     color: white;
-    height: 36px;
+    height: 35px;
     text-align: center;
     border-radius: 0px 3px 3px 0px;
     margin: 12px 0px;

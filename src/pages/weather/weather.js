@@ -7,7 +7,7 @@ import { WhatDates, WeatherEffect } from "./weatherFunction";
 import { CloseLoanding } from "../../components/Loading";
 import { Citys } from '../../components/Citys';
 import { NavSidebar } from "../../components/Nav";
-import { Sidebar } from "../../components/SidebarMenu";
+import { Sidebar, IllustrateSidebar, CloseMenu } from "../../components/SidebarMenu";
 // 引入樣式
 import "../../styles/work/weather.css";
 import "../../styles/Obj/Nature/cloud.css";
@@ -97,8 +97,9 @@ export function Weather() {
     setTimeout(() => { Day12Hrs(Today); }, 100);
     return <>
         <NavSidebar />
-        <Sidebar/>
-        <section className="WeatherBackground">
+        <Sidebar />
+        <IllustrateSidebar />
+        <section className="WeatherBackground" onClick={() => { CloseMenu("all"); }}>
             <div className="WeatherContainer">
                 <div id="scene">
                     <div className="layer"><Citys /></div>
@@ -114,14 +115,14 @@ export function Weather() {
                                     <button onClick={() => {
                                         if (dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD') !== dayjs(Today).format('YYYY-MM-DD')) {
                                             WhatDates("Y");
-                                            setTimeout(() => { Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD')); }, 500);
+                                            setTimeout(() => { Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD')); }, 50);
                                         }
                                     }}></button>
                                     <div className="dates WeatherText">{dayjs(Today).format("YYYY-MM-DD")}</div>
                                     <button className="NextDay" onClick={() => {
                                         if (dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD') !== dayjs(Today).add(6, 'day').format('YYYY-MM-DD')) {
                                             WhatDates("T");
-                                            setTimeout(() => { Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD')); }, 500);
+                                            setTimeout(() => { Day12Hrs(dayjs(document.getElementsByClassName("dates")[0].textContent).format('YYYY-MM-DD')); }, 50);
                                         }
                                     }}></button>
                                 </div>

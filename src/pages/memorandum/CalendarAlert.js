@@ -23,7 +23,7 @@ export function CalendarAlerts(props) {
     }, 200)
     return <div className="CalendarAlertGroup">
         <nav>
-            <h6>店家排程</h6>
+            <h6>當日班表</h6>
             <button onClick={() => {
                 ReactDOM.render(<div />, document.getElementsByClassName("calendarAlert")[0]);
                 document.getElementsByClassName("calendarAlert")[0].classList.remove("calendarAlertbBackground");
@@ -57,8 +57,8 @@ export function CalendarAlerts(props) {
             <div className="SelectBusinessGroup">
                 <div className="SelectBusinessCombo">
                     <div className="SelectBusinessTitle">
-                        <p>可營業店家</p>
-                        <p>當日營業店家</p>
+                        <p>當日上班員工</p>
+                        <p>當日休假員工</p>
                     </div>
                     <ListApp />
                 </div>
