@@ -32,7 +32,6 @@ export function Memorandum() {
                 <div className="SelectWeek">
                     <button className="LastWeek">{"<"}</button>
                     <button className="NextWeek">{">"}</button>
-                    <button className="todayButton NormalBtn">今日</button>
                     <span>
                         <h1 className="WeekStart">
                         </h1>
@@ -41,9 +40,7 @@ export function Memorandum() {
                         </h1>
                     </span>
                 </div>
-                <div className="SelectMonth">
-                    <a href="/stores-schedule/index/"><button className="todayButton NormalBtn">今日</button></a>
-                </div>
+                <div className="SelectMonth"></div>
                 <div className="ShowMonthEdit">
                     <span>
                         <a href="/memorandum/date">

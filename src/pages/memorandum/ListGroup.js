@@ -112,26 +112,18 @@ export function ListGroup() {
     setTimeout(() => {
         let LastWeek = document.getElementsByClassName("LastWeek")[0];
         let NextWeek = document.getElementsByClassName("NextWeek")[0];
-        let todayButton = document.getElementsByClassName("todayButton")[0];
         LastWeek.addEventListener("click", SelectLastWeek, false);
         NextWeek.addEventListener("click", SelectNextWeek, false);
-        todayButton.addEventListener("click", TodaysWeek, false);
         function SelectLastWeek() {
             CallLoanding();
             SelectOtherWeek(dayjs(document.getElementsByClassName("WeekStart")[0].textContent).subtract(6, 'day').format('YYYY/MM/DD'));
             getWeekListsAPI();
-        }
+        };
         function SelectNextWeek() {
             CallLoanding();
             SelectOtherWeek(dayjs(document.getElementsByClassName("WeekEnd")[0].textContent).add(6, 'day').format('YYYY/MM/DD'));
             getWeekListsAPI();
-        }
-        function TodaysWeek() {
-            let Today = new Date();
-            CallLoanding();
-            SelectOtherWeek(new Date(Today.getFullYear(), Today.getMonth(), Today.getDate()));
-            getWeekListsAPI();
-        }
+        };
     }, 300)
     GetWeekListAPI();
     return <span className="ListGroupList"></span>

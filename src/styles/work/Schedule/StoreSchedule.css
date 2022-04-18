@@ -2,20 +2,22 @@
     width: 100%;
 }
 
-#calendarContainer, #listContainer {
+#calendarContainer,
+#listContainer {
     padding: 0 15px;
 }
 
 .HolidayDates {
-    background: #f85756;
-    width: 100%;
+    background: #ff0101;
+    width: 95%;
     color: white;
     font-size: 14px !important;
     border: none;
     border-radius: 3px;
-    height: 20px;
-    line-height: 20px;
-    margin-left: -8px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 2px;
+    margin-top: 5px;
     left: 0;
     padding-left: 3px;
 }
@@ -52,15 +54,13 @@
 }
 
 .SelectMonth button {
-    background: #4f5d73;
+    background: rgb(227, 145, 51);
     border: none;
-    color: white;
-    height: 36px;
-    width: 48px;
+    color: rgb(247, 239, 239);
+    height: 35px;
+    min-width: 28px;
     text-align: center;
     margin-top: 12px;
-    border-radius: 4px;
-    margin-left: 16px;
 }
 
 @media (max-width: 540px) {
@@ -69,34 +69,31 @@
     }
 }
 
+.AlertNextWeek{
+    border-radius: 0px 3px 3px 0px;
+}
+
+.AlertLastWeek{
+    border-radius: 3px 0px 0px 3px;
+}
+
+
 .SelectWeek {
     display: none;
     margin-left: -50px;
 }
 
 .SelectWeek button {
-    background: #4f5d73;
+    background: rgb(227, 145, 51);
     border: none;
-    color: white;
+    color: rgb(247, 239, 239);
     height: 35px;
     text-align: center;
     margin: 12px 0px;
     z-index: 99;
 }
 
-.SelectWeek .todayButton {
-    margin-left: 10px;
-    background: #4f5d73;
-    border: none;
-    color: white;
-    height: 36px;
-    width: 48px;
-    text-align: center;
-    border-radius: 4px;
-}
-
 .LastWeek {
-    background: #4f5d73;
     border: none;
     color: white;
     height: 34px;
@@ -108,7 +105,6 @@
 }
 
 .NextWeek {
-    background: #4f5d73;
     border: none;
     color: white;
     height: 34px;
@@ -123,6 +119,7 @@
     display: flex;
     margin-left: 28%;
     position: absolute;
+    user-select: none;
 }
 
 @media (max-width: 1280px) {
@@ -167,6 +164,7 @@
     height: 36px;
     border: none;
     margin: 12px 0px;
+    
 }
 
 @media (max-width: 540px) {
@@ -174,6 +172,15 @@
         font-size: 12px;
         width: 50px;
     }
+}
+
+.CalendarAlertSearch{
+    background: rgb(227, 145, 51); 
+    color: rgb(247, 239, 239);
+    height: 35px;
+    width: 48px;
+    border: none;
+    border-radius: 3px;
 }
 
 .ShowMonthEditLeft {
@@ -263,9 +270,9 @@
 }
 
 #calendarContainer .react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button {
-    background: #4f5d73;
+    background: rgb(227, 145, 51);
     border: none;
-    color: white;
+    color: rgb(247, 239, 239);
     height: 35px;
     text-align: center;
     border-radius: 3px 0px 0px 3px;
@@ -274,9 +281,9 @@
 }
 
 #calendarContainer .react-calendar .react-calendar__navigation .react-calendar__navigation__next-button {
-    background: #4f5d73;
+    background: rgb(227, 145, 51);
     border: none;
-    color: white;
+    color: rgb(247, 239, 239);
     height: 35px;
     text-align: center;
     border-radius: 0px 3px 3px 0px;
@@ -297,10 +304,12 @@
 
 #calendarContainer .react-calendar__viewContainer .react-calendar__month-view__weekdays__weekday abbr {
     cursor: default;
-    font-size: 14px;
+    font-size: 1.2em;
     text-decoration: none;
-    font-weight: normal;
-    color: black;
+    font-weight: 500;
+    color: rgba(112, 68, 7, 0.8);
+    user-select: none;
+    text-shadow: 0.01em 0.1em rgb(227, 145, 51);
 }
 
 @media (max-width: 540px) {
@@ -425,15 +434,18 @@ element.style {
 .ListGroup nav {
     width: 100%;
     background-color: #f1f1f1;
+    user-select: none;
+    text-shadow: 0.03em 0.03em rgb(227, 145, 51);
     border: #c8ced3 1px solid;
     line-height: 39px;
     height: 39px;
     font-size: 14px;
-    color: #2f353a;
+    color: rgba(112, 68, 7, 0.8);
     padding: 0 20px;
     border-bottom: #c8ced3 0.5px solid;
     display: flex;
     justify-content: space-between;
+    font-weight: 400;
 }
 
 .StoresListGroup h6 {
@@ -467,6 +479,7 @@ element.style {
     margin-left: -5px;
     font-size: 14px;
     left: 0;
+    user-select: none;
 }
 
 @media (max-width: 540px) {
@@ -506,6 +519,7 @@ element.style {
 
 .CompanyBusiness {
     margin-left: -50px;
+    user-select: none;
 }
 
 .ListGroupBtns {

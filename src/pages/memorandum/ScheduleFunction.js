@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 import { StoreEvent } from "./CalendarGroup";
 // import { ChickCheckdate } from "../../../components/Function/SwalWarn";
 import { CallLoanding } from "../../components/Loading";
-import { ListGroup} from "./ListGroup";
+import { ListGroup } from "./ListGroup";
 import { OpenCloseElements } from "./ScheduleEl";
 
 
@@ -43,9 +43,9 @@ export function ShowMonthEdit(i) {
         ReactDOM.render(
             <><ListGroup />
                 <footer className="BusinessTimeInstruction">
-                    <h6><div className="periodIndex periodMorning"></div>{"早餐時段: 00:00 ~ 10:30"}</h6>
-                    <h6><div className="periodIndex periodNoonday"></div>{"午餐時段: 10:30 ~ 15:30"}</h6>
-                    <h6><div className="periodIndex periodNight"></div>{"晚餐時段: 15:30 ~ 00:00"}</h6>
+                    <h6><div className="periodIndex periodMorning"></div>{"早上時段: 10:00 ~ 14:00"}</h6>
+                    <h6><div className="periodIndex periodNoonday"></div>{"下午時段: 14:00 ~ 18:00"}</h6>
+                    <h6><div className="periodIndex periodNight"></div>{"晚上時段: 18:00 ~ 22:00"}</h6>
                 </footer></>,
             document.getElementById("listContainer")
         );
@@ -121,7 +121,6 @@ export function ItemDown(i) {
 // 調整物件順序
 export function ReadJustItems(i, TimeValue, time) {
     let targetKeyArrey = [];
-    let ChooseDates = document.getElementsByClassName("ChooseDates")[i].textContent;
     let Group = document.getElementsByClassName("Group" + i);
     let ListBtnValue = document.getElementsByClassName("ListBtn" + i);
     for (let x = 0; x < Group.length; x++) {
