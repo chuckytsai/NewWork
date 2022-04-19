@@ -130,7 +130,7 @@ let StoreEvents = async () => {
         let BusinessMachine = document.getElementsByClassName("BusinessMachine");
         for (let x = 0; x < BusinessMachine.length; x++) {
             let BusinessMachines = ScheduleList[x].map((item, y) => (
-                <div className={"BusinessMachines" + " BusinessMachines" + item.work} key={y}>
+                <div className={"BusinessMachines BusinessMachines" + item.work} key={y}>
                     <div className={"periodIndex  time" + item.business_time.split(":")[0]}>O </div>
                     {item.name}
                 </div>

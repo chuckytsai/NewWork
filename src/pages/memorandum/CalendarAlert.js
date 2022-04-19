@@ -80,12 +80,12 @@ export function CalendarAlerts(props) {
 
                                 for (let x = 0; x < ScheduleList.length; x++) {
                                     if (ScheduleList[x][0]["date"] === document.getElementsByClassName("WhatDateText")[0].textContent) {
-                     
+
                                     }
                                 }
                                 setTimeout(() => { ChangeStore = false; }, 500);
                             } else {
-                                // Close(); 
+                                Close();
                             }
                         }}>確認</button>
                 </footer>
