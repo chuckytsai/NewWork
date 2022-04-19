@@ -7,7 +7,6 @@
     position: absolute;
     width: 100%;
     overflow: hidden;
-    z-index: -5;
 }
 
 .TimerContainer {
@@ -35,7 +34,7 @@
     position: relative;
     width: 350px;
     height: 350px;
-    background: linear-gradient(rgb(235, 138, 222), rgb(201, 121, 204), rgb(187, 156, 177), rgb(133, 137, 172));
+    background: linear-gradient(rgb(226, 47, 202), rgb(197, 145, 199), rgb(187, 156, 177), rgb(133, 137, 172));
     border-radius: 50%;
     box-shadow: 10px 40px 20px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5),
         inset 5px 5px 15px rgba(0, 0, 0, 0.2), inset -5px -5px 10px rgba(0, 0, 0, 0.75);
@@ -169,8 +168,8 @@
 }
 
 .circle2 {
-    width: 260px;
-    height: 260px;
+    width: 245px;
+    height: 245px;
     z-index: 9;
 }
 

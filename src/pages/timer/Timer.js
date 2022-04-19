@@ -27,7 +27,7 @@ export function Timer() {
   });
   setTimeout(() => {
     CloseLoanding();
-  }, 1500);
+  }, 1000);
   let getTime = () => {
     let timeID = setInterval(() => {
       setCurrentTime(Date.now());
@@ -36,7 +36,7 @@ export function Timer() {
       clearInterval(timeID);
     }, 1000);
   };
-  return <>
+  return <div>
     <NavSidebar />
     <Sidebar />
     <IllustrateSidebar />
@@ -82,7 +82,7 @@ export function Timer() {
           <span className="Flower20"><img alt="" src={RoseShape4} /></span>
           <span className="Flower21"><img alt="" src={grass} /></span>
           <span className="Flower22"><img alt="" src={grass} /></span>
-          <span className="Flower23"><img alt="" src={RoseShape7} /></span>
+          <span className="Flower23"><img alt="" src={RoseShape5} /></span>
           <span className="Flower24"><img alt="" src={grass} /></span>
         </div>
 
@@ -95,5 +95,5 @@ export function Timer() {
       <img className="key" alt="" src={key} />
       <div className="TimeText">{time}</div>
     </div>
-  </>;
+  </div>;
 }
