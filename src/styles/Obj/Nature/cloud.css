@@ -24,42 +24,35 @@
   z-index: 10;
 }
 
-.CloudS2 {
+.Cloud .CloudS2 {
   transform: scale(1.6, 1.6);
   margin: 0 0 4px 13px;
   z-index: 9;
 }
 
-.CloudS3 {
+.Cloud .CloudS3 {
   transform: scale(2.4, 2.4);
   margin: 0 0 9px 32px;
   z-index: 8;
 }
 
-.CloudS4 {
+.Cloud .CloudS4 {
   transform: scale(1.3, 1.3);
   margin: 0 0 2px 50px;
   z-index: 7;
 }
-/* .Cloud::after,
-.Cloud::before {
-  content: "";
-  position: absolute;
-  background: white;
-  border-radius: 50%;
-  z-index: 99;
-  border: none;
-  top: -20px;
-  left: 25px;
-} */
 
 .CloudyBackground {
   background: linear-gradient(to bottom, rgb(7, 53, 102), #34475e, rgb(243, 244, 252));
 }
 
 .CloudCloudy {
-  /* background: rgb(167, 190, 189); */
-  border: none;
+  background: #a89fcf;
+}
+
+.CloudCloudy div{
+  background: #d3cfe5;
+  box-shadow: inset -2px -3px 0 0 #a39bd3;
 }
 
 .PartlyCloudyBackground {
@@ -103,26 +96,22 @@
 
 @keyframes cloudFloating {
   0% {
-    left:-100%;
+    left: -80%;
     /* transform: translateX(-10px); */
   }
   50% {
     /* transform: translateX(0px); */
   }
   100% {
-    left: 100%;
+    left: 30%;
   }
 }
 
 .CloudRain {
-  /* background: rgb(67, 92, 116);
-  opacity: 0.9;
-  box-shadow: 3px 5px rgba(15, 21, 75, 0.2);
-  border: 0.5px solid rgb(68, 64, 114);
-  border-left: none; */
+  background: rgb(137, 142, 179);
 }
 
-/* .CloudRain::after,
-.CloudRain::before {
-  background: rgb(67, 92, 116);
-} */
+.CloudRain div{
+  background: rgb(137, 142, 179);
+  box-shadow: inset -2px -3px 0 0 #8580a3;
+}
