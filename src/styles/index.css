@@ -47,3 +47,9 @@
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     user-select: none;
 }
+
+#swal2-html-container{
+    color: rgb(2, 2, 26);
+    font-weight: 500;
+    font-size: 22px;
+}

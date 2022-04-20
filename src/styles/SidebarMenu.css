@@ -15,7 +15,7 @@
     position: fixed;
     width: 60px;
     height: 100%;
-    background-color: rgb(234, 114, 28);
+
     transition: 0.5s;
     overflow-y: scroll;
     z-index: 9999999;
@@ -34,9 +34,10 @@
 }
 
 .activeNav {
-    width: 150px;
+    width: 180px;
     left: 0;
     overflow: hidden;
+    background-color: rgb(234, 114, 28);
 }
 
 .navigation ul {

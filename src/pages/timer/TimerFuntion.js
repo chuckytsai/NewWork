@@ -31,6 +31,7 @@ export function HelloTimeUp(time) {
     if (Events !== "Invalid Date" && Events.length > 0) {
         if (Events <= time) {
             TimmerGroup.classList.add("TimeUpGroup");
+            DropItems.classList.add("TimeUpGroup")
             DropItems.classList.add("DropSoon");
         }
     } else if (Events === "Invalid Date" || Events.length === 0) {

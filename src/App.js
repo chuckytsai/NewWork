@@ -5,6 +5,7 @@ import { Index } from "./pages";
 import { Weather } from "./pages/weather/Weather";
 import { Memorandum } from "./pages/memorandum/Memorandum";
 import { Timer } from "./pages/timer/Timer";
+import { Questionnaire } from "./pages/questionnaire/Questionnaire";
 import { Loanding } from "./components/Loading";
 
 //===========引用樣式==============
@@ -24,8 +25,11 @@ function App() {
       {/* ===============排班表(月曆+清單)================= */}
       <Router path="/Memorandum"><Memorandum /></Router>
 
-      {/* ===============鬧鐘================= */}
-      <Router path="/Timer"><Timer /></Router>
+      {/* ===============夢遊仙境鬧鐘================= */}
+      <Router path="/timer"><Timer /></Router>
+
+      {/* ===============問卷調查表================= */}
+      <Router path="/questionnaire"><Questionnaire /></Router>
 
     </Switch>
   </Router>
