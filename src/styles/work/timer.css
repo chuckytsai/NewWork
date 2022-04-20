@@ -2,11 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #8208c92f;
+    height: 100vh;
+    background:linear-gradient(to bottom, rgb(235, 123, 216), hsl(1, 56%, 83%), rgb(250, 235, 243));
     position: absolute;
     width: 100%;
     overflow: hidden;
+    top: 0;
+    opacity: 1;
 }
 
 .TimerContainer {
@@ -34,7 +36,7 @@
     position: relative;
     width: 350px;
     height: 350px;
-    background: linear-gradient(rgb(226, 47, 202), rgb(197, 145, 199), rgb(187, 156, 177), rgb(133, 137, 172));
+    background: linear-gradient(rgb(226, 47, 202), rgb(197, 145, 199), rgb(159, 173, 177), rgb(128, 132, 161));
     border-radius: 50%;
     box-shadow: 10px 40px 20px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5),
         inset 5px 5px 15px rgba(0, 0, 0, 0.2), inset -5px -5px 10px rgba(0, 0, 0, 0.75);
@@ -96,19 +98,18 @@
     transform: rotate(calc(30deg * var(--i)));
 }
 
-@media (max-width:375px) {
+@media (max-width: 375px) {
     .clcokRing span {
         inset: 5px;
     }
 }
-
 
 .clcokRing span img {
     width: 40px;
     user-select: none;
 }
 
-@media (max-width:375px) {
+@media (max-width: 375px) {
     .clcokRing span img {
         width: 35px;
     }
@@ -287,13 +288,14 @@
     width: 210px;
     word-wrap: break-word;
     z-index: 99;
-    background-color: rgba(230, 232, 247, 0.8);
+    background-color: rgba(230, 232, 247, 0.5);
     border-radius: 15px;
+    position: absolute;
 }
 
-@media (max-width:375px) {
+@media (max-width: 375px) {
     .TimeText {
-        margin-left: 20px; 
+        margin-left: 20px;
         font-size: 22px;
     }
 }
@@ -406,6 +408,7 @@
     z-index: -77;
     overflow: hidden;
 }
+
 .DropItems img {
     position: absolute;
     z-index: -1;
@@ -447,4 +450,91 @@
     100% {
         transform: translateY(calc(100vh)) rotate(-145deg);
     }
+}
+
+.TimeUp {
+    position: relative;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.TimeUp input {
+    width: 170px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    color: #860d62;
+    z-index: 10;
+}
+
+.ant-picker-time-panel-column::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f0e4ec;
+}
+
+.TimeUpGroup {
+    animation: TimeUpGroups 10s infinite;
+}
+
+@keyframes TimeUpGroups {
+    0% {
+        background: linear-gradient(rgb(245, 94, 89), rgb(95, 71, 6));
+        opacity: 0.6;
+    }
+    50% {
+        background: linear-gradient(rgb(95, 71, 6), rgb(194, 63, 2));
+        opacity: 0.55;
+    }
+    100% {
+        background: linear-gradient(rgb(194, 63, 2), rgb(245, 94, 89));
+        opacity: 0.7;
+    }
+}
+
+.TimeUpGroup .TimerContainer .clock {
+    animation: clockCrazy 6s cubic-bezier(0.1, 0.1, 0.45, 0.2) infinite;
+}
+
+@keyframes clockCrazy {
+    0% {
+        transform: rotateZ(45deg);
+        opacity: 0.7;
+        font-size: 30px;
+    }
+    25% {
+        transform: rotateZ(90deg);
+        opacity: 1;
+        font-size: 12px;
+    }
+    50% {
+        transform: rotateZ(225deg);
+        opacity: 0.8;
+        font-size: 20px;
+    }
+    100% {
+        transform: rotateZ(45deg);
+        opacity: 0.9;
+        font-size: 30px;
+    }
+}
+
+.TimeUpGroup .clcokRing {
+    animation: TimerTrunInfinite 4s cubic-bezier(0.1, 0.1, 0.45, 0.2) infinite;
+}
+
+.DropSoon .teapot {
+    animation: DropItems 2s cubic-bezier(0.1, 0.1, 0.45, 0.2) infinite;
+}
+
+.DropSoon .bottle {
+    animation: DropItems 3s cubic-bezier(0.6, 0.1, 0.45, 0.2) infinite;
+}
+
+.DropSoon .Chair {
+    animation: DropItems 5s cubic-bezier(0.5, 0.1, 0.45, 0.2) infinite;
+}
+
+.DropSoon .key {
+    animation: DropItems 2s cubic-bezier(0.8, 0.1, 0.45, 0.2) infinite;
 }

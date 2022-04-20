@@ -6,7 +6,7 @@
             "url": "/weather"
         },
         {
-            "name": "月曆備忘錄",
+            "name": "排程表(月曆&清單)",
             "Illustrate": "原為原本公司",
             "url": "/memorandum/date"
         },
@@ -16,12 +16,12 @@
             "url": "/memorandum"
         },
         {
-            "name": "時鐘",
+            "name": "夢遊仙境鬧鐘",
             "Illustrate": "時鐘",
             "url": "/timer"
         },
         {
-            "name": "龍騰文化",
+            "name": "龍騰文化形象一頁網站",
             "Illustrate": "龍騰活動頁面",
             "url": "/LongTone"
         }

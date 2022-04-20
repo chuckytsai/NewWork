@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { TimePicker } from 'antd';
 import "../../styles/work/timer.css";
 // 引入元件
 import { NavSidebar } from "../../components/Nav";
 import { Sidebar, IllustrateSidebar, CloseMenu } from "../../components/SidebarMenu"
 import { CloseLoanding } from "../../components/Loading";
-import { FormatData } from "./TimerFuntion";
+import { FormatData ,EventsTime } from "./TimerFuntion";
 // 引入圖片
 import RoseShape from "../../images/svg/RoseShape.svg";
 import RoseShape2 from "../../images/svg/RoseShape2.svg";
@@ -85,7 +86,6 @@ export function Timer() {
           <span className="Flower23"><img alt="" src={RoseShape5} /></span>
           <span className="Flower24"><img alt="" src={grass} /></span>
         </div>
-
       </div>
     </div>
     <div className="DropItems">
@@ -93,7 +93,12 @@ export function Timer() {
       <img className="bottle" alt="" src={bottle} />
       <img className="Chair" alt="" src={Chair} />
       <img className="key" alt="" src={key} />
-      <div className="TimeText">{time}</div>
+    </div>
+    <div className="TimeText">{time}
+      <div className="TimeUp">
+        <TimePicker use12Hours placeholder="提醒事項 1" onChange={EventsTime} />
+      </div>
     </div>
   </div>;
 }
+
