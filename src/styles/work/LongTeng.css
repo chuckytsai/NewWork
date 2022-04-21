@@ -111,10 +111,10 @@
 }
 
 .RainbowBall {
-    width: 550px;
+    width: 700px;
     position: absolute;
     top: 150px;
-    left: 150px;
+    left: -50px;
     animation: RainbowBallRun 60s cubic-bezier(0.1, 0.1, 0.45, 0.2) infinite;
 }
 
