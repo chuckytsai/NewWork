@@ -57,9 +57,23 @@
     padding-right: 38%;
 }
 
+@media (max-width: 540px) {
+    .CalendarAlertGroup .SelectMonth {
+        padding-right: 28%;
+        padding-left: 8px;
+    }
+}
+
 .SelectMonth h1 {
     margin-top: 6px;
     margin-bottom: 3px;
+}
+
+@media (max-width: 540px) {
+    .SelectMonth h1 {
+        margin-top: 16px;
+        font-size: 22px;
+    }
 }
 
 .SelectBusinessGroup {
@@ -117,7 +131,7 @@
 
 @media (max-width: 540px) {
     .CalendarAlertBusinessTime {
-        padding: 0 5px;
+       display: contents;
     }
 }
 

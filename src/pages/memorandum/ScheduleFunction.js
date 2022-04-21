@@ -2,7 +2,6 @@ import ReactDOM from "react-dom";
 import dayjs from 'dayjs';
 // 引入元件
 import { StoreEvent } from "./CalendarGroup";
-// import { ChickCheckdate } from "../../../components/Function/SwalWarn";
 import { CallLoanding } from "../../components/Loading";
 import { ListGroup } from "./ListGroup";
 import { OpenCloseElements } from "./ScheduleEl";
@@ -82,9 +81,6 @@ export function ItemTop(i) {
                 }, 200);
             }
         }
-        else {
-            // ChickCheckdate("無法變更到其他時段", " ", "error");
-        }
     }
 }
 // 清單物件往下移
@@ -113,9 +109,6 @@ export function ItemDown(i) {
                 }, 200);
             }
         }
-        else {
-            // ChickCheckdate("無法變更到其他時段", " ", "error");
-        }
     }
 }
 // 調整物件順序
@@ -131,22 +124,6 @@ export function ReadJustItems(i, TimeValue, time) {
             });
         }
     }
-    // let StoreNameListAPI = async () => {
-    //     try {
-    //         let UpItem = await StoreDeleteApi({
-    //             "machine_id": document.getElementsByClassName("storeToMachine")[0].value,
-    //             "date": dayjs(ChooseDates).format('YYYY-MM-DD'),
-    //             "machine_business_time_id": TimeValue,
-    //             "storeDetailList": targetKeyArrey
-    //         });
-    //         return UpItem;
-    //     } catch (error) {
-    //         ChickCheckdate("更新狀態異常", error, "error");
-    //         GetWeekListAPI();
-    //         setTimeout(() => { GetWeekListAPI(); }, 500);
-    //     }
-    // }
-    // StoreNameListAPI();
 }
 // 顯示這個月  鎖住其他月份
 export function ThisMonthOnly() {

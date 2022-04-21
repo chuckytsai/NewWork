@@ -11,7 +11,7 @@
     background: #ff0101;
     width: 95%;
     color: white;
-    font-size: 14px !important;
+    font-size: 14px;
     border: none;
     border-radius: 3px;
     height: 25px;
@@ -20,6 +20,16 @@
     margin-top: 5px;
     left: 0;
     padding-left: 3px;
+}
+
+@media (max-width: 540px) {
+    .HolidayDates {
+        height: 15px;
+        line-height: 15px;
+        font-size: 8px;
+        margin-left: -1px;
+        padding-left: 1px;
+    }
 }
 
 .HolidayDates div {
@@ -69,14 +79,13 @@
     }
 }
 
-.AlertNextWeek{
+.AlertNextWeek {
     border-radius: 0px 3px 3px 0px;
 }
 
-.AlertLastWeek{
+.AlertLastWeek {
     border-radius: 3px 0px 0px 3px;
 }
-
 
 .SelectWeek {
     display: none;
@@ -128,6 +137,13 @@
     }
 }
 
+@media (max-width: 375px) {
+    .SelectWeek span {
+        margin-left: 70px;
+        margin-top: 67px;
+    }
+}
+
 .SelectWeek span h1 {
     color: #2f353a;
     font-size: 35px;
@@ -140,9 +156,14 @@
 @media (max-width: 540px) {
     .SelectWeek span h1 {
         width: auto;
-        margin-left: 10px;
         margin-top: -45px;
         font-size: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .SelectWeek span h1 {
+        font-size: 12px;
     }
 }
 
@@ -164,7 +185,6 @@
     height: 36px;
     border: none;
     margin: 12px 0px;
-    
 }
 
 @media (max-width: 540px) {
@@ -174,8 +194,8 @@
     }
 }
 
-.CalendarAlertSearch{
-    background: rgb(227, 145, 51); 
+.CalendarAlertSearch {
+    background: rgb(227, 145, 51);
     color: rgb(247, 239, 239);
     height: 35px;
     width: 48px;
@@ -265,6 +285,15 @@
     }
 }
 
+@media (max-width: 375px) {
+    #calendarContainer .react-calendar .react-calendar__navigation .react-calendar__navigation__label {
+        width: 300px;
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}
+
 .react-calendar__navigation__label__labelText--from :hover {
     cursor: default;
 }
@@ -341,6 +370,13 @@ element.style {
 #calendarContainer .react-calendar__viewContainer .react-calendar__month-view__weekdays__weekday {
     background-color: white;
     border: 0.5px solid #c8ced3;
+}
+
+@media (max-width: 540px) {
+    #calendarContainer .react-calendar__viewContainer .react-calendar__month-view__days__day,
+    #calendarContainer .react-calendar__viewContainer .react-calendar__month-view__weekdays__weekday {
+        font-size: 8px;
+    }
 }
 
 .react-calendar button:enabled:hover {
@@ -420,6 +456,7 @@ element.style {
 #listContainer {
     display: none;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 .ListGroup {
@@ -527,6 +564,12 @@ element.style {
     right: 0;
 }
 
+@media (max-width: 375px) {
+    .ListGroupBtns {
+        margin-right: 15px;
+    }
+}
+
 .ListGroupBtns div {
     width: 50px;
     height: 15px;
@@ -555,7 +598,6 @@ element.style {
 
 .BusinessTimeInstruction {
     margin-top: 15px;
-    font-size: 14px;
     display: flex;
     color: #2f353a;
 }
@@ -572,9 +614,21 @@ element.style {
     display: flex;
 }
 
+@media (max-width: 540px) {
+    .BusinessTimeInstruction h6 {
+        font-size: 10px;
+    }
+}
+
 .BusinessTimeInstruction h6 .periodIndex {
     margin-top: 6px;
     margin-right: 3px;
+}
+
+@media (max-width: 540px) {
+    .BusinessTimeInstruction h6 .periodIndex {
+        margin-top: 1px;
+    }
 }
 
 .periodMorning,
@@ -663,4 +717,13 @@ element.style {
     margin-right: 2px;
     border: none;
     margin-top: 3px;
+}
+
+@media (max-width: 540px) {
+    .periodIndex {
+        width: 5px;
+        height: 5px;
+        margin-top: 4px;
+        margin-right: 1px;
+    }
 }

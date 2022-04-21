@@ -9,7 +9,7 @@ import { CalenderGroup, ChangeMonths, StoreEvent } from "./CalendarGroup";
 import { NavSidebar } from "../../components/Nav";
 import { Sidebar, IllustrateSidebar, CloseMenu } from "../../components/SidebarMenu";
 // 引入樣式
-import "../../styles/work/Schedule/StoreSchedule.css"
+import "../../styles/work/Schedule/StoreSchedule.css";
 
 // ========月曆========
 export function Memorandum() {

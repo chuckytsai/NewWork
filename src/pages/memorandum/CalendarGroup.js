@@ -83,7 +83,7 @@ export function CalenderGroup() {
             defaultView={("month")}
             formatDay={(locale, date) => dayjs(date).format('D')}
             formatMonthYear={(locale, date) => dayjs(date).format('YYYY - MM')}
-            formatShortWeekday={(locale, date) => dayjs(date).format('dddd')}
+            formatShortWeekday={(locale, date) => dayjs(date).format('ddd')}
             calendarType={("US")}
             tileContent={tileContent}
             onClickDay={(value, event) => onSelect(value)}
