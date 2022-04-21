@@ -26,6 +26,7 @@ let pastAn = [];
 let yetAn = [];
 // 結算回答幾個問題了
 export function TotalAn() {
+    localStorage.setItem("TEST","TEST");
     TopicState = true;
     let FakeBtn = document.getElementsByClassName("FakeBtn");
     let CloorPercentageChild = document.getElementsByClassName("CloorPercentageChild")[0];

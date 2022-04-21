@@ -35,6 +35,7 @@ export function IllustrateGroupEffect(index, item) {
   else if (index === "Leave") { IllustrateGroup.lastElementChild.textContent = item; }
 }
 
-window.onbeforeunload = function () {
-  alert("關閉")
+window.onbeforeunload = function() {
+ // localStorage.removeItem("Questionnaire");
+ // localStorage.removeItem("Memorandum");
 };

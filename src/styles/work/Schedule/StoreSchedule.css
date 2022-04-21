@@ -716,7 +716,7 @@ element.style {
     color: rgb(255, 249, 249, 0);
     margin-right: 2px;
     border: none;
-    margin-top: 3px;
+    margin-top: 6px;
 }
 
 @media (max-width: 540px) {

@@ -6,7 +6,6 @@ import dayjs from 'dayjs';
 import { onSelect } from "./ListGroup";
 import { ThisMonthOnly } from "./ScheduleFunction";
 import { CallLoanding, CloseLoanding } from "../../components/Loading";
-// import { ChickCheckdate } from "../../../components/Function/SwalWarn";
 import { DataCompent } from "../../components/Json/Holiday.json";
 // 引入Json檔案
 import { ScheduleList } from "../../components/Json/ScheduleList.json";

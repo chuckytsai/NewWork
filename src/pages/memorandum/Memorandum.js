@@ -23,6 +23,7 @@ export function Memorandum() {
         if (window.location.href.split("/")[4] === "date") { ShowMonthEdit("left"); }
         else if (window.location.href.split("/")[4] === "list") { ShowMonthEdit("right"); }
     }, 300);
+
     return <>
         <NavSidebar />
         <Sidebar />
@@ -57,6 +58,4 @@ export function Memorandum() {
             <div id="listContainer"></div>
         </div>
     </>
-
-
 }

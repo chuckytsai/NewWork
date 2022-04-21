@@ -5,11 +5,14 @@ import { NavSidebar } from "../../components/Nav";
 import { Sidebar, IllustrateSidebar, CloseMenu } from "../../components/SidebarMenu"
 import { CloseLoanding } from "../../components/Loading";
 import { CheckboxValue, TotalQuestion } from "./QuestionnaireFunction";
+import { ScrollBody, MoveScol } from "../../components/WindowScroll";
 // 引入Json 
 import { Data } from "../../components/Json/Questionnaire.json";
 
 export function Questionnaire() {
+    ScrollBody("Questionnaire");
     setTimeout(() => {
+        MoveScol(localStorage.Questionnaire);
         CloseLoanding();
     }, 100);
     return <>
