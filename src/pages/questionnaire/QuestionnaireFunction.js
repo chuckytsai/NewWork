@@ -1,4 +1,5 @@
 import { ChickCheckdate } from "../../components/Objs/SwalWarn";
+let TopicState = true; //題目依序狀態鎖定
 
 let point = 0; //預設每個問題都是0分
 // 選擇勾選答案後 取消其他選項勾選
@@ -25,6 +26,7 @@ let pastAn = [];
 let yetAn = [];
 // 結算回答幾個問題了
 export function TotalAn() {
+    TopicState = true;
     let FakeBtn = document.getElementsByClassName("FakeBtn");
     let CloorPercentageChild = document.getElementsByClassName("CloorPercentageChild")[0];
     pastAn = [];
@@ -40,6 +42,7 @@ export function TotalAn() {
     CloorPercentageChild.style.height = ((pastAn.length / FakeBtn.length) * 100) + "%";
 }
 
+
 // 結算分數
 export function TotalQuestion() {
     let FakeBtn = document.getElementsByClassName("FakeBtn");
@@ -47,7 +50,10 @@ export function TotalQuestion() {
         let whitch = String();
         for (let x = 0; x < FakeBtn.length; x++) {
             if (FakeBtn[x].value.length === 0 || FakeBtn[x].value === "null") {
-                whitch = x + 1;
+                if (TopicState === true) {
+                    whitch = x + 1;
+                    TopicState = false;
+                }
             }
         }
         ChickCheckdate("未填寫完畢 !", "請填寫問題 " + whitch, "error")

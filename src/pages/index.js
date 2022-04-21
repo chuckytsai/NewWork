@@ -34,3 +34,7 @@ export function IllustrateGroupEffect(index, item) {
   if (index === "Move") { IllustrateGroup.lastElementChild.textContent = item; }
   else if (index === "Leave") { IllustrateGroup.lastElementChild.textContent = item; }
 }
+
+window.onbeforeunload = function () {
+  alert("關閉")
+};
