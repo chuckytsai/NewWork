@@ -1,0 +1,178 @@
+.LongTengGroup {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+
+/* 龍騰文化NAV背景設定 */
+.LongTengNav {
+    width: 100%;
+    height: 70px;
+    background: radial-gradient(
+        circle farthest-corner at left,
+        #970b31,
+        #dc007a,
+        #c60f28,
+        #e5001e,
+        #e83819,
+        #ed6a02,
+        #f5a200,
+        #e8b000
+    );
+    justify-content: center;
+    display: flex;
+}
+
+/* 龍騰文化NAV文字 */
+
+.LongTengNavText {
+    position: absolute;
+    width: 90%;
+    margin-top: 40px;
+    background-color: white;
+    border: 0.01px inset rgb(235, 223, 223, 0.5);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+/*  龍騰文化NAV左邊LOGO */
+
+.LongTengNavTextLogo {
+    font-size: 22px;
+    height: 70px;
+    line-height: 70px;
+    font-weight: 1000;
+    cursor: pointer;
+    z-index: 99;
+}
+
+/* 右邊龍騰文化的活動選項 */
+
+.LongTengNavOptionDiv {
+    display: flex;
+    height: 70px;
+    line-height: 70px;
+    z-index: 99;
+}
+
+.LongTengNavOption {
+    width: 120px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.LongTengBigBannerGroup{
+    height: 670px;
+    position: relative;
+}
+
+.LongTengBigBanner {
+    width: 100%;
+    height: 660px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.DoubleBalls {
+    z-index: -3;
+}
+
+.DoubleBalls img {
+    object-fit: cover;
+    position: absolute;
+}
+
+.blueRoundShape {
+    opacity: 0.9;
+    left: -250px;
+    top: -150px;
+    width: 750px;
+}
+
+.yellowRoundShape {
+    opacity: 0.4;
+    right: -210px;
+    bottom: -280px;
+    width: 750px;
+}
+
+.SignUp {
+    bottom: 0;
+    right: 30px;
+    width: 500px;
+}
+
+.ClolorBall {
+    z-index: -2;
+}
+
+.RainbowBall {
+    width: 550px;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    animation: RainbowBallRun 60s cubic-bezier(0.1, 0.1, 0.45, 0.2) infinite;
+}
+
+@keyframes RainbowBallRun {
+    10% {
+        transform: rotateZ(36deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.LongTengPeople {
+    z-index: -1;
+}
+
+.LongTengPeople img {
+    position: absolute;
+}
+
+.people {
+    width: 700px;
+    bottom: 0;
+    left: 400px;
+}
+
+.version {
+    width: 480px;
+    bottom: 300px;
+    left: 730px;
+}
+
+.instruct {
+    width: 130px;
+    bottom: 350px;
+    left: 695px;
+}
+
+.SignUpIng {
+    width: 230px;
+    bottom: 500px;
+    left: 850px;
+}
+
+.Group {
+    width: 330px;
+    bottom: 300px;
+    left: 810px;
+}
+
+.Protech {
+    width: 100px;
+    bottom: 430px;
+    left: 1090px;
+}
+
+/* 最新消息藍色大背景 */
+.NewsBlueBackground {
+    width: 100%;
+    background: radial-gradient(circle farthest-corner at left, #003067, #005a91, #083552);
+}

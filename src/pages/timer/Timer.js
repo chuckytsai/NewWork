@@ -5,7 +5,7 @@ import "../../styles/work/timer.css";
 import { NavSidebar } from "../../components/Nav";
 import { Sidebar, IllustrateSidebar, CloseMenu } from "../../components/SidebarMenu"
 import { CloseLoanding } from "../../components/Loading";
-import { FormatData ,EventsTime } from "./TimerFuntion";
+import { FormatData, EventsTime } from "./TimerFuntion";
 // 引入圖片
 import RoseShape from "../../images/svg/RoseShape.svg";
 import RoseShape2 from "../../images/svg/RoseShape2.svg";

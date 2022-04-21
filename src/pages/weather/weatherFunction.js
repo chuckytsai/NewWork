@@ -96,7 +96,8 @@ export function CreatClouds(index, amount, situation) {
         clouds.className = "Clouds";
         let posX = x * 10;
         let posY = Math.floor(Math.random() * 150);
-        clouds.style.top = (posY + 25) + "px";
+        if (document.body.clientWidth > 768) { clouds.style.top = (posY + 25) + "px"; }
+        else if (document.body.clientWidth < 768) { clouds.style.top = (posY - 25) + "px"; }
         clouds.style.left = (posX + parseInt(Math.random() * 5)) + "%";
         WeatherLayer.appendChild(clouds);
         ReactDOM.render(<><Cloud className={"Cloud" + x + " Cloud" + situation} /></>, document.getElementsByClassName("Clouds")[x]);

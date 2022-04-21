@@ -37,5 +37,6 @@ export function HelloTimeUp(time) {
     } else if (Events === "Invalid Date" || Events.length === 0) {
         TimmerGroup.className = "TimmerGroup";
         DropItems.className = "DropItems";
+   
     }
 }
