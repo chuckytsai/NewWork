@@ -25,7 +25,6 @@
 }
 
 /* 龍騰文化NAV文字 */
-
 .LongTengNavText {
     position: absolute;
     width: 90%;
@@ -35,11 +34,10 @@
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
-    padding-left: 15px;
+    padding-left: 25px;
 }
 
 /*  龍騰文化NAV左邊LOGO */
-
 .LongTengNavTextLogo {
     font-size: 22px;
     height: 70px;
@@ -47,15 +45,16 @@
     font-weight: 1000;
     cursor: pointer;
     z-index: 99;
+    user-select: none;
 }
 
 /* 右邊龍騰文化的活動選項 */
-
 .LongTengNavOptionDiv {
     display: flex;
     height: 70px;
     line-height: 70px;
     z-index: 99;
+    user-select: none;
 }
 
 .LongTengNavOption {
@@ -65,8 +64,8 @@
     font-size: 16px;
 }
 
-.LongTengBigBannerGroup{
-    height: 670px;
+.LongTengBigBannerGroup {
+    height: 660px;
     position: relative;
 }
 
@@ -111,11 +110,19 @@
 }
 
 .RainbowBall {
-    width: 700px;
+    width: 600px;
     position: absolute;
     top: 150px;
-    left: -50px;
+    left: 110px;
     animation: RainbowBallRun 60s cubic-bezier(0.1, 0.1, 0.45, 0.2) infinite;
+}
+
+@media (max-width: 1280px) {
+    .RainbowBall {
+        width: 530px;
+        left: -40px;
+        top: 240px;
+    }
 }
 
 @keyframes RainbowBallRun {
@@ -141,10 +148,25 @@
     left: 400px;
 }
 
+@media (max-width: 1280px) {
+    .people {
+        width: 600px;
+        left: 180px;
+    }
+}
+
 .version {
     width: 480px;
     bottom: 300px;
     left: 730px;
+}
+
+@media (max-width: 1280px) {
+    .version {
+        width: 480px;
+        bottom: 260px;
+        left: 470px;
+    }
 }
 
 .instruct {
@@ -153,10 +175,26 @@
     left: 695px;
 }
 
+@media (max-width: 1280px) {
+    .instruct {
+        width: 100px;
+        bottom: 330px;
+        left: 415px;
+    }
+}
+
 .SignUpIng {
     width: 230px;
     bottom: 500px;
     left: 850px;
+}
+
+@media (max-width: 1280px) {
+    .SignUpIng {
+        width: 230px;
+        bottom: 460px;
+        left: 580px;
+    }
 }
 
 .Group {
@@ -165,14 +203,232 @@
     left: 810px;
 }
 
+@media (max-width: 1280px) {
+    .Group {
+        width: 280px;
+        bottom: 270px;
+        left: 560px;
+    }
+}
+
 .Protech {
     width: 100px;
     bottom: 430px;
     left: 1090px;
 }
 
+@media (max-width: 1280px) {
+    .Protech {
+        width: 80px;
+        bottom: 390px;
+        left: 820px;
+    }
+}
+
 /* 最新消息藍色大背景 */
 .NewsBlueBackground {
     width: 100%;
+    display: flex;
+    height: 764px;
     background: radial-gradient(circle farthest-corner at left, #003067, #005a91, #083552);
+    justify-content: center;
+}
+
+@media (max-width: 1280px) {
+    .NewsBlueBackground {
+        height: 630px;
+    }
+}
+
+/* 入圍新消息 */
+.ShortlistedNews {
+    width: 90%;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}
+
+/* 入圍名單背景圖示 */
+.PinkBackGround {
+    height: 100%;
+    margin: 0 auto;
+    background: radial-gradient(circle farthest-corner at bottom, #e69dbd, #d89fca, #e7b9e1);
+    padding-top: 140px;
+}
+
+.PinkBackGround .newImg {
+    width: 450px;
+}
+
+@media (max-width: 1280px) {
+    .PinkBackGround .newImg {
+        width: 350px;
+    }
+}
+
+.newNewsGroup {
+    width: 100%;
+    z-index: 99;
+    margin-top: 30px;
+    padding-left: 160px;
+}
+
+/* 活動緣起 */
+.ActivityOrigin {
+    width: 100%;
+}
+
+.ActivityOriginHr {
+    padding-left: 160px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+/* 活動緣起的輪播圖區塊 */
+
+.ActivityOriginCarousel {
+    margin: 0 2.5%;
+    margin-top: 50px;
+}
+
+/* 活動緣起的圖片與文字區塊 */
+.ActivityOriginCarousel {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* 活動緣起的圖片格式 */
+.ActivityOriginCarouselImg {
+    margin-right: 100px;
+}
+
+/* 活動緣起的輪播控制dots */
+.ActivityOriginCarouselDots {
+    height: 15px;
+    line-height: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    float: right;
+}
+
+.ActivityOriginCarouselDots img {
+    width: 10px;
+    height: 10px;
+}
+
+/* 活動緣起的文字格式 */
+
+.ActivityOriginCarouselText {
+    margin-top: 70px;
+    font-size: 20px;
+    text-align: left;
+    word-wrap: break-word;
+    font-weight: 700;
+    text-shadow: 0.02em 0.01em gray;
+}
+
+.LongTengActivitySchedule {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.LongTengActivityBackground img {
+    position: absolute;
+    height: 1132px;
+    width: 100%;
+}
+
+.LongTengSchedule {
+    position: absolute;
+    padding-left: 160px;
+    padding-top: 80px;
+    z-index: 99;
+}
+
+/* 活動時程背景粉紅色柱子區塊 */
+.PinkPillar {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+}
+
+/* 活動時程背景粉紅色柱子們 */
+.PinkPillars {
+    width: 170px;
+    height: 1070px;
+    background: radial-gradient(circle farthest-corner at bottom, #e69dbd, #d89fca, #e7b9e1);
+    margin: 0 40px;
+    margin-top: 3%;
+    opacity: 0.2;
+}
+
+@media (max-width: 1280px) {
+    .PinkPillars {
+        margin-top: 5%;
+    }
+}
+
+/* 活動時程排成活動 */
+.LongTengActivityScheduleSchedule {
+    width: 90%;
+    margin: 0 5%;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 手機模式排版 */
+.AllSop {
+    display: none;
+}
+
+.ActivityScheduleImgGroup {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+}
+
+.ActivitySchedulePillars {
+    width: 20px;
+    height: 970px;
+    position: absolute;
+    background-color: white;
+}
+
+.ActivityScheduleImgs img {
+    margin: 60px 0;
+    opacity: 0.9;
+    width: 550px;
+    z-index: 99;
+}
+
+.ActivityScheduleLeft img {
+    float: right;
+}
+
+.ActivityScheduleLeft {
+    padding-top: 180px;
+    z-index: 1;
+}
+
+.ActivityScheduleRight img {
+    float: left;
+}
+
+.LongFooter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+@media (max-width: 1280px) {
+    .LongFooter img {
+        width: 30%;
+    }
 }
