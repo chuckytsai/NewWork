@@ -15,7 +15,6 @@
     position: fixed;
     width: 60px;
     height: 100%;
-
     transition: 0.5s;
     overflow-y: scroll;
     z-index: 9999999;
@@ -27,6 +26,24 @@
 .navigation::-webkit-scrollbar,
 .IllustrateSidebar::-webkit-scrollbar {
     display: none;
+}
+
+.IllustrateTitle{
+    font-size: 16px;
+    color: rgb(12, 8, 1);
+    margin-top: 15px;
+    margin-left: 10px;
+    font-weight: 800;
+}
+
+.IllustrateSidebar .Illustrate{
+    margin: 0 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: left;
+    word-wrap: break-word;
+    color: aliceblue;
+    letter-spacing: 1.5px;
 }
 
 .navigation ul {
@@ -86,4 +103,19 @@
     position: relative;
     line-height: 50px;
     width: 100%;
+}
+
+.IndexIcon a{
+    position: relative;
+    width: 100%;
+}
+
+.IndexIcon a svg{
+    width: 80px;
+    margin-left: 35px;
+    fill: white;
+}
+
+.IndexIcon a svg:hover{
+    fill: rgb(224, 230, 194);
 }

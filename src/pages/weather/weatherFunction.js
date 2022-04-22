@@ -24,10 +24,8 @@ export function WeatherEffect(time, index) {
 
     // 恢復正常無天氣狀態
     ReactDOM.render(<></>, WeatherLayer);
-    console.log(time)
     // ======  先決定有沒有太陽  =====
     if (time >= 18 || Rain > 1 || Sunny === 1) {   //不要太陽
-        console.log("不要太陽")
         if (Rain > 1) {
             ReactDOM.render(<></>, WeatherLayer);
             CreatRains(0, 50);
@@ -59,7 +57,6 @@ export function WeatherEffect(time, index) {
         else if (Fog > 1) { document.getElementsByClassName("wave")[0].style.display = "block"; }
     }
     else if (time < 18 || Sunny > 1) {   //要太陽
-        console.warn("要太陽")
         ReactDOM.render(<><Sun /></>, document.getElementsByClassName("layer")[1]);
         CreatClouds(0, 10, "Sun");
         if (Fog < 2) { document.getElementsByClassName("wave")[0].style.display = "none"; }

@@ -2,14 +2,14 @@
 export function ScrollBody(index){
     window.addEventListener("scroll", () => {
         let bodyTop = 0;
-        if (typeof window.pageYOffset != "undefined") {
+        if (typeof window.pageYOffset !== "undefined") {
                 bodyTop = window.pageYOffset;
     
         }
-        else if (typeof document.compatMode != "undefined" && document.compatMode != "BackCompat") {
+        else if (typeof document.compatMode !== "undefined" && document.compatMode !== "BackCompat") {
                 bodyTop = document.documentElement.scrollTop;
         }
-        else if (typeof document.body != "undefined") {
+        else if (typeof document.body !== "undefined") {
                 bodyTop = document.body.scrollTop;
         }
         /*捲動後的高度值*/
@@ -20,7 +20,7 @@ export function ScrollBody(index){
 // 網頁卷軸
 export function MoveScol(index) {
     let scrollo_y = index;
-    if (scrollo_y != null) {
+    if (scrollo_y !== null) {
             window.scrollTo(100, scrollo_y);
     }
 }

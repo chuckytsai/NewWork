@@ -143,12 +143,13 @@
 }
 
 .WeatherText h5 {
-    font-size: 20px;
+    font-size: 17px;
+    letter-spacing: 0.5px;
     color: rgb(0, 8, 3);
     text-align: left;
     height: 40px;
     line-height: 40px;
-    margin-left: 135px;
+    margin-left: 125px;
     z-index: 9999;
     font-family: emoji;
     position: absolute;

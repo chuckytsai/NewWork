@@ -1,6 +1,8 @@
 import "../styles/SidebarMenu.css";
 // 引入Json
 import { Data } from "../components/Json/index.json";
+// 引入圖片
+import { ReactComponent as Home } from "../../src/images/gif/home.svg";
 
 // 選單模塊
 export function Sidebar() {
@@ -9,7 +11,7 @@ export function Sidebar() {
     }}>
         <ul>
             <li className="IndexIcon">
-                <a href="http://localhost:3000/">首頁</a>
+                <a href="http://localhost:3000/"><Home /></a>
             </li>
             {Data.map((item, i) => (<li className="navigationLi" key={"option" + i}>
                 <a href={item.url}>
@@ -22,10 +24,19 @@ export function Sidebar() {
 }
 
 export function IllustrateSidebar() {
+    setTimeout(() => {
+        for (let x = 0; x < Data.length; x++) {
+            if (Data[x]["id"] === window.location.href.split("/")[3]) {
+                document.getElementsByClassName("Illustrate")[0].textContent = Data[x]["Illustrate"]
+            }
+        }
+    }, 100);
     return <div className="IllustrateSidebar" onMouseLeave={() => {
         ToggleMenu("Illustrate");
     }}>
-        說明
+        <p className="IllustrateTitle">說明</p>
+        <h6 className="Illustrate">
+        </h6>
     </div>
 }
 
