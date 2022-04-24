@@ -18,13 +18,6 @@ import new2 from "../../images/png/LongTeng/new2.png";
 import new3 from "../../images/png/LongTeng/new3.png";
 import newNews from "../../images/png/LongTeng/最新消息.png";
 import Activity from "../../images/png/LongTeng/活動緣起.png";
-import dot1 from "../../images/png/LongTeng/dot1.png";
-import dot2 from "../../images/png/LongTeng/dot2.png";
-import dot3 from "../../images/png/LongTeng/dot3.png";
-import dot4 from "../../images/png/LongTeng/dot4.png";
-import dot5 from "../../images/png/LongTeng/dot5.png";
-import dot6 from "../../images/png/LongTeng/dot6.png";
-import dot7 from "../../images/png/LongTeng/dot7.png";
 import ActivityImg from "../../images/png/LongTeng/活動緣起圖片1.png";
 import LongTengActivityBackground from "../../images/png/LongTeng/活動時程背景.png";
 import AllSop from "../../images/png/LongTeng/活動流程4步驟.png";
@@ -87,15 +80,6 @@ export function LongTeng() {
                 <div className="ActivityOriginCarousel">
                     <img className="ActivityOriginCarouselImg" src={ActivityImg} alt="" />
                     <div>
-                        <div className="ActivityOriginCarouselDots">
-                            <img src={dot1} alt="" />
-                            <img src={dot2} alt="" />
-                            <img src={dot3} alt="" />
-                            <img src={dot4} alt="" />
-                            <img src={dot5} alt="" />
-                            <img src={dot6} alt="" />
-                            <img src={dot7} alt="" />
-                        </div>
                         <h3 className="ActivityOriginCarouselText">
                             2020年龍騰舉辦了第一屆全國高中職英文素養成果大賞，收到將近500件學生作品，並從中獲得許多感動。我們看見了學生的創意思考與精采表現，更看見了素養的無限可能！龍騰相信，只要給予學生舞台，就有機會「看見‧最美的課堂風景」。
                             第二屆活動，從英文科擴展到全科；從素養教學延伸到探究實作與自主學習成果。</h3>
