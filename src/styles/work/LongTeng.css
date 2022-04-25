@@ -4,7 +4,6 @@
     height: 100vh;
     z-index: 2;
 }
-
 /* 龍騰文化NAV背景設定 */
 .LongTengNav {
     width: 100%;
@@ -23,7 +22,6 @@
     justify-content: center;
     display: flex;
 }
-
 /* 龍騰文化NAV文字 */
 .LongTengNavText {
     position: absolute;
@@ -36,7 +34,6 @@
     justify-content: space-between;
     padding-left: 25px;
 }
-
 /*  龍騰文化NAV左邊LOGO */
 .LongTengNavTextLogo {
     font-size: 22px;
@@ -47,13 +44,11 @@
     z-index: 99;
     user-select: none;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .LongTengNavTextLogo {
         font-size: 18px;
     }
 }
-
 /* 右邊龍騰文化的活動選項 */
 .LongTengNavOptionDiv {
     display: flex;
@@ -62,97 +57,82 @@
     z-index: 99;
     user-select: none;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .LongTengNavOptionDiv {
         display: block;
         height: 30px;
         line-height: 30px;
     }
 }
-
 .LongTengNavOption {
     width: 120px;
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;
 }
-
 .LongTengBigBannerGroup {
     height: 660px;
     position: relative;
 }
-
 .LongTengBigBanner {
     width: 100%;
     height: 660px;
     position: absolute;
     overflow: hidden;
 }
-
-@media (max-width: 375px) {
+@media (max-width: 912px) {
     .LongTengBigBannerGroup,
     .LongTengBigBanner {
         height: 440px;
     }
 }
-
 .DoubleBalls {
     z-index: -3;
 }
-
 .DoubleBalls img {
     object-fit: cover;
     position: absolute;
 }
-
 .blueRoundShape {
     opacity: 0.9;
     left: -250px;
     top: -150px;
     width: 750px;
 }
-
-@media (max-width: 375px) {
+@media (max-width: 912px) {
     .blueRoundShape {
         left: -250px;
         width: 400px;
     }
 }
-
 .yellowRoundShape {
     opacity: 0.4;
     right: -210px;
     bottom: -280px;
     width: 750px;
 }
-
-@media (max-width: 375px) {
+@media (max-width: 912px) {
     .yellowRoundShape {
         right: -210px;
         bottom: -280px;
         width: 400px;
     }
 }
-
 .SignUp {
     bottom: 0;
     right: 30px;
     width: 500px;
 }
-
-@media (max-width: 375px) {
+@media (max-width: 912px) {
     .SignUp {
         bottom: 0;
         right: 0px;
         width: 170px;
     }
 }
-
 .ClolorBall {
     z-index: -2;
 }
-
 .RainbowBall {
     width: 600px;
     position: absolute;
@@ -160,7 +140,6 @@
     left: 110px;
     animation: RainbowBallRun 60s cubic-bezier(0.1, 0.1, 0.45, 0.2) infinite;
 }
-
 @media (max-width: 1280px) {
     .RainbowBall {
         width: 530px;
@@ -168,15 +147,13 @@
         top: 240px;
     }
 }
-
-@media (max-width: 375px) {
+@media (max-width: 912px) {
     .RainbowBall {
         width: 300px;
         left: -150px;
         top: 100px;
     }
 }
-
 @keyframes RainbowBallRun {
     10% {
         transform: rotateZ(36deg);
@@ -185,41 +162,34 @@
         transform: rotateZ(360deg);
     }
 }
-
 .LongTengPeople {
     z-index: -1;
 }
-
 .LongTengPeople img {
     position: absolute;
 }
-
 .people {
     width: 700px;
     bottom: 0;
     left: 400px;
 }
-
 @media (max-width: 1280px) {
     .people {
         width: 600px;
         left: 180px;
     }
 }
-
-@media (max-width: 375px) {
+@media (max-width: 912px) {
     .people {
         width: 320px;
         left: -20px;
     }
 }
-
 .version {
     width: 480px;
     bottom: 300px;
     left: 730px;
 }
-
 @media (max-width: 1280px) {
     .version {
         width: 480px;
@@ -227,21 +197,18 @@
         left: 470px;
     }
 }
-
-@media (max-width: 375px) {
+@media (max-width: 912px) {
     .version {
         width: 180px;
         bottom: 138px;
         left: 160px;
     }
 }
-
 .instruct {
     width: 130px;
     bottom: 350px;
     left: 695px;
 }
-
 @media (max-width: 1280px) {
     .instruct {
         width: 100px;
@@ -249,21 +216,18 @@
         left: 415px;
     }
 }
-
-@media (max-width: 376px) {
+@media (max-width: 912px) {
     .instruct {
         width: 60px;
         bottom: 160px;
         left: 130px;
     }
 }
-
 .SignUpIng {
     width: 230px;
     bottom: 500px;
     left: 850px;
 }
-
 @media (max-width: 1280px) {
     .SignUpIng {
         width: 230px;
@@ -271,21 +235,18 @@
         left: 580px;
     }
 }
-
-@media (max-width: 375px) {
+@media (max-width: 912px) {
     .SignUpIng {
         width: 150px;
         bottom: 210px;
         left: 175px;
     }
 }
-
 .Group {
     width: 330px;
     bottom: 300px;
     left: 810px;
 }
-
 @media (max-width: 1280px) {
     .Group {
         width: 280px;
@@ -293,21 +254,18 @@
         left: 560px;
     }
 }
-
-@media (max-width: 375px) {
+@media (max-width: 912px) {
     .Group {
         width: 115px;
         bottom: 140px;
         left: 190px;
     }
 }
-
 .Protech {
     width: 100px;
     bottom: 430px;
     left: 1090px;
 }
-
 @media (max-width: 1280px) {
     .Protech {
         width: 80px;
@@ -315,15 +273,13 @@
         left: 820px;
     }
 }
-
-@media (max-width: 375px) {
+@media (max-width: 912px) {
     .Protech {
         width: 40px;
         bottom: 183px;
         left: 290px;
     }
 }
-
 /* 最新消息藍色大背景 */
 .NewsBlueBackground {
     width: 100%;
@@ -332,13 +288,26 @@
     background: radial-gradient(circle farthest-corner at left, #003067, #005a91, #083552);
     justify-content: center;
 }
-
 @media (max-width: 1280px) {
     .NewsBlueBackground {
         height: 600px;
     }
 }
-
+@media (max-width: 912px) {
+    .NewsBlueBackground {
+        height: 650px;
+    }
+}
+@media (max-width: 414px) {
+    .NewsBlueBackground {
+        height: 620px;
+    }
+}
+@media (max-width: 375px) {
+    .NewsBlueBackground {
+        height: 600px;
+    }
+}
 /* 入圍新消息 */
 .ShortlistedNews {
     width: 90%;
@@ -349,13 +318,12 @@
     justify-content: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .ShortlistedNews {
         display: block;
         width: 100%;
     }
 }
-
 /* 入圍名單背景圖示 */
 .PinkBackGround {
     height: 100%;
@@ -363,63 +331,60 @@
     background: radial-gradient(circle farthest-corner at bottom, #e69dbd, #d89fca, #e7b9e1);
     padding-top: 140px;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .PinkBackGround {
         position: absolute;
         padding-top: 80px;
     }
 }
-
 .PinkBackGround .newImg {
     width: 450px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1280px) {
     .PinkBackGround .newImg {
-        width: 375px;
+        width:330px;
     }
 }
 
+@media (max-width: 912px) {
+    .PinkBackGround .newImg {
+        width: 100vw;
+    }
+}
 .newNewsGroup {
     width: 100%;
     z-index: 99;
     margin-top: 30px;
     padding-left: 160px;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .newNewsGroup {
         margin-top: 10px;
         padding-left: 10px;
     }
 }
-
 /* 活動緣起 */
 .ActivityOrigin {
     width: 100%;
 }
-
 .ActivityOriginHr {
     padding-left: 160px;
     margin-top: 40px;
     margin-bottom: 30px;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .ActivityOriginHr {
         padding-left: 10px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
 }
-
 /* 活動緣起的輪播圖區塊 */
 .ActivityOriginCarousel {
     margin: 0 2.5%;
     margin-top: 50px;
 }
-
 /* 活動緣起的圖片與文字區塊 */
 .ActivityOriginCarousel {
     display: flex;
@@ -427,31 +392,26 @@
     margin: 0 auto;
     justify-content: center;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .ActivityOriginCarousel {
         display: block;
         width: 100%;
     }
 }
-
 /* 活動緣起的圖片格式 */
 .ActivityOriginCarouselImg {
     margin-right: 100px;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .ActivityOriginCarouselImg {
         margin-right: 0px;
-        width: 375px;
+        width: 100vw;
     }
 }
-
 .ActivityOriginCarouselDots img {
     width: 10px;
     height: 10px;
 }
-
 /* 活動緣起的文字格式 */
 .ActivityOriginCarouselText {
     margin-bottom: 50px;
@@ -461,8 +421,7 @@
     font-weight: 700;
     text-shadow: 0.02em 0.01em gray;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .ActivityOriginCarouselText {
         font-size: 14px;
         text-align: left;
@@ -471,7 +430,6 @@
         margin-top: 3px;
     }
 }
-
 .LongTengActivitySchedule {
     margin-top: 20px;
     width: 100%;
@@ -483,26 +441,41 @@
     width: 100%;
 }
 
+@media (max-width: 414px) {
+    .LongTengActivityBackground img {
+        height: 1020px;
+    }
+}
+
+@media (max-width: 393px) {
+    .LongTengActivityBackground img {
+        height: 970px;
+    }
+}
+
 @media (max-width: 375px) {
     .LongTengActivityBackground img {
         height: 1080px;
     }
 }
 
+@media (max-width: 360px) {
+    .LongTengActivityBackground img {
+        height: 1030px;
+    }
+}
 .LongTengSchedule {
     position: absolute;
     padding-left: 160px;
     padding-top: 80px;
     z-index: 99;
 }
-
-@media (max-width: 375px) {
+@media (max-width: 912px) {
     .LongTengSchedule {
         padding-left: 10px;
         padding-top: 50px;
     }
 }
-
 /* 活動時程背景粉紅色柱子區塊 */
 .PinkPillar {
     display: flex;
@@ -510,13 +483,11 @@
     position: absolute;
     justify-content: center;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .PinkPillar {
         display: none;
     }
 }
-
 /* 活動時程背景粉紅色柱子們 */
 .PinkPillars {
     width: 170px;
@@ -526,13 +497,11 @@
     margin-top: 3%;
     opacity: 0.2;
 }
-
 @media (max-width: 1280px) {
     .PinkPillars {
         margin-top: 5%;
     }
 }
-
 /* 活動時程排成活動 */
 .LongTengActivityScheduleSchedule {
     width: 90%;
@@ -541,58 +510,55 @@
     display: flex;
     justify-content: center;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .LongTengActivityScheduleSchedule {
         width: 100%;
         margin: 0 0;
     }
 }
-
 /* 手機模式排版 */
 .AllSop {
     display: none;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .AllSop {
         display: block;
-        width: 375px;
+        width: 85vw;
     }
 }
-
+@media (max-width: 375px) {
+    .AllSop {
+        display: block;
+        width: 100vw;
+    }
+}
 .ActivityScheduleImgGroup {
     display: flex;
     justify-content: center;
     width: 85%;
 }
-
 .ActivitySchedulePillars {
     width: 20px;
     height: 970px;
     position: absolute;
     background-color: white;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .ActivitySchedulePillars {
         display: none;
     }
 }
-
 .ActivityScheduleImgs img {
     margin: 60px 0;
     opacity: 0.9;
     width: 550px;
     z-index: 99;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .ActivityScheduleImgs img {
         display: none;
     }
 }
-
 .ActivityScheduleLeft img {
     float: right;
 }
@@ -601,16 +567,15 @@
     padding-top: 180px;
     z-index: 1;
 }
-
 .ActivityScheduleRight img {
     float: left;
 }
-
 .LongFooter {
     width: 100%;
     display: flex;
     justify-content: center;
     overflow: hidden;
+
 }
 @media (max-width: 1280px) {
     .LongFooter img {
@@ -618,7 +583,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .LongFooter img {
         width: 40%;
     }

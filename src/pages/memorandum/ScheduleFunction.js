@@ -78,7 +78,7 @@ export function ItemTop(i) {
                         SlowlyDisappear[0].classList.remove("SlowlyDisappear");
                         ReadJustItems(i, TimeValue, Group[ListCost].getElementsByClassName("BusinessTime")[0].textContent);
                     }
-                }, 200);
+                }, 800);
             }
         }
     }
@@ -106,7 +106,7 @@ export function ItemDown(i) {
                         SlowlyDisappear[0].classList.remove("SlowlyDisappear");
                         ReadJustItems(i, TimeValue, Group[ListCost].getElementsByClassName("BusinessTime")[0].textContent);
                     }
-                }, 200);
+                }, 800);
             }
         }
     }
@@ -140,26 +140,5 @@ export function ThisMonthOnly() {
     }, 500);
     dataText.onclick = (event) => {
         event.stopPropagation();
-    }
-}
-// 編輯選擇Open 或是Close
-export function StoresOpenClose(value) {
-    let i = (parseInt(dayjs(value).format('D') - 1))
-    let EditDateList = document.getElementsByClassName("EditDateList");
-    if (EditDateList[i].lastChild === null) {
-        ReactDOM.render(<OpenCloseElements className="OpenStores" value={1} BtnText={dayjs(value).format('YYYY/MM/DD')} text="OPEN" />,
-            document.getElementsByClassName("EditDateList")[i]);
-    }
-    else if (EditDateList[i].lastChild !== null) {
-        if (EditDateList[i].getElementsByTagName("button")[0].value === "1") {
-            ReactDOM.render(<></>, document.getElementsByClassName("EditDateList")[i]);
-            ReactDOM.render(<OpenCloseElements className="CloseStores" value={2} BtnText={dayjs(value).format('YYYY/MM/DD')} text="Close" />,
-                document.getElementsByClassName("EditDateList")[i]);
-        }
-        else if (EditDateList[i].getElementsByTagName("button")[0].value === "2") {
-            ReactDOM.render(<></>, document.getElementsByClassName("EditDateList")[i]);
-            ReactDOM.render(<OpenCloseElements className="OpenStores" value={1} BtnText={dayjs(value).format('YYYY/MM/DD')} text="OPEN" />,
-                document.getElementsByClassName("EditDateList")[i]);
-        }
     }
 }
