@@ -28,6 +28,7 @@ export function IllustrateSidebar() {
         for (let x = 0; x < Data.length; x++) {
             if (Data[x]["id"] === window.location.href.split("/")[3]) {
                 document.getElementsByClassName("Illustrate")[0].textContent = Data[x]["Illustrate"]
+                document.getElementsByClassName("Illustrate")[1].textContent = Data[x]["Illustrate2"]
             }
         }
     }, 100);
@@ -35,6 +36,9 @@ export function IllustrateSidebar() {
         ToggleMenu("Illustrate");
     }}>
         <p className="IllustrateTitle">說明</p>
+        <h6 className="Illustrate">
+        </h6>
+        <br />
         <h6 className="Illustrate">
         </h6>
     </div>

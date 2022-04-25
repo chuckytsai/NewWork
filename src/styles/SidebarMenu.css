@@ -3,7 +3,7 @@
     width: 60px;
     height: 100%;
     background-color: rgb(234, 114, 28);
-    transition: 0.5s;
+    transition: 1s;
     overflow-y: scroll;
     z-index: 9999999;
     left: -60px;
@@ -15,10 +15,11 @@
     position: fixed;
     width: 60px;
     height: 100%;
-    transition: 0.5s;
-    overflow-y: scroll;
+    transition: 1s;
+    overflow-y: hidden;
     z-index: 9999999;
     left: -60px;
+    color: rgb(234, 114, 28);
     border-right: 0.5px solid white;
     top: 0;
 }
@@ -28,7 +29,7 @@
     display: none;
 }
 
-.IllustrateTitle{
+.IllustrateTitle {
     font-size: 16px;
     color: rgb(12, 8, 1);
     margin-top: 15px;
@@ -36,7 +37,7 @@
     font-weight: 800;
 }
 
-.IllustrateSidebar .Illustrate{
+.IllustrateSidebar .Illustrate {
     margin: 0 10px;
     margin-top: 5px;
     font-size: 14px;
@@ -44,6 +45,7 @@
     word-wrap: break-word;
     color: aliceblue;
     letter-spacing: 1.5px;
+    width: 140px;
 }
 
 .navigation ul {
@@ -105,17 +107,17 @@
     width: 100%;
 }
 
-.IndexIcon a{
+.IndexIcon a {
     position: relative;
     width: 100%;
 }
 
-.IndexIcon a svg{
+.IndexIcon a svg {
     width: 80px;
     margin-left: 35px;
     fill: white;
 }
 
-.IndexIcon a svg:hover{
+.IndexIcon a svg:hover {
     fill: rgb(224, 230, 194);
 }

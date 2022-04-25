@@ -34,6 +34,7 @@
     justify-content: space-between;
     padding-left: 25px;
 }
+
 /*  龍騰文化NAV左邊LOGO */
 .LongTengNavTextLogo {
     font-size: 22px;
@@ -425,16 +426,29 @@
     word-wrap: break-word;
     font-weight: 700;
     text-shadow: 0.02em 0.01em gray;
+    animation: TextShow 6s;
 }
+
 @media (max-width: 912px) {
     .ActivityOriginCarouselText {
         font-size: 14px;
         text-align: left;
         width: 90%;
-        margin: 0 5%;
-        margin-top: 3px;
+        margin: 0 5%;  
     }
 }
+
+@keyframes TextShow {
+    0% {
+        opacity: 0.1;
+        margin-bottom: -5px;
+    }
+    100% {
+        opacity: 1;
+        margin-bottom: 50px;
+    }
+}
+
 .LongTengActivitySchedule {
     margin-top: 20px;
     width: 100%;
@@ -605,7 +619,7 @@
 
 @keyframes slidein {
     0% {
-        padding-left: 1920px;
+        padding-left: 50%;
         opacity: 0.3;
     }
     100% {
@@ -616,22 +630,22 @@
 
 .Sop2 {
     margin-right: 12px;
-    animation: SopMiveLeft 5s;
+    animation: SopMiveLeft 2s;
 }
 
 .Sop4 {
     margin-right: 12px;
-    animation: SopMiveLeft 9s;
+    animation: SopMiveLeft 4s;
 }
 
 .Sop1 {
     margin-left: 12px;
-    animation: SopMiveRight 3s;
+    animation: SopMiveRight 1s;
 }
 
 .Sop3 {
     margin-left: 12px;
-    animation: SopMiveRight 7s;
+    animation: SopMiveRight 3s;
 }
 
 @keyframes SopMiveLeft {
