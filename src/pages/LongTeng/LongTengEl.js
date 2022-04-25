@@ -7,10 +7,11 @@ import Sop2 from "../../images/png/LongTeng/入圍名單揭曉.png";
 import Sop3 from "../../images/png/LongTeng/得獎名單出爐.png";
 import Sop4 from "../../images/png/LongTeng/成果展.png";
 import LongFooterPC from "../../images/png/LongTeng/龍騰文化頁尾.png";
+import newNews from "../../images/png/LongTeng/最新消息.png";
 
 // 活動緣起
-export function ActivityOrigin() {
-    return <>
+export function ActivityOriginEl() {
+    return <span>
         <div className="ActivityOriginHr"><img src={Activity} alt="" /></div>
         <div className="ActivityOriginCarousel">
             <img className="ActivityOriginCarouselImg" src={ActivityImg} alt="" />
@@ -22,12 +23,12 @@ export function ActivityOrigin() {
                     龍騰相信，好的理念可以被延續，藉由龍騰的拋磚引玉，讓更多創意可以被看見，讓永續目標可以被實踐！</h3>
             </div>
         </div>
-    </>
+    </span>
 }
 
 // 活動時程
-export function LongTengActivitySchedule() {
-    return <>
+export function LongTengActivityScheduleEl() {
+    return <span>
         <div className="LongTengSchedule"><img className="newNews" alt="" src={newNews}></img></div>
         <div className="LongTengActivityBackground"><img alt="" src={LongTengActivityBackground}></img></div>
         <div className="PinkPillar">
@@ -43,13 +44,13 @@ export function LongTengActivitySchedule() {
             <img className="AllSop" src={AllSop} alt="" />
             <div className="ActivityScheduleImgGroup">
                 <div className="ActivityScheduleImgs ActivityScheduleLeft">
-                    <img className="ActivityScheduleImg" src={Sop2} alt="" />
-                    <img className="ActivityScheduleImg" src={Sop4} alt="" />
+                    <img className="ActivityScheduleImg Sop2" src={Sop2} alt="" />
+                    <img className="ActivityScheduleImg Sop4" src={Sop4} alt="" />
                 </div>
                 <div className="ActivitySchedulePillars"></div>
                 <div className="ActivityScheduleImgs ActivityScheduleRight">
-                    <img className="ActivityScheduleImg" src={Sop1} alt="" />
-                    <img className="ActivityScheduleImg" src={Sop3} alt="" />
+                    <img className="ActivityScheduleImg Sop1" src={Sop1} alt="" />
+                    <img className="ActivityScheduleImg Sop3" src={Sop3} alt="" />
                 </div>
             </div>
         </div>
@@ -57,5 +58,5 @@ export function LongTengActivitySchedule() {
         <footer className="LongFooter">
             <img className="LongFooterPC" src={LongFooterPC} alt="" />
         </footer>
-    </>
+    </span>
 }
