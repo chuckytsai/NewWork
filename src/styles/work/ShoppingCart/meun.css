@@ -53,6 +53,11 @@
     border: 1px solid rgb(244, 113, 113);
 }
 
+.KfcMenuOptions div button:active {
+    color: rgb(254, 254, 254);
+    background-color: rgb(233, 31, 12);
+}
+
 .MenuKFC {
     width: 1000px;
     background: linear-gradient(rgb(240, 211, 211), rgb(244, 240, 245), rgb(244, 240, 250), rgb(243, 232, 221));
