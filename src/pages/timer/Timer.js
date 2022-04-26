@@ -7,28 +7,24 @@ import { Sidebar, IllustrateSidebar, CloseMenu } from "../../components/SidebarM
 import { CloseLoanding } from "../../components/Loading";
 import { FormatData, EventsTime } from "./TimerFuntion";
 // 引入圖片
-import RoseShape from "../../images/svg/RoseShape.svg";
-import RoseShape2 from "../../images/svg/RoseShape2.svg";
-import RoseShape3 from "../../images/svg/RoseShape3.svg";
-import RoseShape4 from "../../images/svg/RoseShape4.svg";
-import RoseShape5 from "../../images/svg/RoseShape5.svg";
-import RoseShape6 from "../../images/svg/RoseShape6.svg";
-import RoseShape7 from "../../images/svg/RoseShape7.svg";
-import grass from "../../images/svg/grass.svg";
-import teapot from "../../images/svg/teapot.svg";
-import bottle from "../../images/svg/bottle.svg";
-import Chair from "../../images/svg/Chair.svg";
-import key from "../../images/svg/key.svg";
+import RoseShape from "../../images/svg/AliceTimer/RoseShape.svg";
+import RoseShape2 from "../../images/svg/AliceTimer/RoseShape2.svg";
+import RoseShape3 from "../../images/svg/AliceTimer/RoseShape3.svg";
+import RoseShape4 from "../../images/svg/AliceTimer/RoseShape4.svg";
+import RoseShape5 from "../../images/svg/AliceTimer/RoseShape5.svg";
+import RoseShape6 from "../../images/svg/AliceTimer/RoseShape6.svg";
+import RoseShape7 from "../../images/svg/AliceTimer/RoseShape7.svg";
+import grass from "../../images/svg/AliceTimer/grass.svg";
+import teapot from "../../images/svg/AliceTimer/teapot.svg";
+import bottle from "../../images/svg/AliceTimer/bottle.svg";
+import Chair from "../../images/svg/AliceTimer/Chair.svg";
+import key from "../../images/svg/AliceTimer/key.svg";
 
 export function Timer() {
   let [currentTime, setCurrentTime] = useState(Date.now());
   let [time, setTime] = useState("");
-  useEffect(() => {
-    getTime();
-  });
-  setTimeout(() => {
-    CloseLoanding();
-  }, 1000);
+  useEffect(() => {getTime();});
+  setTimeout(() => {CloseLoanding();}, 1000);
   let getTime = () => {
     let timeID = setInterval(() => {
       setCurrentTime(Date.now());

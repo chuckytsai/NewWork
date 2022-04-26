@@ -33,7 +33,13 @@
             "name": "龍騰文化一頁網站",
             "Illustrate": "龍騰文化曾經辦過的活動，所需要的一頁式宣傳網站，",
             "Illustrate2": "原本都只有普通的圖片與畫面切版，我添增一些自己的小設計，像是網頁滾輪下，才會用React Render出物件，這樣才能讓使用者第一次看到該物件時候，會跑出一些動畫，像是標題從右邊移動至左邊，或是文字從透明轉為非透明效果",
-            "url": "/LongTeng"
+            "url": "/LongTeng" 
+        },        {
+            "id":"shoppingCart",
+            "name": "肯德基購物車",
+            "Illustrate": "用肯德基的餐點作為範本，並且以網址紀錄作為加入購物車。",
+            "Illustrate2": "。",
+            "url": "/shoppingCart"
         }
     ]
 }

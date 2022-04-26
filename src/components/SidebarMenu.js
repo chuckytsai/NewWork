@@ -1,6 +1,6 @@
 import "../styles/SidebarMenu.css";
 // 引入Json
-import { Data } from "../components/Json/index.json";
+import { Data } from "./Json";
 // 引入圖片
 import { ReactComponent as Home } from "../../src/images/gif/home.svg";
 

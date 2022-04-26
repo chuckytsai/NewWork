@@ -7,6 +7,7 @@ import { Memorandum } from "./pages/memorandum/Memorandum";
 import { Timer } from "./pages/timer/Timer";
 import { Questionnaire } from "./pages/questionnaire/Questionnaire";
 import { LongTeng } from "./pages/LongTeng/LongTeng";
+import { ShoppingCart } from "./pages/shoppingCart/ShoppingCart";
 import { Loanding } from "./components/Loading";
 
 //===========引用樣式==============
@@ -32,8 +33,11 @@ function App() {
       {/* ===============問卷調查表================= */}
       <Router path="/questionnaire"><Questionnaire /></Router>
 
-      {/* ===============問卷調查表================= */}
+      {/* ===============龍騰文化活動宣傳網頁================= */}
       <Router path="/LongTeng"><LongTeng /></Router>
+
+      {/* ===============購物車(購物車)================= */}
+      <Router path="/shoppingCart"><ShoppingCart /></Router>
 
     </Switch>
   </Router>

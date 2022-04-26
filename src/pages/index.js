@@ -1,6 +1,6 @@
 import React from "react";
 // 引入Json
-import { Data } from "../components/Json/index.json";
+import { Data } from "../components/Json";
 // 引入CSS
 import "../styles/index.css";
 // LONDING
