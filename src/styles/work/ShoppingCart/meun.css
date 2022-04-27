@@ -42,8 +42,8 @@
 
 .KfcMenuOptions div button {
     width: 90px;
-    height: 45px;
-    line-height: 45px;
+    height: 47px;
+    line-height: 47px;
     margin: auto 1px;
     border-radius: 5px;
     font-size: 14px;
@@ -94,7 +94,7 @@
 
 .cartMenuPrice {
     padding-left: 26px;
-    padding-right: 40px;
+    padding-right: 20px;
     user-select: none;
     margin-top: -5px;
     margin-bottom: 10px;
@@ -106,14 +106,14 @@
 .GoShopping {
     position: fixed;
     bottom: 100px;
-    right: 40px;
+    right: 0.5%;
     width: 100%;
     display: flex;
     justify-content: end;
 }
 
 .GoShopping button {
-    width: 200px;
+    width: 150px;
     height: 45px;
     line-height: 45px;
     border-radius: 5px;
@@ -122,13 +122,37 @@
     font-weight: 800;
     color: rgb(233, 31, 12);
     border: 1px solid rgb(244, 113, 113);
+    user-select: none;
 }
 
 .AddShopping {
     color: black;
+    display: flex;
 }
 
-.ShoppingDot{
-    width: 50px;
+.ShoppingQuantity {
+    height: 25px;
+    line-height: 22px;
+    width: 10px;
+    text-align: center;
+}
+
+.ShoppingDot {
+    width: 25px;
+    height: 25px;
+    text-align: center;
     position: relative;
+    border: 0.5px solid rgb(53, 38, 38);
+    border-radius: 50%;
+    margin: 0 5px;
+    font-weight: 500;
+    background-color: white;
+    z-index: 9;
+}
+
+.ShoppingDot:active {
+    border: 2px solid rgb(248, 216, 216);
+    font-weight: 800;
+    line-height: 13px;
+    background-color: rgb(250, 250, 250);
 }

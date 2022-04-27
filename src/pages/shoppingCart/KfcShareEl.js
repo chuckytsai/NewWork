@@ -24,47 +24,56 @@ export function Share24Group() {
         {
             "name": "宅宅快樂餐",
             "price": 548,
-            "img": 宅宅快樂餐
+            "img": 宅宅快樂餐,
+            "url": "HappyHouseParty"
         },
         {
             "name": "歡聚樂享餐",
             "price": 548,
-            "img": 歡聚樂享餐
+            "img": 歡聚樂享餐,
+            "url": "HappyShareParty"
         },
         {
             "name": "經典A餐-6塊雞桶",
             "price": 317,
-            "img": 經典A餐6塊雞桶
+            "img": 經典A餐6塊雞桶,
+            "url": "ClassicA6Party"
         },
         {
             "name": "經典A餐-8塊雞桶",
             "price": 419,
-            "img": 經典A餐8塊雞桶
+            "img": 經典A餐8塊雞桶,
+            "url": "ClassicA8Party"
         },
         {
             "name": "派對B餐-6塊雞",
             "price": 427,
-            "img": 派對B餐6塊雞
+            "img": 派對B餐6塊雞,
+            "url": "ClassicB6Party"
         },
         {
             "name": "派對B餐-8塊雞",
             "price": 559,
-            "img": 派對B餐8塊雞
+            "img": 派對B餐8塊雞,
+            "url": "ClassicB8Party"
         },
         {
             "name": "派對狂饗烤全雞餐",
             "price": 639,
-            "img": 派對狂饗烤全雞餐
+            "img": 派對狂饗烤全雞餐,
+            "url": "RoastChickenParty"
         },
         {
             "name": "青花椒香麻脆雞雙人餐",
             "price": 320,
-            "img": 青花椒香麻脆雞雙人餐
+            "img": 青花椒香麻脆雞雙人餐,
+            "url": "QingPepperChickenDoubleParty"
         },
         {
             "name": "青花椒麻脆雞歡聚餐",
             "price": 530,
-            "img": 青花椒麻脆雞歡聚餐
+            "img": 青花椒麻脆雞歡聚餐,
+            "url": "QingPepperChickenParty"
         }
     ])
     return <>
@@ -73,6 +82,7 @@ export function Share24Group() {
                 key={x}
                 img={item.img}
                 name={item.name}
+                cost={item.url}
                 price={item.price} />
         ))}
     </>
@@ -83,27 +93,32 @@ export function Share57Group() {
         {
             "name": "經典A餐-10塊雞桶",
             "price": 509,
-            "img": 經典A餐10塊雞桶
+            "img": 經典A餐10塊雞桶,
+            "url": "ClassicA10Party"
         },
         {
             "name": "派對B餐-10塊雞",
             "price": 679,
-            "img": 派對B餐10塊雞
+            "img": 派對B餐10塊雞,
+            "url": "ClassicB10Party"
         },
         {
             "name": "義式香草紙包雞同饗餐",
             "price": 838,
-            "img": 義式香草紙包雞同饗餐
+            "img": 義式香草紙包雞同饗餐,
+            "url": "ChickenWrappedInPaperParty"
         },
         {
             "name": "超人氣同樂餐",
             "price": 828,
-            "img": 超人氣同樂餐
+            "img": 超人氣同樂餐,
+            "url": "SuperPopularParty"
         },
         {
             "name": "好食雞同樂餐",
             "price": 1058,
-            "img": 好食雞同樂餐
+            "img": 好食雞同樂餐,
+            "url": "NiceChickenParty"
         }
     ])
     return <>
@@ -112,6 +127,7 @@ export function Share57Group() {
                 key={x}
                 img={item.img}
                 name={item.name}
+                cost={item.url}
                 price={item.price} />
         ))}
     </>

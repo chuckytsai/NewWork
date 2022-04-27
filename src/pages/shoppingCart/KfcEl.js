@@ -1,3 +1,5 @@
+import { OrderMenu } from "./ShoppingCatFunction";
+
 // KFC 菜單中每個選項
 export function CartMenuGroup(props) {
     return <div className="cartMenuGroup">
@@ -7,9 +9,9 @@ export function CartMenuGroup(props) {
         <h6 className="cartMenuName">{props.name}</h6>
         <h6 className="cartMenuPrice">${props.price}
             <span className="AddShopping">
-                <span className="ShoppingDot">-</span>
-                <span className="ShoppingQuantity">0</span>
-                <span className="ShoppingDot">+</span>
+                <button className="ShoppingDot" onClick={() => { OrderMenu("reduce", props.cost) }}><h6>-</h6></button>
+                <div className={props.cost + " ShoppingQuantity"}>0</div>
+                <button className="ShoppingDot" onClick={() => { OrderMenu("Add", props.cost) }}><h6>+</h6></button>
             </span>
         </h6>
     </div>

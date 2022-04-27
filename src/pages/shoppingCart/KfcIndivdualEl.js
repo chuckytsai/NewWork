@@ -35,47 +35,56 @@ export function XLGroup() {
         {
             "name": "吮指雙雞XL套餐",
             "price": 189,
-            "img": 吮指雙雞XL套餐
+            "img": 吮指雙雞XL套餐,
+            "url": "DoubleChickenGroupXL"
         },
         {
             "name": "咔啦雞腿堡XL套餐",
             "price": 185,
-            "img": 咔啦雞腿堡XL套餐
+            "img": 咔啦雞腿堡XL套餐,
+            "url": "KaraDrumstickGroupXL"
         },
         {
             "name": "花生起司雞柳捲XL餐",
             "price": 175,
-            "img": 花生起司雞柳捲XL餐
+            "img": 花生起司雞柳捲XL餐,
+            "url": "PeanutCheeseChickenwickerGroupXL"
         },
         {
             "name": "花生培根咔啦雞腿堡XL餐",
             "price": 190,
-            "img": 花生培根咔啦雞腿堡XL餐
+            "img": 花生培根咔啦雞腿堡XL餐,
+            "url": "PeanutBaconKaraDrumstickGroupXL"
         },
         {
             "name": "花生熔岩咔啦雞腿堡XL套餐",
             "price": 195,
-            "img": 花生熔岩咔啦雞腿堡XL套餐
+            "img": 花生熔岩咔啦雞腿堡XL套餐,
+            "url": "PeanutSauceGroupKaraDrumstickGroupXL"
         },
         {
             "name": "青花椒香麻脆雞XL套餐",
             "price": 175,
-            "img": 青花椒香麻脆雞XL套餐
+            "img": 青花椒香麻脆雞XL套餐,
+            "url": "QingPepperChickenGroupXL"
         },
         {
             "name": "紐奧良烤雞腿堡XL套餐",
             "price": 189,
-            "img": 紐奧良烤雞腿堡XL套餐
+            "img": 紐奧良烤雞腿堡XL套餐,
+            "url": "NewOrleansDrumstickGroupXL"
         },
         {
             "name": "原味起司燻雞捲XL餐",
             "price": 175,
-            "img": 原味起司燻雞捲XL餐
+            "img": 原味起司燻雞捲XL餐,
+            "url": "CheeseChickenrollsGroupXL"
         },
         {
             "name": "義式香草紙包雞XL套餐",
             "price": 189,
-            "img": 義式香草紙包雞XL套餐
+            "img": 義式香草紙包雞XL套餐,
+            "url": "ChickenWrappedInPaperGroupXL"
         }
     ])
     return <>
@@ -84,6 +93,7 @@ export function XLGroup() {
                 key={x}
                 img={item.img}
                 name={item.name}
+                cost={item.url}
                 price={item.price} />
         ))}
     </>
@@ -94,58 +104,68 @@ export function IndivdualGroup() {
         {
             "name": "8塊上校雞塊套餐",
             "price": 99,
-            "img": 八塊上校雞塊套餐
+            "img": 八塊上校雞塊套餐,
+            "url": "ChickenNuggets8Group"
         },
         {
             "name": "原味起司燻雞捲套餐",
             "price": 99,
-            "img": 原味起司燻雞捲套餐
+            "img": 原味起司燻雞捲套餐,
+            "url": "CheeseChickenwickerGroup"
         },
         {
             "name": "吮指雙雞套餐",
             "price": 155,
-            "img": 吮指雙雞套餐
+            "img": 吮指雙雞套餐,
+            "url": "DoubleChickenGroup"
         },
         {
             "name": "咔啦雞腿堡套餐",
             "price": 135,
-            "img": 咔啦雞腿堡套餐
+            "img": 咔啦雞腿堡套餐,
+            "url": "KaraDrumstickGroup"
         },
         {
             "name": "紐奧良烤雞腿堡套餐",
             "price": 139,
-            "img": 紐奧良烤雞腿堡套餐
+            "img": 紐奧良烤雞腿堡套餐,
+            "url": "NewOrleansDrumstickGroup"
         },
         {
             "name": "花生培根咔啦雞腿堡餐",
             "price": 145,
-            "img": 花生培根咔啦雞腿堡餐
+            "img": 花生培根咔啦雞腿堡餐,
+            "url": "PeanutBaconKaraDrumstickGroup"
         },
         {
             "name": "花生起司雞柳捲套餐",
             "price": 99,
-            "img": 花生起司雞柳捲套餐
+            "img": 花生起司雞柳捲套餐,
+            "url": "PeanutCheeseChickenwickerGroup"
         },
         {
             "name": "花生熔岩咔啦雞腿堡餐",
             "price": 155,
-            "img": 花生熔岩咔啦雞腿堡餐
+            "img": 花生熔岩咔啦雞腿堡餐,
+            "url": "PeanutSauceGroupKaraDrumstickGroup"
         },
         {
             "name": "墨西哥莎莎霸王捲餐",
             "price": 145,
-            "img": 莎莎霸王捲餐
-        }
-        ,
+            "img": 莎莎霸王捲餐,
+            "url": "TacoHotGroup"
+        },
         {
             "name": "青花椒香麻脆雞個人餐",
             "price": 165,
-            "img": 青花椒香麻脆雞個人餐
+            "img": 青花椒香麻脆雞個人餐,
+            "url": "QingPepperChickenHotGroup"
         },
         {
             "name": "義式香草紙包雞個人餐",
             "price": 159,
-            "img": 香草紙包雞個人餐
+            "img": 香草紙包雞個人餐,
+            "url": "ChickenWrappedInPaperGroup"
         }
     ])
     return <>
@@ -154,6 +174,7 @@ export function IndivdualGroup() {
                 key={x}
                 img={item.img}
                 name={item.name}
+                cost={item.url}
                 price={item.price} />
         ))}
     </>
@@ -164,22 +185,26 @@ export function SalaGroup() {
         {
             "name": "凱薩烤地瓜沙拉",
             "price": 108,
-            "img": 烤地瓜沙拉
+            "img": 烤地瓜沙拉,
+            "url": "SweetPotatoSalaGroup"
         },
         {
             "name": "凱薩烤地瓜沙拉套餐",
             "price": 139,
-            "img": 烤地瓜沙拉套餐
+            "img": 烤地瓜沙拉套餐,
+            "url": "CaesarSweetPotatoSalaGroup"
         },
         {
             "name": "上校私廚烤雞溫沙拉",
             "price": 119,
-            "img": 烤雞溫沙拉
+            "img": 烤雞溫沙拉,
+            "url": "RoastChickenSala"
         },
         {
             "name": "上校私廚烤雞溫沙拉套餐",
             "price": 149,
-            "img": 烤雞溫沙拉套餐
+            "img": 烤雞溫沙拉套餐,
+            "url": "RoastChickenSalaGroup"
         }
     ])
     return <>
@@ -188,6 +213,7 @@ export function SalaGroup() {
                 key={x}
                 img={item.img}
                 name={item.name}
+                cost={item.url}
                 price={item.price} />
         ))}
     </>

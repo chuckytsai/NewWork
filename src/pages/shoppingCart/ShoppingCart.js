@@ -1,3 +1,4 @@
+import ReactDOM from 'react-dom';
 import { NavSidebar } from "../../components/Nav";
 import { Sidebar, IllustrateSidebar, CloseMenu } from "../../components/SidebarMenu";
 import { CloseLoanding } from "../../components/Loading";
@@ -13,7 +14,10 @@ export function ShoppingCart() {
     setTimeout(() => {
         CloseLoanding();
         CreatKfcMenuOption("Indivdual");
-    }, 200);
+        let KfcMenuOptionChild = document.getElementsByClassName("KfcMenuOptionChild");
+        ReactDOM.render(<XLGroup />,document.getElementsByClassName("MenuKFC")[0]);
+        KfcMenuOptionChild[0].classList.add("KfcMenuOptionAction");
+    }, 100);
     return <>
         <NavSidebar />
         <Sidebar />
@@ -31,7 +35,7 @@ export function ShoppingCart() {
                 </div>
             </div>
             <div className="MenuKfcGroup">
-                <div className="MenuKFC"><XLGroup /></div>
+                <div className="MenuKFC"></div>
             </div>
             <div className="GoShopping">
                 <button>前往購物車結算</button>

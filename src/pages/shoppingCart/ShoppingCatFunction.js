@@ -5,6 +5,27 @@ import { Share24Group, Share57Group } from "./KfcShareEl";  //分享餐
 import { KfcBreakFastGroup, KfcBreakFast } from "./KfcBreakFastEl";  //早餐
 import { AlacarteGroup, EggTart, SnackGroup, DrinksGroup } from "./alacarte"; //單點
 
+// ======各分類菜單願望清單(預設都為空的)=====
+let WantMenuList = [];
+
+// 點餐加入願望清單
+export function WantListAdd(menu) {
+    let MenuName = WantMenuList.filter(function (item) {
+        return item.name === menu["name"];
+    });
+    if (MenuName.length === 0) {
+        WantMenuList.push(menu)
+    }
+    else if (MenuName.length === 1) {
+        for (let x = 0; x < WantMenuList.length; x++) {
+            if (WantMenuList[x].name === menu.name) {
+                WantMenuList[x] = menu;
+            }
+        }
+    }
+    console.log(WantMenuList);
+}
+
 // 選擇出現哪種菜單
 export function CreatKfcMenuOption(mode) {
     let KfcMenuOptionChilds = document.getElementsByClassName("KfcMenuOptionChilds")[0];
@@ -95,5 +116,44 @@ export function WhitchMunu(menu) {
     else if (menu === "DrinksGroup") {
         ReactDOM.render(<DrinksGroup />, MenuKFC);
         KfcMenuOptionChild[3].classList.add("KfcMenuOptionAction");
+    }
+    setTimeout(() => {
+        MenuCost();
+    }, 100);
+}
+
+// 餐點點餐數目變化
+export function OrderMenu(cost, name) {
+    let MenuName = document.getElementsByClassName(name)[0];
+    if (cost === "Add") {
+        MenuName.textContent = parseInt(MenuName.textContent) + 1;
+        setTimeout(() => {
+            WantListAdd({
+                "name": name,
+                "cost": MenuName.textContent
+            })
+        }, 20);
+    }
+    else if (cost === "reduce") {
+        if (MenuName.textContent !== "0") {
+            MenuName.textContent = parseInt(MenuName.textContent) - 1;
+        }
+        setTimeout(() => {
+            WantListAdd({
+                "name": name,
+                "cost": MenuName.textContent
+            })
+        }, 20);
+    }
+}
+
+// 每一分類商品的數目渲染
+export function MenuCost() {
+    if (WantMenuList.length > 0) {
+        for (let x = 0; x < WantMenuList.length; x++) {
+            if (document.getElementsByClassName(WantMenuList[x].name).length > 0) {
+                document.getElementsByClassName(WantMenuList[x].name)[0].textContent = WantMenuList[x].cost;
+            }
+        }
     }
 }

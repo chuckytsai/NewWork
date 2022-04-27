@@ -30,52 +30,62 @@ export function KfcBreakFastGroup() {
         {
             "name": "吮指嫩雞燒餅套餐",
             "price": 75,
-            "img": 吮指嫩雞燒餅套餐
+            "img": 吮指嫩雞燒餅套餐,
+            "url": "ChickenBiscuitsGroup"
         },
         {
             "name": "吮指嫩雞蛋堡套餐",
             "price": 65,
-            "img": 吮指嫩雞蛋堡套餐
+            "img": 吮指嫩雞蛋堡套餐,
+            "url": "ChickenEggBurgerGroup"
         },
         {
             "name": "吮指嫩雞蛋烤餅套餐",
             "price": 75,
-            "img": 吮指嫩雞蛋烤餅套餐
+            "img": 吮指嫩雞蛋烤餅套餐,
+            "url": "ChickenSconesGroup"
         },
         {
             "name": "培根薯餅蛋烤餅套餐",
             "price": 49,
-            "img": 培根薯餅蛋烤餅套餐
+            "img": 培根薯餅蛋烤餅套餐,
+            "url": "BaconPotatoCakeSconesGroup"
         },
         {
             "name": "歐式經典總匯早餐",
             "price": 119,
-            "img": 歐式經典總匯早餐套餐
+            "img": 歐式經典總匯早餐套餐,
+            "url": "ClassicBreakFastGroup"
         },
         {
             "name": "雙人優惠A餐",
             "price": 105,
-            "img": 雙人優惠A餐
+            "img": 雙人優惠A餐,
+            "url": "DoubleDiscountAGroup"
         },
         {
             "name": "雙人優惠B餐",
             "price": 115,
-            "img": 雙人優惠B餐
+            "img": 雙人優惠B餐,
+            "url": "DoubleDiscountBGroup"
         },
         {
             "name": "紅藜燕麥粥早餐套餐",
             "price": 65,
-            "img": 紅藜燕麥粥早餐套餐
+            "img": 紅藜燕麥粥早餐套餐,
+            "url": "OatmealBreakFastGroup"
         },
         {
             "name": "總匯歐姆蛋堡套餐",
             "price": 59,
-            "img": 總匯歐姆蛋堡套餐
+            "img": 總匯歐姆蛋堡套餐,
+            "url": "OmeletteBurgerGroup"
         },
         {
             "name": "總匯歐姆蛋燒餅套餐",
             "price": 69,
-            "img": 總匯歐姆蛋燒餅套餐
+            "img": 總匯歐姆蛋燒餅套餐,
+            "url": "OmeletteBurgerBiscuitsGroup"
         }
     ])
     return <>
@@ -84,6 +94,7 @@ export function KfcBreakFastGroup() {
                 key={x}
                 img={item.img}
                 name={item.name}
+                cost={item.url}
                 price={item.price} />
         ))}
     </>
@@ -94,52 +105,62 @@ export function KfcBreakFast() {
         {
             "name": "吮指嫩雞燒餅",
             "price": 56,
-            "img": 吮指嫩雞燒餅
+            "img": 吮指嫩雞燒餅,
+            "url": "ChickenBiscuits"
         },
         {
             "name": "吮指嫩雞蛋堡",
             "price": 46,
-            "img": 吮指嫩雞蛋堡
+            "img": 吮指嫩雞蛋堡,
+            "url": "ChickenEggBurger"
         },
         {
             "name": "吮指嫩雞蛋烤餅",
             "price": 46,
-            "img": 吮指嫩雞蛋烤餅
+            "img": 吮指嫩雞蛋烤餅,
+            "url": "ChickenScones"
         },
         {
             "name": "培根薯餅蛋烤餅",
             "price": 35,
-            "img": 培根薯餅蛋烤餅
+            "img": 培根薯餅蛋烤餅,
+            "url": "BaconPotatoCakeScones"
         },
         {
             "name": "歐式經典總匯早餐",
             "price": 95,
-            "img": 歐式經典總匯早餐
+            "img": 歐式經典總匯早餐,
+            "url": "ClassicBreakFast"
         },        
         {
             "name": "紅藜燕麥粥",
             "price": 46,
-            "img": 紅藜燕麥粥
+            "img": 紅藜燕麥粥,
+            "url": "OatmealBreakFast"
         },
         {
             "name": "總匯歐姆蛋堡",
             "price": 40,
-            "img": 總匯歐姆蛋堡
+            "img": 總匯歐姆蛋堡,
+            "url": "OmeletteBurger"
         },
         {
             "name": "總匯歐姆蛋燒餅",
             "price": 50,
-            "img": 總匯歐姆蛋燒餅
+            "img": 總匯歐姆蛋燒餅,
+            "url": "OmeletteBurgerBiscuits"
         },
         {
             "name": "薯餅",
             "price": 25,
-            "img": 薯餅
+            "img": 薯餅,
+            "url": "PotatoCake"
         },
         {
             "name": "鮮蔬沙拉(千島醬)",
             "price": 40,
-            "img": 鮮蔬沙拉
+            "img": 鮮蔬沙拉,
+            "url": "ThousandIslandSauceSara"
         }
     ])
     return <>
@@ -148,6 +169,7 @@ export function KfcBreakFast() {
                 key={x}
                 img={item.img}
                 name={item.name}
+                cost={item.url}
                 price={item.price} />
         ))}
     </>
