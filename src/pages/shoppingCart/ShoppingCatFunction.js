@@ -4,9 +4,23 @@ import { XLGroup, IndivdualGroup, SalaGroup } from "./KfcIndivdualEl";  //個人
 import { Share24Group, Share57Group } from "./KfcShareEl";  //分享餐
 import { KfcBreakFastGroup, KfcBreakFast } from "./KfcBreakFastEl";  //早餐
 import { AlacarteGroup, EggTart, SnackGroup, DrinksGroup } from "./alacarte"; //單點
+import { ChickCheckdate } from "../../components/Objs/SwalWarn";
 
 // ======各分類菜單願望清單(預設都為空的)=====
 let WantMenuList = [];
+// 瀏覽器有儲存則會灌入清單
+export function WantMenuListLog() {
+    if (localStorage.WantMenuList !== undefined) {
+        let GetMenu = localStorage.getItem("WantMenuList");
+        let GetMenuArr = JSON.parse(GetMenu);
+        for (let x = 0; x < GetMenuArr.length; x++) {
+            WantMenuList.push(GetMenuArr[x]);
+        }
+    }
+    setTimeout(() => {
+        MenuCost()
+    }, 150);
+}
 
 // 點餐加入願望清單
 export function WantListAdd(menu) {
@@ -23,7 +37,8 @@ export function WantListAdd(menu) {
             }
         }
     }
-    console.log(WantMenuList);
+    let WantMenuListArr = JSON.stringify(WantMenuList);
+    localStorage.setItem("WantMenuList", WantMenuListArr);
 }
 
 // 選擇出現哪種菜單
@@ -123,14 +138,16 @@ export function WhitchMunu(menu) {
 }
 
 // 餐點點餐數目變化
-export function OrderMenu(cost, name) {
+export function OrderMenu(cost, name, zh, price) {
     let MenuName = document.getElementsByClassName(name)[0];
     if (cost === "Add") {
         MenuName.textContent = parseInt(MenuName.textContent) + 1;
         setTimeout(() => {
             WantListAdd({
                 "name": name,
-                "cost": MenuName.textContent
+                "cost": MenuName.textContent,
+                "zh": zh,
+                "price": price
             })
         }, 20);
     }
@@ -141,7 +158,9 @@ export function OrderMenu(cost, name) {
         setTimeout(() => {
             WantListAdd({
                 "name": name,
-                "cost": MenuName.textContent
+                "cost": MenuName.textContent,
+                "zh": zh,
+                "price": price
             })
         }, 20);
     }
@@ -149,12 +168,61 @@ export function OrderMenu(cost, name) {
 
 // 每一分類商品的數目渲染
 export function MenuCost() {
-    if (WantMenuList.length > 0) {
-        for (let x = 0; x < WantMenuList.length; x++) {
-            if (document.getElementsByClassName(WantMenuList[x].name).length > 0) {
-                document.getElementsByClassName(WantMenuList[x].name)[0].textContent = WantMenuList[x].cost;
-            }
+    for (let x = 0; x < WantMenuList.length; x++) {
+        if (document.getElementsByClassName(WantMenuList[x].name).length > 0) {
+            document.getElementsByClassName(WantMenuList[x].name)[0].textContent = WantMenuList[x].cost;
+        }
+    }
+
+}
+
+// 購物車結算
+export function CheckoutShppingCart() {
+    let KfcCheckout = document.getElementsByClassName("KfcCheckout")[0];
+    KfcCheckout.classList.toggle("KfcCheckoutAvtive");
+    setTimeout(() => {
+        let AllMenuAll = document.getElementsByClassName("AllMenuAll")[0];
+        let GetMenu = localStorage.getItem("WantMenuList");
+        let GetMenuArr = JSON.parse(GetMenu);
+        if (localStorage.WantMenuList !== undefined) {
+            let MenuList = GetMenuArr.map((item, i) => {
+                if (item.cost > 0) {
+                    return <li key={i}>
+                        <span className="AllMenuName">{item.zh}</span>
+                        <span>{item.cost}份</span>
+                        <span className="AllMenuPrice">${item.cost * item.price}</span>
+                    </li>
+                }
+            });
+            ReactDOM.render(<>{MenuList}</>, AllMenuAll);
+        }
+    }, 20);
+    setTimeout(() => {
+        let AllMenuPrice = document.getElementsByClassName("AllMenuPrice");
+        let MenuTotaltext = document.getElementsByClassName("MenuTotaltext")[0];
+        let Total = 0;
+        for (let x = 0; x < AllMenuPrice.length; x++) {
+            Total = Total + parseInt(AllMenuPrice[x].textContent.split("$")[1]);
+        }
+        ReactDOM.render(<>${Total}</>, MenuTotaltext);
+    }, 100);
+}
+
+export function WantBuy() {
+    ChickCheckdate("已付款", "感謝您這次消費", "success");
+    setTimeout(() => {
+        let swal2Btn = document.getElementsByClassName("swal2-confirm")[0];
+        swal2Btn.addEventListener("click", ReDom, false);
+        localStorage.removeItem("WantMenuList");
+    }, 500);
+    function ReDom() {
+        WantMenuList = [];
+        let AllMenuAll = document.getElementsByClassName("AllMenuAll")[0];
+        let ShoppingQuantity = document.getElementsByClassName("ShoppingQuantity");
+        ReactDOM.render(<></>, AllMenuAll);
+        CheckoutShppingCart();
+        for (let i = 0; i < ShoppingQuantity.length; i ++) {
+            ShoppingQuantity[i].textContent = 0;
         }
     }
 }
-

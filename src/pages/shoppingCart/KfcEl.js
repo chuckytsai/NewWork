@@ -9,9 +9,13 @@ export function CartMenuGroup(props) {
         <h6 className="cartMenuName">{props.name}</h6>
         <h6 className="cartMenuPrice">${props.price}
             <span className="AddShopping">
-                <button className="ShoppingDot" onClick={() => { OrderMenu("reduce", props.cost) }}><h6>-</h6></button>
+                <button className="ShoppingDot" onClick={() => {
+                    OrderMenu("reduce", props.cost, props.name, props.price)
+                }}><h6>-</h6></button>
                 <div className={props.cost + " ShoppingQuantity"}>0</div>
-                <button className="ShoppingDot" onClick={() => { OrderMenu("Add", props.cost) }}><h6>+</h6></button>
+                <button className="ShoppingDot" onClick={() => {
+                    OrderMenu("Add", props.cost, props.name, props.price)
+                }}><h6>+</h6></button>
             </span>
         </h6>
     </div>

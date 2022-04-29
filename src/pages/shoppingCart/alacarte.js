@@ -512,6 +512,7 @@ export function DrinksGroup() {
                 key={x}
                 img={item.img}
                 name={item.name}
+                cost={item.url}
                 price={item.price} />
         ))}
     </>

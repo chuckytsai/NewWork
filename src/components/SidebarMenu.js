@@ -7,7 +7,9 @@ import { ReactComponent as Home } from "../../src/images/gif/home.svg";
 // 選單模塊
 export function Sidebar() {
     return <div className="navigation" onMouseLeave={() => {
-        ToggleMenu("menu");
+        setTimeout(() => {
+            ToggleMenu("menu");
+        }, 500);
     }}>
         <ul>
             <li className="IndexIcon">
