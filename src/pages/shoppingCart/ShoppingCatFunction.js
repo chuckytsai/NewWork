@@ -134,7 +134,7 @@ export function WhitchMunu(menu) {
     }
     setTimeout(() => {
         MenuCost();
-    }, 100);
+    }, 500);
 }
 
 // 餐點點餐數目變化

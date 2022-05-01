@@ -24,10 +24,8 @@
 
 .KfcMenuOptions {
     width: 940px;
-    height: 50px;
+    height: 104px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
     margin-top: 20px;
     background-color: rgb(241, 232, 229);
     border-radius: 10px 10px 0 0;
@@ -36,7 +34,7 @@
 
 .KfcMenuOptions div {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     line-height: 50px;
 }
 
@@ -44,7 +42,7 @@
     width: 90px;
     height: 47px;
     line-height: 47px;
-    margin: auto 1px;
+    margin: 2px 5px;
     border-radius: 5px;
     font-size: 14px;
     background-color: rgb(254, 254, 254);
@@ -179,6 +177,13 @@
     background-color: white;
     margin-top: 10%;
     border-radius: 10px;
+}
+
+@media (max-width:1280px) {
+    .AllMenu {
+        margin-top: 2%;
+    }
+    
 }
 
 .AllMenu nav {
