@@ -37,8 +37,8 @@
         },        {
             "id":"shoppingCart",
             "name": "肯德基購物車",
-            "Illustrate": "用肯德基的餐點作為範本，並且以網址紀錄作為加入購物車。",
-            "Illustrate2": "。",
+            "Illustrate": "用肯德基的餐點作為範本，並且將餐點以Json方式存入localStorage中，以方便跳頁再來來此頁也可以進行點餐。",
+            "Illustrate2": "根據使用者在菜單點擊各商品的數量，購物車結算可以結算出每樣餐點的數量與價格，點擊確認付款後，則會清除localStorage。",
             "url": "/shoppingCart"
         }
     ]

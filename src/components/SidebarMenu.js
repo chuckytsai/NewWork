@@ -13,7 +13,7 @@ export function Sidebar() {
     }}>
         <ul>
             <li className="IndexIcon">
-                <a href="http://localhost:3000/"><Home /></a>
+                <a href="./"><Home /></a>
             </li>
             {Data.map((item, i) => (<li className="navigationLi" key={"option" + i}>
                 <a href={item.url}>

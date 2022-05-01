@@ -38,7 +38,7 @@
     padding-left: 3px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 912px) {
     .KfcMenuOptions {
         width: 90%;
     }
