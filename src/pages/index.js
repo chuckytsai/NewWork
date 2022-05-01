@@ -13,13 +13,13 @@ export function Index() {
   }, 10);
   return <div className="IndexPanel">
     <div className="IllustrateGroup">
-      <h6>{""}</h6>
+      {/* <div className="IllustrateKv"></div> */}
     </div>
     <div className="WellcomeMyHome">
       <div className="HoverImgs">
         {Data.map((item, i) => (
           <a href={item["url"]} className="HoverImg" key={i}
-            onMouseMove={() => { IllustrateGroupEffect("Move", item["name"]); }}
+            onMouseMove={() => { IllustrateGroupEffect("Move", item["id"]); }}
             onMouseLeave={() => { IllustrateGroupEffect("Leave", ""); }}
           >{item["name"]}</a>
         ))}
@@ -31,11 +31,12 @@ export function Index() {
 // ===========滑鼠移入與移出選項  左邊說明區塊效果==========
 export function IllustrateGroupEffect(index, item) {
   let IllustrateGroup = document.getElementsByClassName("IllustrateGroup")[0];
-  if (index === "Move") { IllustrateGroup.lastElementChild.textContent = item; }
-  else if (index === "Leave") { IllustrateGroup.lastElementChild.textContent = item; }
+  // let IllustrateKv = document.getElementsByClassName("IllustrateKv")[0];
+  if (index === "Move") {
+    IllustrateGroup.className = "IllustrateImgs IllustrateGroup " + item;
+    // IllustrateKv.className = "IllustrateKv " + item + "Gif";
+  }
+  else if (index === "Leave") {
+    // IllustrateGroup.lastElementChild.textContent = item;
+  }
 }
-
-window.onbeforeunload = function() {
- // localStorage.removeItem("Questionnaire");
- // localStorage.removeItem("Memorandum");
-};

@@ -2,7 +2,7 @@ import { CloseLoanding } from "../../components/Loading";
 import { NavSidebar } from "../../components/Nav";
 import { Sidebar, IllustrateSidebar, CloseMenu } from "../../components/SidebarMenu";
 import "../../styles/work/LongTeng.css";
-import { AddLongTengEl } from "./LongTengFunction";
+import { AddLongTengEl, DotImgClick, LongTengNavMenu } from "./LongTengFunction";
 // 引入圖片
 import blueRoundShape from "../../images/png/LongTeng/BlueRoundShape.png";
 import yellowRoundShape from "../../images/png/LongTeng/YellowRoundShape.png";
@@ -18,11 +18,15 @@ import new1 from "../../images/png/LongTeng/new1.png";
 import new2 from "../../images/png/LongTeng/new2.png";
 import new3 from "../../images/png/LongTeng/new3.png";
 import newNews from "../../images/png/LongTeng/最新消息.png";
+import dot1 from "../../images/png/LongTeng/dot1.png";
+import dot2 from "../../images/png/LongTeng/dot3.png";
+import dot3 from "../../images/png/LongTeng/dot7.png";
+import Menu from "../../images/png/LongTeng/fi_menu.png";
 
 export function LongTeng() {
-    setTimeout(() => { 
+    setTimeout(() => {
         AddLongTengEl();
-        CloseLoanding(); 
+        CloseLoanding();
     }, 20);
     return <>
         <NavSidebar />
@@ -32,6 +36,9 @@ export function LongTeng() {
             <nav className="LongTengNav">
                 <div className="LongTengNavText">
                     <h2 className="LongTengNavTextLogo">龍騰文化 </h2>
+                    <div onClick={LongTengNavMenu} className="LongTengMenu">
+                        <img alt="" src={Menu} />
+                    </div>
                     <div className="LongTengNavOptionDiv">
                         <div className="LongTengNavOption">活動辦法</div>
                         <div className="LongTengNavOption">歷屆成果</div>
@@ -68,6 +75,12 @@ export function LongTeng() {
                     <div className="PinkBackGround"><img className="newImg" alt="" src={new2}></img></div>
                     <div className="PinkBackGround"><img className="newImg" alt="" src={new3}></img></div>
                 </div>
+            </div>
+            <div className="NewsDots">
+                <div>最新消息查看</div>
+                <img onClick={() => { DotImgClick(0) }} alt="" src={dot1} />
+                <img onClick={() => { DotImgClick(1) }} alt="" src={dot2} />
+                <img onClick={() => { DotImgClick(2) }} alt="" src={dot3} />
             </div>
             {/* 活動緣起 */}
             <div className="ActivityOrigin">
