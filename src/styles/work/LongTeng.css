@@ -85,8 +85,8 @@
     }
 }
 
-.LongTengNavOptionDivActive{
-  display: block !important;
+.LongTengNavOptionDivActive {
+    display: block !important;
 }
 
 .LongTengNavOption {
@@ -397,12 +397,24 @@
     justify-content: end;
     padding-right: 10px;
     padding-top: 10px;
-    display: flex;
+    display: none;
 }
 
 @media (max-width: 540px) {
     .NewsDots {
         display: flex;
+    }
+}
+
+@media (max-width: 414px) {
+    .NewsDots {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 393px) {
+    .NewsDots {
+        margin-top: 10px;
     }
 }
 

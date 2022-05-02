@@ -28,7 +28,7 @@
     .TimerContainer {
         width: 370px;
         height: 370px;
-        margin-top: 140px;
+        margin-top: 70px;
     }
 }
 
@@ -293,10 +293,11 @@
     position: absolute;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 540px) {
     .TimeText {
         margin-left: 20px;
         font-size: 22px;
+        margin-top: 50px;
     }
 }
 
