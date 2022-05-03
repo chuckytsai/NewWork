@@ -12,7 +12,7 @@ export function Index() {
     CloseLoanding();
   }, 10);
   return <div className="IndexPanel">
-    <div className="IllustrateGroup">
+    <div className="IllustrateGroup IllustrateImgs weather">
       {/* <div className="IllustrateKv"></div> */}
     </div>
     <div className="WellcomeMyHome">
