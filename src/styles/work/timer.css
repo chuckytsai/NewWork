@@ -301,6 +301,12 @@
     }
 }
 
+@media (max-width: 392px) {
+    .TimeText {
+        margin-top: 20px;
+    }
+}
+
 .Flower1 {
     --i: 0.5;
     margin-top: 8px;

@@ -9,6 +9,7 @@ import { Questionnaire } from "./pages/questionnaire/Questionnaire";
 import { LongTeng } from "./pages/LongTeng/LongTeng";
 import { ShoppingCart } from "./pages/shoppingCart/ShoppingCart";
 import { Loanding } from "./components/Loading";
+import { Login } from "./pages/login/Login";
 
 //===========引用樣式==============
 import "./styles/App.css";
@@ -20,6 +21,9 @@ function App() {
 
       {/* ===============首頁================= */}
       <Router exact path="/"><Index /></Router>
+
+      {/* ===============登入================= */}
+      <Router path="/login"><Login /></Router>
 
       {/* ===============天氣預測================= */}
       <Router path="/weather"><Weather /></Router>
