@@ -99,7 +99,7 @@
 .HoverImgs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     width: 1200px;
     height: 350px;
 }
@@ -114,7 +114,6 @@
 @media (max-width: 540px) {
     .HoverImgs {
         width: 100%;
-        justify-content: center;
     }
 }
 
