@@ -10,6 +10,7 @@ import { LongTeng } from "./pages/LongTeng/LongTeng";
 import { ShoppingCart } from "./pages/shoppingCart/ShoppingCart";
 import { Loanding } from "./components/Loading";
 import { Login } from "./pages/login/Login";
+import { HookExercise } from "./pages/HookExercise/HookExercise";
 
 //===========引用樣式==============
 import "./styles/App.css";
@@ -42,6 +43,9 @@ function App() {
 
       {/* ===============購物車(購物車)================= */}
       <Router path="/shoppingCart"><ShoppingCart /></Router>
+
+      {/* ===============Hook練習================= */}
+      <Router path="/HookExercise"><HookExercise /></Router>
 
     </Switch>
   </Router>
